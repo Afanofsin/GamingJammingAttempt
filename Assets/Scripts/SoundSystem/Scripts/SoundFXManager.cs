@@ -24,29 +24,29 @@ public class SoundFXManager : MonoBehaviour
         float pitchLowEnd = float.NaN, float pitchHighEnd = float.NaN)
     {
         // Spawn of audio source
-        Instantiate(_audioSourcePrefab, spawnPosition.position, Quaternion.identity);
+        AudioSource audioSource = Instantiate(_audioSourcePrefab, spawnPosition.position, Quaternion.identity);
 
         // Assign parameters
-        _audioSourcePrefab.clip = clip;
-        _audioSourcePrefab.volume = clipVolume;
+        audioSource.clip = clip;
+        audioSource.volume = clipVolume;
 
         // If pitch randomization is set up, apply it
-        if (pitchLowEnd != float.NaN && pitchHighEnd != float.NaN)
+        /*if (pitchLowEnd != float.NaN && pitchHighEnd != float.NaN)
         {
-            _audioSourcePrefab.pitch = UnityEngine.Random.Range(pitchLowEnd, pitchHighEnd);
-        }
-        _audioSourcePrefab.Play();
+            audioSource.pitch = UnityEngine.Random.Range(pitchLowEnd, pitchHighEnd);
+        }*/
+        audioSource.Play();
 
         // Destroy after done playing
-        float clipLength = _audioSourcePrefab.clip.length;
-        Destroy(_audioSourcePrefab, clipLength);
+        float clipLength = audioSource.clip.length;
+        Destroy(audioSource.gameObject, clipLength);
     }
 
     public void PlayRandomFXClip(AudioClip[] clips, Transform spawnPosition, float clipVolume,
         float pitchLowEnd = float.NaN, float pitchHighEnd = float.NaN)
     {
         // Spawn of audio source
-        Instantiate(_audioSourcePrefab, spawnPosition.position, Quaternion.identity);
+         AudioSource audioSource = Instantiate(_audioSourcePrefab, spawnPosition.position, Quaternion.identity);
 
         AudioClip clip = clips[UnityEngine.Random.Range(0, clips.Length)];
         // Assign parameters
@@ -62,6 +62,6 @@ public class SoundFXManager : MonoBehaviour
 
         // Destroy after done playing
         float clipLength = _audioSourcePrefab.clip.length;
-        Destroy(_audioSourcePrefab, clipLength);
+        Destroy(audioSource.gameObject, clipLength);
     }
 }
