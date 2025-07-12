@@ -2,15 +2,21 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.UIElements;
 
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI objectName;
     [SerializeField] private TextMeshProUGUI objectDialogueText;
     private Queue<string> paragpaphs = new Queue<string>();
+    private Movement playerMovement;
     private bool talkingEnded;
     private bool isRepeatable = true;
     private string p;
+    public void Awake()
+    {
+        
+    }
     public void DisplayNextParagraph(DialogueText dialogueText)
     {
         if (paragpaphs.Count == 0)
@@ -35,6 +41,8 @@ public class DialogueController : MonoBehaviour
     }
     private void StartTalking(DialogueText dialogueText)
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
+        
         if (!gameObject.activeSelf)
         {
             gameObject.SetActive(true);
@@ -47,8 +55,14 @@ public class DialogueController : MonoBehaviour
     }
     private void StopTalking()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
         paragpaphs.Clear();
-        talkingEnded = true;
+        if (isRepeatable)
+        {
+            talkingEnded = false;
+        }
+        else talkingEnded = true;
+
         if (gameObject.activeSelf)
         {
             gameObject.SetActive(false);
