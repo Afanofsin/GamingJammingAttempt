@@ -1,4 +1,6 @@
+using DG.Tweening;
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -33,6 +35,9 @@ public class HandView : MonoBehaviour
             Vector3 up = spline.EvaluateUpVector(pos);
 
             Quaternion rotation = Quaternion.LookRotation(-up, Vector3.Cross(-up, forward).normalized);
+            cards[i].transform.DOMove(splinePosition, 0.25f);
+            cards[i].transform.DORotateQuaternion(rotation, 0.25f);
         }
+        yield return new WaitForSeconds(duration);
     }
 }
