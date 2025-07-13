@@ -25,4 +25,17 @@ public class CardView : MonoBehaviour
         _manaText.text = card.Mana.ToString();
         _cardSprite.sprite = card.Image;
     }
+
+    private void OnMouseEnter()
+    {
+        _wrapper.SetActive(false);
+        Vector3 pos = new(transform.position.x, 8, 0);
+        CardViewHover.Instance.ShowAnim(Card, transform.position, pos, transform.rotation);
+    }
+
+    private void OnMouseExit()
+    {
+        CardViewHover.Instance.Hide();
+        _wrapper.SetActive(true);
+    }
 }
