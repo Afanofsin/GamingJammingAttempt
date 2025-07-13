@@ -1576,11 +1576,8 @@ MonoBehaviour:
   deckData:
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
+  - {fileID: 11400000, guid: 2725c77cdfae03048b09a302c691ea5a, type: 2}
+  - {fileID: 11400000, guid: 2725c77cdfae03048b09a302c691ea5a, type: 2}
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
