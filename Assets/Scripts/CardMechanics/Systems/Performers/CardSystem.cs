@@ -81,7 +81,11 @@ public class CardSystem : MonoBehaviour
         hand.Remove(playCardGA.Card);
         CardView cardView = handView.RemoveCard(playCardGA.Card);
         yield return DiscardCard(cardView);
-        // Perform Effects
+        foreach(var effect in playCardGA.Card.Effects)
+        {
+            PerformEffectsGA performEffectsGA = new(effect);
+            ActionSystem.Instance.AddReaction(performEffectsGA);
+        }
     }
     // Reaction
     private void EnemyTurnPreReaction(EnemyTurnGA enemyTurnGA)
