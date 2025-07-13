@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D _rb;
+    public Animator _animator;
     Vector2 _moveDirection;
     public bool canMove = true;
     void Update()
@@ -23,12 +24,14 @@ public class Movement : MonoBehaviour
             SnapToGrid();
         }
 
+
     }
     private void MovePlayer()
     {
         _moveDirection = (transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical")).normalized;
         _rb.linearVelocity = _moveDirection * speed;
-
+        _animator.SetFloat("Horizontal", _moveDirection.x);
+        _animator.SetFloat("Vertical", _moveDirection.y);
     }
     private void SnapToGrid()
     {

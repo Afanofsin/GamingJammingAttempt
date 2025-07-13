@@ -31,9 +31,8 @@ public abstract class InteractObject : MonoBehaviour, IInteractable
     }
     public bool IsWithinDistance()
     {
-        if (Vector2.Distance(transform.position, playerTransform.transform.position) <= 1.5f)
+        if (Vector2.Distance(transform.position, playerTransform.transform.position + new Vector3(-1f, -3f, 0)) <= 3)
         {
-
             return true;
         }
 
@@ -41,5 +40,6 @@ public abstract class InteractObject : MonoBehaviour, IInteractable
     }
     public abstract void Interact();
     public abstract void DoAction();
+    
 
 }

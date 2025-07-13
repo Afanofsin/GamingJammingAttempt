@@ -6,8 +6,8 @@ public class DialogueController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI objectName;
     [SerializeField] private TextMeshProUGUI objectDialogueText;
-    private Queue<string> paragpaphs = new Queue<string>();
-    private bool talkingEnded;
+    public Queue<string> paragpaphs = new Queue<string>();
+    public bool talkingEnded;
     private string p;
     public void DisplayNextParagraph(DialogueText dialogueText)
     {
@@ -50,7 +50,7 @@ public class DialogueController : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
         paragpaphs.Clear();
 
-            talkingEnded = false;
+        talkingEnded = false;
 
         if (gameObject.activeSelf)
         {
@@ -59,4 +59,5 @@ public class DialogueController : MonoBehaviour
 
     }
     
+
 }

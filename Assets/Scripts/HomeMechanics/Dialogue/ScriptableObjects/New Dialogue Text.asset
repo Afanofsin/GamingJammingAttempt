@@ -17,4 +17,7 @@ MonoBehaviour:
   - 'Hello my name is Uni, now poop your pants
 
 '
-  - Kill yourself
+  - 'Heres a free card
+
+'
+  isRepeatable: 0
