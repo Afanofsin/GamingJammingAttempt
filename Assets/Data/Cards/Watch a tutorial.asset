@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Watch a tutorial
   m_EditorClassIdentifier: 
   <ManaCost>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 21300000, guid: fcd6c7e48e87adc4bb469df6abc70a34, type: 3}
+  <Image>k__BackingField: {fileID: 21300000, guid: b9f6982453d9aa64fa291ebc9c6d234d, type: 3}
   <Description>k__BackingField: Deals 1 Damage
