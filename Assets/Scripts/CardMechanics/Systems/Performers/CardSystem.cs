@@ -84,6 +84,12 @@ public class CardSystem : MonoBehaviour
         SpendManaGA spendManaGA = new(playCardGA.Card.Mana);
         ActionSystem.Instance.AddReaction(spendManaGA); 
 
+        if(playCardGA.Card.ManualTargetEffect != null)
+        {
+            PerformEffectsGA performEffectsGA = new(playCardGA.Card.ManualTargetEffect, new() { playCardGA.ManualTarget });
+            ActionSystem.Instance.AddReaction(performEffectsGA);
+        }
+
         foreach(var effect in playCardGA.Card.OtherEffects)
         {
             List<CombatantView> targets = effect.TargetMode.GetTargets();
@@ -109,6 +115,7 @@ public class CardSystem : MonoBehaviour
     {
         Card card = drawPile.Draw();
         if (card == null) yield break;
+        if (handView.GetMaxCardNumber() == handView.GetCurrentCardNumber()) yield break;
         hand.Add(card);
         CardView cardView = CardViewCreator.Instance.CreateCardView(card, drawPilePos.position, drawPilePos.rotation);
         yield return handView.AddCard(cardView);

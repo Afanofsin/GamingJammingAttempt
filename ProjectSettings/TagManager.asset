@@ -17,7 +17,7 @@ TagManager:
   - 
   - DropArea
   - 
-  - 
+  - EnemyView
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Cards
     uniqueID: 3416471337
+    locked: 0
+  - name: TargetArrow
+    uniqueID: 2645960865
     locked: 0
   m_RenderingLayers:
   - Default
