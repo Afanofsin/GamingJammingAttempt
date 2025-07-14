@@ -1,0 +1,768 @@
+fileFormatVersion: 2
+guid: 4d89c2908040b9a45b76544b0db4478f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8722024563354455737
+    second: House5_0
+  - first:
+      213: -4680712978827466827
+    second: House5_1
+  - first:
+      213: -6769991528051193652
+    second: House5_2
+  - first:
+      213: 2668255441388558444
+    second: House5_3
+  - first:
+      213: 4150439988386182225
+    second: House5_4
+  - first:
+      213: 360274229556788511
+    second: House5_5
+  - first:
+      213: 5616637490323569859
+    second: House5_6
+  - first:
+      213: 8894916061433361479
+    second: House5_7
+  - first:
+      213: -1206232529553113974
+    second: House5_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: -0}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: House5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cecf526bb1b4644ae2cb5e8301fc52
+      internalID: -2103747439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ae440e6df601d458ff897c089e4911
+      internalID: 942807600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3237f1216e7484a46aa4a1a74003552b
+      internalID: -310280693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d023eec2a412e804086a9b2bd13db4ef
+      internalID: -1572356154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_23
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753fcd146687115418fd5f292d195720
+      internalID: 2011513818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_40
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0947164fa500df647ac20121614dc121
+      internalID: 1582374775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfc22351e7425f40a22209b578f5393
+      internalID: 1372957668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_46
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cafc99bc6cea64a975619712e27ec0
+      internalID: -498984640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_63
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d912986333b73b40b299f37271233e6
+      internalID: 401552092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_68
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804b78643f3dc2d47822fc1d3a262ad7
+      internalID: 1845689691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_69
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f287d520278ce4140b9bf53b17aabee3
+      internalID: 1794796664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_70
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeb0c388077a0b49bf8ed0659ab766d
+      internalID: 1073007323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_84
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad154b4c53346344884f3d67db9b7288
+      internalID: 728411498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_89
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadf58aa9b597f14587b5e2a8a270c7d
+      internalID: -386095558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_90
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71b049c9b6a4c4448d375d55ce99d87
+      internalID: 1882605265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_107
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f15fb2857a70148bcfcdcba1f967ac
+      internalID: 1548135451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_108
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44abb9fe6d419834e8a1bc1205b5ec63
+      internalID: -343347084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_109
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2fdfc73db36cb478e73933d661b459
+      internalID: 1685266183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_127
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a623e047d9dfb24899e1918f9737366
+      internalID: 53460541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_128
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2bad63a42441d4f98d5e1485c11230
+      internalID: -1838084521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House5_129
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753333c286fec524e8d518a09bba7085
+      internalID: -1359575636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      House5_0: -2103747439
+      House5_1: 942807600
+      House5_10: 1757475173
+      House5_100: -1282139258
+      House5_101: 778657138
+      House5_102: 1225850679
+      House5_103: -2144989750
+      House5_104: -1633650186
+      House5_105: 1378356820
+      House5_106: -704134386
+      House5_107: 1548135451
+      House5_108: -343347084
+      House5_109: 1685266183
+      House5_11: 1726349585
+      House5_110: -646527691
+      House5_111: -1469124474
+      House5_112: 535130834
+      House5_113: 1991994810
+      House5_114: -548834547
+      House5_115: 363320307
+      House5_116: 1097241886
+      House5_117: -389911755
+      House5_118: 1118352860
+      House5_119: -1543156564
+      House5_12: 1940693017
+      House5_120: -1570200787
+      House5_121: -252835004
+      House5_122: -1951087991
+      House5_123: 1683217291
+      House5_124: 730196901
+      House5_125: -1366629225
+      House5_126: -2065762617
+      House5_127: 53460541
+      House5_128: -1838084521
+      House5_129: -1359575636
+      House5_13: -1058454626
+      House5_130: -1974168071
+      House5_131: -2011786509
+      House5_132: 420638846
+      House5_133: -1691422660
+      House5_134: 358122808
+      House5_135: 548591822
+      House5_136: 1055302575
+      House5_137: 1346007929
+      House5_138: 106150982
+      House5_139: 2101717959
+      House5_14: 580810735
+      House5_140: 980711777
+      House5_141: -1048957018
+      House5_142: 1659957625
+      House5_143: 1993279848
+      House5_144: 1686970622
+      House5_145: 2015834276
+      House5_146: -377230552
+      House5_15: -306018049
+      House5_16: 1207160954
+      House5_17: -310280693
+      House5_18: 1071686753
+      House5_19: 2040978924
+      House5_2: 1576658031
+      House5_20: -1204437461
+      House5_21: -1440786307
+      House5_22: -1572356154
+      House5_23: 2011513818
+      House5_24: -748107870
+      House5_25: 421471762
+      House5_26: -588960270
+      House5_27: -1755206890
+      House5_28: 1731873248
+      House5_29: -1934516770
+      House5_3: 670508447
+      House5_30: -1346318986
+      House5_31: -1675190954
+      House5_32: -1757867368
+      House5_33: -1905381732
+      House5_34: 115930951
+      House5_35: -318523746
+      House5_36: 181222707
+      House5_37: -983974266
+      House5_38: 2063405761
+      House5_39: -1363749955
+      House5_4: 594833887
+      House5_40: 1582374775
+      House5_41: -415649639
+      House5_42: 2009072925
+      House5_43: 2022790047
+      House5_44: 1969425715
+      House5_45: 1372957668
+      House5_46: -498984640
+      House5_47: 14605484
+      House5_48: -63290204
+      House5_49: -522845124
+      House5_5: 504047588
+      House5_50: 700218313
+      House5_51: 2063310625
+      House5_52: -791942015
+      House5_53: 994682314
+      House5_54: 467954824
+      House5_55: -1239548768
+      House5_56: 1705376610
+      House5_57: 1039626028
+      House5_58: -1522542449
+      House5_59: 1132505486
+      House5_6: -1533918443
+      House5_60: -236394090
+      House5_61: -833276749
+      House5_62: 1260635439
+      House5_63: 401552092
+      House5_64: -1337755068
+      House5_65: 409410780
+      House5_66: -1513214860
+      House5_67: -1787789454
+      House5_68: 1845689691
+      House5_69: 1794796664
+      House5_7: -2145555301
+      House5_70: 1073007323
+      House5_71: 1830356300
+      House5_72: 163877480
+      House5_73: -403760190
+      House5_74: -2062605802
+      House5_75: -1599515781
+      House5_76: -1847450865
+      House5_77: 101042473
+      House5_78: 342116768
+      House5_79: -634089785
+      House5_8: 1174291262
+      House5_80: -1372843077
+      House5_81: 71933834
+      House5_82: -1996202309
+      House5_83: 837494120
+      House5_84: 728411498
+      House5_85: 783726245
+      House5_86: 374372954
+      House5_87: -2082790126
+      House5_88: -1140157308
+      House5_89: -386095558
+      House5_9: -1015770751
+      House5_90: 1882605265
+      House5_91: -606697538
+      House5_92: 2069189356
+      House5_93: -1896143106
+      House5_94: 597481716
+      House5_95: 654904457
+      House5_96: -1235249014
+      House5_97: 1275668769
+      House5_98: 1059834017
+      House5_99: -1319540570
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
