@@ -10,16 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c86b1a82db059b4580ff3ce608c83d6, type: 3}
-  m_Name: Watch a tutorial
+  m_Name: AoeAttack
   m_EditorClassIdentifier: 
-  <ManaCost>k__BackingField: 2
+  <ManaCost>k__BackingField: 1
   <Image>k__BackingField: {fileID: 21300000, guid: b9f6982453d9aa64fa291ebc9c6d234d, type: 3}
-  <Description>k__BackingField: Deals 1 Damage
+  <Description>k__BackingField: Deals 12 Damage to every enemy
   <ManualTargetEffect>k__BackingField:
     rid: -2
-  <OtherEffects>k__BackingField: []
+  <OtherEffects>k__BackingField:
+  - <TargetMode>k__BackingField:
+      rid: 7229863221763768506
+    <Effect>k__BackingField:
+      rid: 7229863221763768507
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 7229863221763768506
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 7229863221763768507
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 12

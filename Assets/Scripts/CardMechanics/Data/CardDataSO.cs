@@ -12,5 +12,7 @@ public class CardDataSO : ScriptableObject
     [field: SerializeField]
     public string Description { get; private set; }
     [field: SerializeReference, SR]
-    public List<Effect> Effects { get; private set; }
+    public Effect ManualTargetEffect { get; private set; } = null;
+    [field: SerializeField]
+    public List<AutoTargetEffect> OtherEffects { get; private set; }
 }

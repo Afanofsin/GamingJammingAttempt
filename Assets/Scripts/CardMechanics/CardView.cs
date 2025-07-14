@@ -77,7 +77,8 @@ public class CardView : MonoBehaviour
         RaycastHit[] hits = Physics.RaycastAll(transform.position, Vector3.forward, 100f, _layerMask);
         foreach (RaycastHit hit in hits)
         {
-            if (hit.collider.gameObject != this.gameObject)
+            if (hit.collider.gameObject != this.gameObject &&
+                ManaSystem.Instance.HasEnoughMana(Card.Mana))
             {
                 PlayCardGA playCardGA = new(Card);
                 ActionSystem.Instance.Perform(playCardGA);

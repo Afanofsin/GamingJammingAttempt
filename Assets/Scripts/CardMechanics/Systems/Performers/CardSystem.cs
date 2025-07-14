@@ -69,7 +69,6 @@ public class CardSystem : MonoBehaviour
     {
         foreach(var card in hand)
         {
-            discardPile.Add(card);
             CardView cardView = handView.RemoveCard(card);
             yield return DiscardCard(cardView);
         }
@@ -81,9 +80,14 @@ public class CardSystem : MonoBehaviour
         hand.Remove(playCardGA.Card);
         CardView cardView = handView.RemoveCard(playCardGA.Card);
         yield return DiscardCard(cardView);
-        foreach(var effect in playCardGA.Card.Effects)
+
+        SpendManaGA spendManaGA = new(playCardGA.Card.Mana);
+        ActionSystem.Instance.AddReaction(spendManaGA); 
+
+        foreach(var effect in playCardGA.Card.OtherEffects)
         {
-            PerformEffectsGA performEffectsGA = new(effect);
+            List<CombatantView> targets = effect.TargetMode.GetTargets();
+            PerformEffectsGA performEffectsGA = new(effect.Effect, targets);
             ActionSystem.Instance.AddReaction(performEffectsGA);
         }
     }
@@ -104,6 +108,7 @@ public class CardSystem : MonoBehaviour
     private IEnumerator DrawCard()
     {
         Card card = drawPile.Draw();
+        if (card == null) yield break;
         hand.Add(card);
         CardView cardView = CardViewCreator.Instance.CreateCardView(card, drawPilePos.position, drawPilePos.rotation);
         yield return handView.AddCard(cardView);
@@ -111,6 +116,7 @@ public class CardSystem : MonoBehaviour
 
     private IEnumerator DiscardCard(CardView cardView)
     {
+        discardPile.Add(cardView.Card);
         cardView.transform.DOScale(Vector3.zero, 0.15f);
         Tween tween = cardView.transform.DOMove(discardPilePos.position, 0.15f);
         yield return tween.WaitForCompletion();

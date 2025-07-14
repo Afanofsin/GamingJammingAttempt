@@ -4,12 +4,16 @@ using UnityEngine;
 public class MatchSetupSystem : MonoBehaviour
 {
     [SerializeField]
-    private List<CardDataSO> deckData;
+    private HeroDataSO _heroData;
+    [SerializeField]
+    private List<EnemyDataSO> _enemyDatas;
 
     public static MatchSetupSystem Instance;
     private void Start()
     {
-        CardSystem.Instance.Setup(deckData);
+        HeroSystem.Instance.Setup(_heroData);
+        EnemySystem.Instance.Setup(_enemyDatas);
+        CardSystem.Instance.Setup(_heroData.Deck);
         DrawCardsGA drawCardsGA = new(5);
         ActionSystem.Instance.Perform(drawCardsGA);
     }
