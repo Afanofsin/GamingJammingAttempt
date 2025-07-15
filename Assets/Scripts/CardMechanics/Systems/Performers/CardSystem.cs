@@ -38,13 +38,14 @@ public class CardSystem : MonoBehaviour
         ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
     }
     // Publics
-    public void Setup(List<CardDataSO> deckData)
+    public void Setup(List<CardDataSO> deckData, int cardsDrawn)
     {
         foreach (var cardData in deckData)
         {
             Card card = new(cardData);
             drawPile.Add(card);
         }
+        PileView.Instance.Setup(drawPilePos, discardPilePos, deckData.Count);
     }
 
     // Performers
@@ -116,8 +117,10 @@ public class CardSystem : MonoBehaviour
         Card card = drawPile.Draw();
         if (card == null) yield break;
         if (handView.GetMaxCardNumber() == handView.GetCurrentCardNumber()) yield break;
+
         hand.Add(card);
         CardView cardView = CardViewCreator.Instance.CreateCardView(card, drawPilePos.position, drawPilePos.rotation);
+
         yield return handView.AddCard(cardView);
     }
 

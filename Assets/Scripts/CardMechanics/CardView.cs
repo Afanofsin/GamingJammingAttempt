@@ -41,8 +41,8 @@ public class CardView : MonoBehaviour
         if (!InteractionsSystem.Instance.PlayerCanHover()) return;
         _wrapper.SetActive(false);
         Vector3 pos = new(transform.position.x, -5, 0);
-        //CardViewHover.Instance.ShowAnim(Card, transform.position, pos, transform.rotation);
-        CardViewHover.Instance.Show(Card, pos);
+        CardViewHover.Instance.ShowAnim(Card, transform.position, pos, transform.rotation);
+        //CardViewHover.Instance.Show(Card, pos);
     }
 
     private void OnMouseExit()
@@ -88,6 +88,7 @@ public class CardView : MonoBehaviour
             {
                 PlayCardGA playCardGA = new(Card, target);
                 ActionSystem.Instance.Perform(playCardGA);
+                InteractionsSystem.Instance.PlayerIsDraggin = false;
             }
         }
         else
@@ -100,6 +101,7 @@ public class CardView : MonoBehaviour
                 {
                     PlayCardGA playCardGA = new(Card);
                     ActionSystem.Instance.Perform(playCardGA);
+                    InteractionsSystem.Instance.PlayerIsDraggin = false;
                     return;
                 }
             }
