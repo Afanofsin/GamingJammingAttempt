@@ -8,6 +8,6 @@ public class ManaUI : MonoBehaviour
 
     public void UpdateManaText(int currentMana, int MAX_MANA)
     {
-        _manaText.text = $"{currentMana} / {MAX_MANA}";
+        _manaText.text = $"{currentMana} {MAX_MANA}";
     }
 }

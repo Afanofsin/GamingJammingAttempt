@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb771a7f5e21bb9488fdc25d7920bc6f, type: 3}
   m_Name: DefaultHero
   m_EditorClassIdentifier: 
-  <Image>k__BackingField: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  <Image>k__BackingField: {fileID: 21300000, guid: 49ff09552799397408f1f0b1377e529c, type: 3}
   <Health>k__BackingField: 8
+  <Morale>k__BackingField: 10
   <Deck>k__BackingField:
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
-  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
+  - {fileID: 11400000, guid: 99bb75cc92873164dafec751ad5e326a, type: 2}
+  - {fileID: 11400000, guid: 99bb75cc92873164dafec751ad5e326a, type: 2}
+  - {fileID: 11400000, guid: 99bb75cc92873164dafec751ad5e326a, type: 2}
   - {fileID: 11400000, guid: 2725c77cdfae03048b09a302c691ea5a, type: 2}
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
   - {fileID: 11400000, guid: 2725c77cdfae03048b09a302c691ea5a, type: 2}

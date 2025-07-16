@@ -45,7 +45,7 @@ public class CardSystem : MonoBehaviour
             Card card = new(cardData);
             drawPile.Add(card);
         }
-        PileView.Instance.Setup(drawPilePos, discardPilePos, deckData.Count);
+        //PileView.Instance.Setup(drawPilePos, discardPilePos, deckData.Count);
     }
 
     // Performers
