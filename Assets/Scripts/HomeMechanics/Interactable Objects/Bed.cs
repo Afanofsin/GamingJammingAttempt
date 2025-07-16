@@ -16,7 +16,7 @@ public class Bed : InteractObject, IDoAction
         {
             DoAction();
         }
-        
+
     }
 
     public void Talk(DialogueText dialogueText)
@@ -25,7 +25,6 @@ public class Bed : InteractObject, IDoAction
     }
     public override void DoAction()
     {
-        Debug.Log("Worked");
         didAction = true;
     }
     public void CheckDialogueEnd()

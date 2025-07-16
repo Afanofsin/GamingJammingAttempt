@@ -1,23 +1,26 @@
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class Cat : InteractObject, ITalkable, IDoAction
 {
     [SerializeField] private DialogueText[] dialogueText;
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private AudioClip clip;
-    bool didAction = false;
-    int i = 0;
+    int dialogueIndex = 0;
     public override void Interact()
     {
-        Talk(dialogueText[i]);
-        CheckDialogueEnd();
-        if (i == dialogueText.Length - 1 && !didAction && dialogueController.talkingEnded)
+        if (dialogueController.talkingEnded)
+        {
+            ProgressTalk();
+        }
+
+        Talk(dialogueText[dialogueIndex]);
+
+        if (dialogueIndex == 1 && !dialogueController.talkingEnded)
         {
             DoAction();
         }
-        
+
     }
 
     public void Talk(DialogueText dialogueText)
@@ -26,15 +29,17 @@ public class Cat : InteractObject, ITalkable, IDoAction
     }
     public override void DoAction()
     {
-        didAction = true;
-        SoundFXManager.Instance.PlayFXClip(clip, transform, 0.008f);
+
+        SoundFXManager.Instance.PlayFXClip(clip, gameObject.transform, 0.008f);
+
+
     }
-    public void CheckDialogueEnd()
+    public void ProgressTalk()
     {
-        if (dialogueController.talkingEnded && i < dialogueText.Length - 1)
-        {
-            i++;
-        }
+
+        dialogueIndex++;
+
+
     }
 
 }

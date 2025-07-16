@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49672567a2d7e0047bda820c7f452ebd, type: 3}
+  m_Name: bebebe
+  m_EditorClassIdentifier: 
+  Information:
+    Name: 
+    Icon: {fileID: 0}
+    Description: 
+  Reward:
+    Currency: 10
+  Goals:
+  - {fileID: 4044576770759971649}
+--- !u!114 &4044576770759971649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690b469552235f3458759163d48fb9de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiredAmount: 5
+  GoalCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  Building: 

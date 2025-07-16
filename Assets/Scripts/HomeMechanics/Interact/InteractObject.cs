@@ -6,9 +6,20 @@ public abstract class InteractObject : MonoBehaviour, IInteractable
     [SerializeField] private SpriteRenderer _interactSprite;
     private Transform playerTransform;
     [HideInInspector] public static InteractObject focusObject { get; private set; }
-    void Awake()
+
+    #region StateMachine variables
+    public StateMachine stateMachine { get; set; }
+    public NPCIdleState idleState{ get; set; }
+    #endregion
+    private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        stateMachine = new StateMachine();
+        idleState = new NPCIdleState(this, stateMachine);
+    }
+    private void Start()
+    {
+        stateMachine.Initialize(idleState);
     }
 
     void Update()
@@ -40,6 +51,14 @@ public abstract class InteractObject : MonoBehaviour, IInteractable
     }
     public abstract void Interact();
     public abstract void DoAction();
-    
+    private void AnimationTriggerEvent(AnimationTrigger triggerType)
+    {
+        stateMachine.CurrentNPCState.AnimationTriggerEvent(triggerType);
+    }
+    public enum AnimationTrigger
+    {
+        IdleSound,
+        ActionSound
+    }
 
 }
