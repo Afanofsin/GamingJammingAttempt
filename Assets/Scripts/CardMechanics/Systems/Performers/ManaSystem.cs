@@ -16,6 +16,7 @@ public class ManaSystem : MonoBehaviour
     {
         ActionSystem.AttachPerformer<SpendManaGA>(SpendManaPerformer);
         ActionSystem.AttachPerformer<RefillManaGA>(RefillManaPerformer);
+        ActionSystem.AttachPerformer<AddManaGA>(AddManaPerformer);
         ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
     }
 
@@ -23,6 +24,7 @@ public class ManaSystem : MonoBehaviour
     {
         ActionSystem.DetachPerformer<SpendManaGA>();
         ActionSystem.DetachPerformer<RefillManaGA>();
+        ActionSystem.DetachPerformer<AddManaGA>();
         ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
     }
 
@@ -38,6 +40,13 @@ public class ManaSystem : MonoBehaviour
     private IEnumerator RefillManaPerformer(RefillManaGA refillManaGA)
     {
         currentMana = MAX_MANA;
+        _manaUI.UpdateManaText(currentMana, MAX_MANA);
+        yield return null;
+    }
+
+    private IEnumerator AddManaPerformer(AddManaGA addManaGA)
+    {
+        currentMana += addManaGA.Amount;
         _manaUI.UpdateManaText(currentMana, MAX_MANA);
         yield return null;
     }

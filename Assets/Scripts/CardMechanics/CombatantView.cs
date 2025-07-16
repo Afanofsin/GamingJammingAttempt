@@ -121,6 +121,13 @@ public class CombatantView : MonoBehaviour
 
     }
     
+    public void AddMorale(int amount)
+    {
+        CurrentMorale += amount;
+        UpdateMoraleText();
+        ManageMoraleSprite();
+    }
+
     public int GetStatusEffectStacks(StatusEffectType type)
     {
         if(statusEffects.ContainsKey(type)) return statusEffects[type];
