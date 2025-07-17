@@ -1,27 +1,27 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public abstract class InteractObject : MonoBehaviour, IInteractable
+public abstract class InteractObject : MonoBehaviour, IInteractable, IDoAction
 {
     [SerializeField] private SpriteRenderer _interactSprite;
     private Transform playerTransform;
     [HideInInspector] public static InteractObject focusObject { get; private set; }
     private const int INTERACT_RANGE = 3;
 
-    #region StateMachine variables
-    public StateMachine stateMachine { get; set; }
+    /*#region StateMachine variables
+    public StateMachine stateMachine { get; set; }     UNUSED
     public NPCIdleState idleState{ get; set; }
-    #endregion
+    #endregion*/
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        stateMachine = new StateMachine();
-        idleState = new NPCIdleState(this, stateMachine);
+        /*stateMachine = new StateMachine();
+       idleState = new NPCIdleState(this, stateMachine);     UNUSED    */
     }
-    private void Start()
+    /*private void Start()
     {
-        stateMachine.Initialize(idleState);
-    }
+        stateMachine.Initialize(idleState);     UNUSED
+    }*/
 
     void Update()
     {
@@ -52,14 +52,15 @@ public abstract class InteractObject : MonoBehaviour, IInteractable
     }
     public abstract void Interact();
     public abstract void DoAction();
-    private void AnimationTriggerEvent(AnimationTrigger triggerType)
+    
+    /* private void AnimationTriggerEvent(AnimationTrigger triggerType)
     {
-        stateMachine.CurrentNPCState.AnimationTriggerEvent(triggerType);
+        stateMachine.CurrentNPCState.AnimationTriggerEvent(triggerType);     UNUSED
     }
     public enum AnimationTrigger
     {
         IdleSound,
         ActionSound
-    }
+    } */
 
 }

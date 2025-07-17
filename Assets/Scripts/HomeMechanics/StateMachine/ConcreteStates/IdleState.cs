@@ -18,8 +18,5 @@ public class NPCIdleState : NPCState
     {
         base.FrameUpdate();
     }
-    public override void AnimationTriggerEvent(InteractObject.AnimationTrigger animationTrigger)
-    {
-        base.AnimationTriggerEvent(animationTrigger);
-    }
+
 }

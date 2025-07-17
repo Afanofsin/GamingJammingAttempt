@@ -12,5 +12,4 @@ public class NPCState
     public virtual void EnterState() { }
     public virtual void ExitState() { }
     public virtual void FrameUpdate() { }
-    public virtual void AnimationTriggerEvent(InteractObject.AnimationTrigger animationTrigger) { }
 }

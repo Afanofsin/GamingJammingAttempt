@@ -2,14 +2,10 @@ using UnityEngine;
 
 public class Plant : InteractObject, IInteractable
 {
-    public Quest quest;
     [SerializeField] private DialogueText[] dialogueText;
     [SerializeField] private DialogueController dialogueController;
     bool didAction = false;
     int i = 0;
-    private void Start() {
-        quest.Initialize();
-    }
     public override void Interact()
     {
         Talk(dialogueText[i]);

@@ -10,8 +10,10 @@ public class Bed : InteractObject, IDoAction
     int i = 0;
     public override void Interact()
     {
+
         Talk(dialogueText[i]);
-        CheckDialogueEnd();
+
+        ProgressTalk();
         if (i == 4 && !didAction && dialogueController.talkingEnded)
         {
             DoAction();
@@ -28,9 +30,9 @@ public class Bed : InteractObject, IDoAction
         EventManager.Instance.OnCLick();
         didAction = true;
     }
-    public void CheckDialogueEnd()
+    public void ProgressTalk()
     {
-        if (dialogueController.talkingEnded && i < dialogueText.Length - 1)
+        if (dialogueController.talkingEnded && i < dialogueText.Length - 1 && !dialogueController.isTyping)
         {
             i++;
         }

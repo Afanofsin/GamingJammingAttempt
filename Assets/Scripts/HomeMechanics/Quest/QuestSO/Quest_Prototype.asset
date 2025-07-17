@@ -16,7 +16,6 @@ MonoBehaviour:
   GoalCompleted:
     m_PersistentCalls:
       m_Calls: []
-  collectedCard: 1
 --- !u!114 &-2103031222711988007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,7 +32,6 @@ MonoBehaviour:
   GoalCompleted:
     m_PersistentCalls:
       m_Calls: []
-  collectedCard: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +49,6 @@ MonoBehaviour:
     Icon: {fileID: 0}
     Description: Collect
   Reward:
-    Currency: 10
+    Currency: 0
   Goals:
   - {fileID: -5013719925733366524}
