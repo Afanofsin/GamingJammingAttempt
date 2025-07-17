@@ -2,13 +2,19 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEditor;
+using System.Collections;
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI objectName;
     [SerializeField] private TextMeshProUGUI objectDialogueText;
+    [SerializeField] private float typeSpeed = 10;
+    [HideInInspector] public bool talkingEnded;
+    [HideInInspector] public bool isTyping = false;
     public Queue<string> paragpaphs = new Queue<string>();
-    public bool talkingEnded;
     private string p;
+    private Coroutine typeDialogueCoroutine;
+    private const string HTML_ALPHA = "<color=#00000000>";
+    private const float MAX_TYPE_TIME = 0.1f;
     public void DisplayNextParagraph(DialogueText dialogueText)
     {
 
@@ -18,15 +24,22 @@ public class DialogueController : MonoBehaviour
             {
                 StartTalking(dialogueText);
             }
-            else
+            else if(talkingEnded && !isTyping)
             {
                 StopTalking();
                 return;
             }
 
         }
-        p = paragpaphs.Dequeue();
-        objectDialogueText.text = p;
+        if (!isTyping)
+        {
+            p = paragpaphs.Dequeue();
+            typeDialogueCoroutine = StartCoroutine(TypeDialogueText(p));
+        }
+        else
+        {
+            FInishTypingEarly();
+        }
         if (paragpaphs.Count == 0)
         {
             talkingEnded = true;
@@ -58,6 +71,26 @@ public class DialogueController : MonoBehaviour
         }
 
     }
-    
-
+    private IEnumerator TypeDialogueText(string p) {
+        isTyping = true;
+        objectDialogueText.text = "";
+        string originalText = p;
+        string displayText = "";
+        int aplhaText = 0;
+        foreach (char character in p.ToCharArray())
+        {
+            aplhaText++;
+            objectDialogueText.text = originalText;
+            displayText = objectDialogueText.text.Insert(aplhaText, HTML_ALPHA);
+            objectDialogueText.text = displayText;
+            yield return new WaitForSeconds(MAX_TYPE_TIME/typeSpeed);
+        }
+        isTyping = false;
+    }
+    private void FInishTypingEarly()
+    {
+        StopCoroutine(typeDialogueCoroutine);
+        objectDialogueText.text = p;
+        isTyping = false;
+    }
 }

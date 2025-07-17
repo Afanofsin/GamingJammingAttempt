@@ -47,5 +47,8 @@ TagManager:
   - name: Shop
     uniqueID: 1799216165
     locked: 0
+  - name: Globat_Lit
+    uniqueID: 2506577639
+    locked: 0
   m_RenderingLayers:
   - Default
