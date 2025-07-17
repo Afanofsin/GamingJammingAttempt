@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Card")]
 public class CardDataSO : ScriptableObject
 {
+    [field: Header("Battle Data")]
     [field: SerializeField]
     public int ManaCost { get; private set; }
     [field: SerializeField]
@@ -15,4 +16,11 @@ public class CardDataSO : ScriptableObject
     public Effect ManualTargetEffect { get; private set; } = null;
     [field: SerializeField]
     public List<AutoTargetEffect> OtherEffects { get; private set; }
+
+    [field: Space(10)]
+    [field: Header("Game Progression Data")]
+    [field: SerializeField]
+    public int ID { get; private set; }
+    [field: SerializeField]
+    public int DeckLimit { get; private set; }
 }

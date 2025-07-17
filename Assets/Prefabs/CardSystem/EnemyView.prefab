@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthText: {fileID: 2684439689870224971}
-  _healthMask: {fileID: 3045948679310763281}
+  _healthMask: {fileID: 3684694835695935324}
   _moraleText: {fileID: 319022254733655738}
   _moraleSpriteRenderer: {fileID: 9218965287984636076}
   _spriteRenderer: {fileID: 813834151915698412}
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!331 &3045948679310763281 stripped
-SpriteMask:
-  m_CorrespondingSourceObject: {fileID: 7865238664184819535, guid: 153e8adee805228408b6f47dccd29187, type: 3}
+--- !u!4 &3684694835695935324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8377039064907076866, guid: 153e8adee805228408b6f47dccd29187, type: 3}
   m_PrefabInstance: {fileID: 5144116600601053790}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6317087621467989011 stripped

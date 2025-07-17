@@ -8,7 +8,7 @@ public class CombatantView : MonoBehaviour
     [SerializeField]
     private TMP_Text _healthText;
     [SerializeField]
-    private SpriteMask _healthMask;
+    private Transform _healthMask;
     [SerializeField]
     private TMP_Text _moraleText;
     [SerializeField]
@@ -39,6 +39,8 @@ public class CombatantView : MonoBehaviour
     private void UpdateHealthText()
     {
         _healthText.text = $"{CurrentHealth}/{MaxHealth}";
+        float hpRatio = (float)CurrentHealth / (float)MaxHealth  * 3f;
+        _healthMask.transform.localScale = new Vector3(hpRatio, 0.625f, 0.01f);
     }
 
     private void UpdateMoraleText()

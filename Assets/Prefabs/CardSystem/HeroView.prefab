@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthText: {fileID: 8611185297170192685}
-  _healthMask: {fileID: 8684482576144568951}
+  _healthMask: {fileID: 7053396391511894074}
   _moraleText: {fileID: 6245786553556011484}
   _moraleSpriteRenderer: {fileID: 3256173854320678858}
   _spriteRenderer: {fileID: 6452331236559802250}
@@ -325,6 +325,11 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5487850629319635634, guid: 153e8adee805228408b6f47dccd29187, type: 3}
   m_PrefabInstance: {fileID: 1559241631512526136}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &7053396391511894074 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8377039064907076866, guid: 153e8adee805228408b6f47dccd29187, type: 3}
+  m_PrefabInstance: {fileID: 1559241631512526136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8611185297170192685 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7071383036640142357, guid: 153e8adee805228408b6f47dccd29187, type: 3}
@@ -336,8 +341,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!331 &8684482576144568951 stripped
-SpriteMask:
-  m_CorrespondingSourceObject: {fileID: 7865238664184819535, guid: 153e8adee805228408b6f47dccd29187, type: 3}
-  m_PrefabInstance: {fileID: 1559241631512526136}
-  m_PrefabAsset: {fileID: 0}
