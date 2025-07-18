@@ -57,4 +57,14 @@ public class HandView : MonoBehaviour
     {
         return cards.Where(cardView => cardView.Card == card).FirstOrDefault();
     }
+
+    public int GetMaxCardNumber()
+    {
+        return maxHandSize;
+    }
+
+    public int GetCurrentCardNumber()
+    {
+        return cards.Count();
+    }
 }
