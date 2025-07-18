@@ -820,8 +820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statusEffectUIPrefab: {fileID: 1270217010949451036, guid: 560dd7cac43c46c41b1d273367b37d01, type: 3}
-  shieldSprite: {fileID: 21300000, guid: 192e4c45358fcbd419b587621f2bb39b, type: 3}
-  burnSprite: {fileID: 21300000, guid: 9b32075a292452f479c9f69ac8a08b9e, type: 3}
+  shieldSprite: {fileID: 864074389, guid: cf491e19a7ccc784e8a6b2b5fa2ee0b4, type: 3}
+  burnSprite: {fileID: -1225663973, guid: cf491e19a7ccc784e8a6b2b5fa2ee0b4, type: 3}
 --- !u!222 &2661485608009734342
 CanvasRenderer:
   m_ObjectHideFlags: 0

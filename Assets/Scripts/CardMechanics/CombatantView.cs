@@ -27,6 +27,7 @@ public class CombatantView : MonoBehaviour
     public int CurrentMorale { get; private set; }
 
     private Dictionary<StatusEffectType, int> statusEffects = new();
+    private Tween _jiggleTween;
 
     protected void SetupBase(int health, int morale, Sprite image)
     {
@@ -38,7 +39,7 @@ public class CombatantView : MonoBehaviour
 
         ManageMoraleSprite();
         UpdateMoraleText();
-        StartCoroutine(JiggleBars());
+        StartJiggling();
     }
     private void UpdateHealthText()
     {
@@ -63,14 +64,21 @@ public class CombatantView : MonoBehaviour
         }
     }
 
-    private IEnumerator JiggleBars()
+    private void StartJiggling()
     {
-        Tween up = barsParent.transform.DOMoveY(barsParent.transform.position.y + 0.0625f, 1.15f);
-        yield return up.WaitForCompletion();
-        Tween down = barsParent.transform.DOMoveY(barsParent.transform.position.y - 0.0625f, 1.15f);
-        yield return down.WaitForCompletion();
-        StartCoroutine(JiggleBars());
-        yield break;
+        StopJiggling();
+
+        Vector3 originalPos = barsParent.transform.position;
+        _jiggleTween = barsParent.transform
+            .DOMoveY(originalPos.y + 0.0625f, 1.15f)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine)
+            .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
+    }
+
+    private void StopJiggling()
+    {
+        _jiggleTween?.Kill();
     }
 
     public void Damage(int damageAmount)

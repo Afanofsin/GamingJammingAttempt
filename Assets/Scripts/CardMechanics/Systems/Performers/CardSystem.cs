@@ -16,8 +16,8 @@ public class CardSystem : MonoBehaviour
 
     public static CardSystem Instance;  
 
-    private readonly List<Card> drawPile = new();
-    private readonly List<Card> discardPile = new();
+    public readonly List<Card> drawPile = new();
+    public readonly List<Card> discardPile = new();
     private readonly List<Card> hand = new();
 
     private void OnEnable()
@@ -55,7 +55,7 @@ public class CardSystem : MonoBehaviour
         }
         if(notDrawnAmount > 0)
         {
-            RefillDeck();
+            yield return RefillDeck();
             for (int i = 0; i < notDrawnAmount; i++)
             {
                 yield return DrawCard();
@@ -107,22 +107,31 @@ public class CardSystem : MonoBehaviour
         hand.Add(card);
         CardView cardView = CardViewCreator.Instance.CreateCardView(card, drawPilePos.position, drawPilePos.rotation);
 
+        PileView.Instance.OnCardRemovedFromDraw();
+
+        Debug.Log("Card removed from Draw");
         yield return handView.AddCard(cardView);
     }
 
     private IEnumerator DiscardCard(CardView cardView)
     {
         discardPile.Add(cardView.Card);
+
+        Debug.Log($"CardSystem: Added card to logical discard pile. Count is now: {discardPile.Count}");
+
         cardView.transform.DOScale(Vector3.zero, 0.15f);
         Tween tween = cardView.transform.DOMove(discardPilePos.position, 0.15f);
         yield return tween.WaitForCompletion();
+
+        PileView.Instance.ShowCardAddedToDiscard();
         Destroy(cardView);
     }
 
-    private void RefillDeck()
+    private IEnumerator RefillDeck()
     {
         drawPile.AddRange(discardPile);
         discardPile.Clear();
+        yield return PileView.Instance.RepopulateDrawDeck();
     }
 
     private void Awake()

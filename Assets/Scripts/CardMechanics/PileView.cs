@@ -15,10 +15,10 @@ public class PileView : MonoBehaviour
     [SerializeField]
     private int MAX_CARDS_VISIBLE = 8;
     [SerializeField]
-    private float cardSpacing = 0.05f;
+    private float cardSpacing = 0.0625f;
 
-    private readonly List<PileCardView> drawPile = new();
-    private readonly List<PileCardView> discardPile = new();
+    private readonly List<PileCardView> drawPileVisuals = new();
+    private readonly List<PileCardView> discardPileVisuals = new();
 
     private Transform drawPos;
     private Transform discardPos;
@@ -37,119 +37,229 @@ public class PileView : MonoBehaviour
     {
         drawPos = drawPilePos;
         discardPos = discardPilePos;
+
+        InitializeVisualPools();
+
         SetupDrawDeckGA setupDrawDeckGA = new(drawPileCount);
         ActionSystem.Instance.Perform(setupDrawDeckGA);
+    }
+
+    private void InitializeVisualPools()
+    {
+        // Clear existing visuals if any
+        ClearVisualPools();
+
+        // Create fixed visual cards for draw pile
+        for (int i = 0; i < MAX_CARDS_VISIBLE; i++)
+        {
+            PileCardView visualCard = CreatePileCardView(drawPos);
+            drawPileVisuals.Add(visualCard);
+            visualCard.gameObject.SetActive(false);
+        }
+
+        // Create fixed visual cards for discard pile
+        for (int i = 0; i < MAX_CARDS_VISIBLE; i++)
+        {
+            PileCardView visualCard = CreatePileCardView(discardPos);
+            discardPileVisuals.Add(visualCard);
+            visualCard.gameObject.SetActive(false);
+        }
+    }
+
+    private void ClearVisualPools()
+    {
+        foreach (var card in drawPileVisuals)
+        {
+            if (card != null) Destroy(card.gameObject);
+        }
+        foreach (var card in discardPileVisuals)
+        {
+            if (card != null) Destroy(card.gameObject);
+        }
+        drawPileVisuals.Clear();
+        discardPileVisuals.Clear();
     }
 
     private IEnumerator SetupDrawPilePerformer(SetupDrawDeckGA setupDrawDeckGA)
     {
         for (int i = 0; i < setupDrawDeckGA.CardAmount; i++)
         {
-            yield return AddCardToDraw();
+            //yield return AddCardToDraw();
+            yield return ShowCardAddedToDraw();
         }
 
-       yield return new WaitForSeconds(0.5f);
+       yield return new WaitForSeconds(0.15f);
     }
 
-    public IEnumerator AddCardToDiscard()
+    public void ShowCardAddedToDiscard()
     {
-        yield return new WaitForSeconds(0.15f);
-        PileCardView pileCardView = CreatePileCardView(discardPos, Quaternion.identity);
-        discardPile.Add(pileCardView);
-        yield return UpdateDiscardPile(discardPile.Count);
+        UpdateDiscardPileVisuals();
     }
 
-    public PileCardView RemoveCardFromDiscard()
+    public void OnCardRemovedFromDiscard()
     {
-        PileCardView pileCardView = discardPile.Last();
-        if (pileCardView == null) return null;
-        discardPile.Remove(pileCardView);
-        StartCoroutine(UpdateDiscardPile(discardPile.Count));
-        return pileCardView;
+        UpdateDiscardPileVisuals();
     }
 
-    public PileCardView CreatePileCardView(Transform parent, Quaternion rotation)
+    public IEnumerator ShowCardAddedToDraw()
     {
-        PileCardView pileCardView = Instantiate(cardBackPrefab, Vector3.zero, rotation);
-        pileCardView.transform.parent = parent;
-        pileCardView.transform.localScale = Vector3.one;
-        pileCardView.transform.DOScale(Vector3.one, 0.15f);
-        return pileCardView;
-    }
-    public IEnumerator AddCardToDraw()
-    {
-        yield return new WaitForSeconds(0.15f);
-        PileCardView pileCardView = CreatePileCardView(drawPos, Quaternion.identity);
-        drawPile.Add(pileCardView);
-        yield return UpdateDrawPile(drawPile.Count, 0.05f);
-    }
-    public PileCardView RemoveCardFromDraw()
-    {
-        PileCardView pileCardView = drawPile.Last();
-        if (pileCardView == null) return null;
-        drawPile.Remove(pileCardView);
-        StartCoroutine(UpdateDrawPile(drawPile.Count, 0.05f));
-        return pileCardView;
+        yield return UpdateDrawPileVisuals(0.05f);
     }
 
-    public IEnumerator UpdateDrawPile(int count, float duration)
+    public void OnCardRemovedFromDraw()
     {
-        if (count == 0) yield break;
+        StartCoroutine(UpdateDrawPileVisuals(0.05f));
+    }
 
-        int visibleCards = Mathf.Min(MAX_CARDS_VISIBLE, count);
+    private IEnumerator UpdateDrawPileVisuals(float duration)
+    {
+        int cardCount = CardSystem.Instance.drawPile.Count;
+        int visibleCards = Mathf.Min(MAX_CARDS_VISIBLE, cardCount);
 
-        for(int i = 0; i < visibleCards; i++)
+        // Update visual cards
+        for (int i = 0; i < MAX_CARDS_VISIBLE; i++)
         {
-            Vector3 endPos = drawPos.position;
-            endPos.x += cardSpacing * i;
-            drawPile[i].transform.position = endPos;
-            drawPile[i].transform.rotation = Quaternion.identity;
+            PileCardView visualCard = drawPileVisuals[i];
 
-            if (i < visibleCards - 1)
+            if (i < visibleCards)
             {
-                drawPile[i].TurnOffAnimation();
-                drawPile[i].MakeSpriteOnBottom();
+                visualCard.gameObject.SetActive(true);
+
+                Vector3 endPos = drawPos.position;
+                endPos.x += cardSpacing * i;
+                visualCard.transform.position = endPos;
+                visualCard.transform.rotation = Quaternion.identity;
+
+                if (i < visibleCards - 1)
+                {
+                    visualCard.TurnOffAnimation();
+                    visualCard.MakeSpriteOnBottom();
+                }
+                else
+                {
+                    // Top card
+                    visualCard.TurnOnAnimation();
+                    visualCard.MakeSpriteOnTop();
+                }
+            }
+            else
+            {
+                // Hide this visual card
+                visualCard.gameObject.SetActive(false);
             }
         }
 
-        for (int i = visibleCards; i < drawPile.Count; i++)
-        {
-            drawPile[i].gameObject.SetActive(false);
-        }
-
-        if (visibleCards > 0)
-        {
-            drawPile[visibleCards - 1].TurnOnAnimation();
-            drawPile[visibleCards - 1].MakeSpriteOnTop();
-        }
         yield return new WaitForSeconds(duration);
     }
 
-    public IEnumerator UpdateDiscardPile(int count)
+    private void UpdateDiscardPileVisuals()
     {
-        if (count == 0) yield break;
+        // Get actual count from CardSystem
+        int cardCount = CardSystem.Instance.discardPile.Count;
+        int visibleCards = Mathf.Min(MAX_CARDS_VISIBLE, cardCount);
 
-        int visibleCards = Mathf.Min(MAX_CARDS_VISIBLE, count);
-
-        for (int i = 0; i < visibleCards; i++)
+        Debug.Log($"PileView: Updating discard visuals. Logical count is: {cardCount}");
+        if (cardCount == 0)
         {
-            Vector3 endPos = discardPos.position;
-            endPos.x += cardSpacing * i;
-            discardPile[i].transform.position = endPos;
-            discardPile[i].transform.rotation = Quaternion.identity;
+            Debug.LogWarning("PileView: Update called, but discard pile is empty. No cards will be shown.");
+        }
 
-            if (i < visibleCards - 1)
+        // Update visual cards
+        for (int i = 0; i < MAX_CARDS_VISIBLE; i++)
+        {
+            PileCardView visualCard = discardPileVisuals[i];
+
+            if (i < visibleCards)
             {
-                discardPile[i].TurnOffAnimation();
-                discardPile[i].MakeSpriteOnBottom();
+                Debug.Log($"PileView: Activating visual card at index {i}");
+                visualCard.gameObject.SetActive(true);
+
+                Vector3 endPos = discardPos.position;
+                endPos.x -= cardSpacing * i;
+                visualCard.transform.position = endPos;
+                visualCard.transform.rotation = Quaternion.identity;
+
+                if (i < visibleCards - 1)
+                {
+                    visualCard.TurnOffAnimation();
+                    visualCard.MakeSpriteOnBottom();
+                }
+                else
+                {
+                    // Top card
+                    visualCard.TurnOnAnimation();
+                    visualCard.MakeSpriteOnTop();
+                }
+            }
+            else
+            {
+                // Hide this visual card
+                visualCard.gameObject.SetActive(false);
             }
         }
+    }
 
-        if (visibleCards > 0)
+    public PileCardView CreatePileCardView(Transform parent)
+    {
+        PileCardView pileCardView = Instantiate(cardBackPrefab, Vector3.zero, Quaternion.identity);
+        pileCardView.transform.parent = parent;
+        pileCardView.transform.localScale = Vector3.one;
+        return pileCardView;
+    }
+
+    public IEnumerator RepopulateDrawDeck()
+    {
+        List<PileCardView> cardsToAnimate = discardPileVisuals.Where(card => card.gameObject.activeInHierarchy).ToList();
+
+        if (cardsToAnimate.Count == 0)
         {
-            discardPile[visibleCards - 1].TurnOnAnimation();
-            discardPile[visibleCards - 1].MakeSpriteOnTop();
+            // No cards to animate, so just update the visuals and exit.
+            UpdateDiscardPileVisuals();
+            StartCoroutine(UpdateDrawPileVisuals(0f)); // Use StartCoroutine as it returns IEnumerator
+            yield break; // Exit the coroutine
         }
+
+        Vector3 offScreenRight = discardPos.position + new Vector3(5f, 0, 0); 
+        Vector3 offScreenLeft = drawPos.position - new Vector3(5f, 0, 0);
+
+        Sequence refillSequence = DOTween.Sequence();
+        refillSequence.AppendInterval(0.2f);
+
+        for (int i = 0; i < cardsToAnimate.Count; i++)
+        {
+            PileCardView card = cardsToAnimate[i];
+            card.MakeSpriteOnTop(); // Ensure it's visible
+
+            // Create a mini-sequence for each individual card's journey.
+            Sequence cardJourney = DOTween.Sequence();
+
+            cardJourney.Append(
+                // Part 1: Fly from discard pile to off-screen right
+                card.transform.DOMove(offScreenRight, 0.35f).SetEase(Ease.InQuad)
+            ).AppendCallback(() => {
+                // Part 2: Instantly teleport the card to off-screen left
+                // This happens between animations, so the player won't see the pop.
+                card.transform.position = offScreenLeft;
+            }).Append(
+                // Part 3: Fly from off-screen left to the draw pile
+                card.transform.DOMove(drawPos.position, 0.35f).SetEase(Ease.OutQuad)
+            );
+
+            // Add this card's personal journey to the main sequence.
+            // We use Join so all cards can perform their journey at the same time,
+            // but the delay still creates the cascade effect.
+            refillSequence.Join(cardJourney.SetDelay(i * 0.06f));
+        }
+
+        // 4. Clean up AFTER the animation is done (same as before).
+        refillSequence.AppendCallback(() => {
+            UpdateDiscardPileVisuals();
+            StartCoroutine(UpdateDrawPileVisuals(0f));
+        });
+
+        // 5. Wait for the entire sequence to complete (same as before).
+        yield return refillSequence.WaitForCompletion();
+
     }
 
     private void Awake()
