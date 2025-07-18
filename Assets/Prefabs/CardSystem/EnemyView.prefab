@@ -227,6 +227,7 @@ MonoBehaviour:
   _healthMask: {fileID: 3684694835695935324}
   _moraleText: {fileID: 319022254733655738}
   _moraleSpriteRenderer: {fileID: 9218965287984636076}
+  barsParent: {fileID: 5137264194604545363}
   _spriteRenderer: {fileID: 813834151915698412}
   statusEffectsUI: {fileID: 8182441189976978911}
   _attackText: {fileID: 1691566523287779920}
@@ -414,6 +415,11 @@ MonoBehaviour:
 --- !u!4 &3684694835695935324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8377039064907076866, guid: 153e8adee805228408b6f47dccd29187, type: 3}
+  m_PrefabInstance: {fileID: 5144116600601053790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5137264194604545363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 11444104285699853, guid: 153e8adee805228408b6f47dccd29187, type: 3}
   m_PrefabInstance: {fileID: 5144116600601053790}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6317087621467989011 stripped

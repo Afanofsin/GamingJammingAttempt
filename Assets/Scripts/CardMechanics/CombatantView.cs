@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,7 +14,9 @@ public class CombatantView : MonoBehaviour
     private TMP_Text _moraleText;
     [SerializeField]
     private SpriteRenderer _moraleSpriteRenderer;
-
+    [SerializeField]
+    private Transform barsParent;
+ 
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
@@ -35,6 +38,7 @@ public class CombatantView : MonoBehaviour
 
         ManageMoraleSprite();
         UpdateMoraleText();
+        StartCoroutine(JiggleBars());
     }
     private void UpdateHealthText()
     {
@@ -57,6 +61,16 @@ public class CombatantView : MonoBehaviour
             _moraleSpriteRenderer.enabled = false;
             _moraleText.text = "";
         }
+    }
+
+    private IEnumerator JiggleBars()
+    {
+        Tween up = barsParent.transform.DOMoveY(barsParent.transform.position.y + 0.0625f, 1.15f);
+        yield return up.WaitForCompletion();
+        Tween down = barsParent.transform.DOMoveY(barsParent.transform.position.y - 0.0625f, 1.15f);
+        yield return down.WaitForCompletion();
+        StartCoroutine(JiggleBars());
+        yield break;
     }
 
     public void Damage(int damageAmount)

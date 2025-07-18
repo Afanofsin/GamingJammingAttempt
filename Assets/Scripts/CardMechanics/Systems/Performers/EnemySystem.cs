@@ -39,13 +39,20 @@ public class EnemySystem : MonoBehaviour
         foreach(var enemy in enemyBoardView.EnemyViews)
         {
             int burnStacks = enemy.GetStatusEffectStacks(StatusEffectType.BURN);
-            if(burnStacks > 0)
+            if (burnStacks > 0)
             {
                 ApplyBurnGA applyBurnGA = new(burnStacks, enemy);
                 ActionSystem.Instance.AddReaction(applyBurnGA);
+                if (enemy == null || enemy.CurrentHealth <= 0)
+                {
+                    Debug.Log("EnemyDiedByBurn");
+                    continue;
+
+                }
+                Debug.Log("Enemy did not die by burn");
+                AttackHeroGA attackHeroGA = new(enemy);
+                ActionSystem.Instance.AddReaction(attackHeroGA);
             }
-            AttackHeroGA attackHeroGA = new(enemy);
-            ActionSystem.Instance.AddReaction(attackHeroGA);
         }
         yield return null;
     }

@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: d1511da346d0f334ea4902678fd76195
+guid: cf491e19a7ccc784e8a6b2b5fa2ee0b4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5327685319595075518
-    second: buttonsbattle_0
+      213: 6609894105642088411
+    second: effects_0
   - first:
-      213: -1131652944042083128
-    second: buttonsbattle_1
-  - first:
-      213: 7984162780772613441
-    second: buttonsbattle_2
+      213: 1957107745717523172
+    second: effects_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,9 +52,9 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: -0}
-  spritePixelsToUnits: 16
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,67 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_Green
+      name: effects_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 34
-        width: 32
-        height: 13
+        x: 1
+        y: 0
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 56b25af22c3bc3643932c4b2a4982cb5
-      internalID: -472940466
+      spriteID: bd7beb91baf0bbb50800000000000000
+      internalID: 6609894105642088411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button_Yellow
+      name: effects_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
-        width: 32
-        height: 13
+        x: 15
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7ded5d1c9273b4940a6168b795e4fd6d
-      internalID: -506826261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button_Red
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2
-        width: 32
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7d60fa9a8d0c964c931d3e09c59f04e
-      internalID: -174386269
+      spriteID: 4e298a2202b092b10800000000000000
+      internalID: 1957107745717523172
       vertices: []
       indices: 
       edges: []
@@ -188,21 +163,18 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Button_Green: -472940466
-      Button_Red: -174386269
-      Button_Yellow: -506826261
+      effects_0: 6609894105642088411
+      effects_1: 1957107745717523172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

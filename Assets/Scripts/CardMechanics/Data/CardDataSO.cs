@@ -23,4 +23,9 @@ public class CardDataSO : ScriptableObject
     public int ID { get; private set; }
     [field: SerializeField]
     public int DeckLimit { get; private set; }
+
+    public void SetID(int id)
+    {
+        ID = id;
+    }
 }

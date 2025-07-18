@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,9 +14,23 @@ public class MatchSetupSystem : MonoBehaviour
     public static MatchSetupSystem Instance;
     private void Start()
     {
+        /*HeroSystem.Instance.Setup(_heroData);
+        EnemySystem.Instance.Setup(_enemyDatas);
+        CardSystem.Instance.Setup(_heroData.Deck, cardsToDrawAtStart);
+        DrawCardsGA drawCardsGA = new(cardsToDrawAtStart);
+        ActionSystem.Instance.Perform(drawCardsGA);*/
+
+        StartCoroutine(MatchSetup());
+    }
+
+    private IEnumerator MatchSetup()
+    {
         HeroSystem.Instance.Setup(_heroData);
         EnemySystem.Instance.Setup(_enemyDatas);
         CardSystem.Instance.Setup(_heroData.Deck, cardsToDrawAtStart);
+
+        yield return new WaitUntil(() => !ActionSystem.Instance.isPerforming);
+
         DrawCardsGA drawCardsGA = new(cardsToDrawAtStart);
         ActionSystem.Instance.Perform(drawCardsGA);
     }

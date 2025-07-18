@@ -23,21 +23,32 @@ public class PileView : MonoBehaviour
     private Transform drawPos;
     private Transform discardPos;
 
+    private void OnEnable()
+    {
+        ActionSystem.AttachPerformer<SetupDrawDeckGA>(SetupDrawPilePerformer);
+    }
+
+    private void OnDisable()
+    {
+        ActionSystem.DetachPerformer<SetupDrawDeckGA>();
+    }
+
     public void Setup(Transform drawPilePos, Transform discardPilePos, int drawPileCount)
     {
         drawPos = drawPilePos;
         discardPos = discardPilePos;
-        StartCoroutine(SetupDrawPile(drawPileCount));
+        SetupDrawDeckGA setupDrawDeckGA = new(drawPileCount);
+        ActionSystem.Instance.Perform(setupDrawDeckGA);
     }
 
-    private IEnumerator SetupDrawPile(int count)
+    private IEnumerator SetupDrawPilePerformer(SetupDrawDeckGA setupDrawDeckGA)
     {
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < setupDrawDeckGA.CardAmount; i++)
         {
             yield return AddCardToDraw();
         }
 
-       yield return UpdateDrawPile(count);
+       yield return new WaitForSeconds(0.5f);
     }
 
     public IEnumerator AddCardToDiscard()
@@ -70,18 +81,18 @@ public class PileView : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         PileCardView pileCardView = CreatePileCardView(drawPos, Quaternion.identity);
         drawPile.Add(pileCardView);
-        yield return UpdateDrawPile(drawPile.Count);
+        yield return UpdateDrawPile(drawPile.Count, 0.05f);
     }
     public PileCardView RemoveCardFromDraw()
     {
         PileCardView pileCardView = drawPile.Last();
         if (pileCardView == null) return null;
         drawPile.Remove(pileCardView);
-        StartCoroutine(UpdateDiscardPile(drawPile.Count));
+        StartCoroutine(UpdateDrawPile(drawPile.Count, 0.05f));
         return pileCardView;
     }
 
-    public IEnumerator UpdateDrawPile(int count)
+    public IEnumerator UpdateDrawPile(int count, float duration)
     {
         if (count == 0) yield break;
 
@@ -101,12 +112,17 @@ public class PileView : MonoBehaviour
             }
         }
 
+        for (int i = visibleCards; i < drawPile.Count; i++)
+        {
+            drawPile[i].gameObject.SetActive(false);
+        }
+
         if (visibleCards > 0)
         {
             drawPile[visibleCards - 1].TurnOnAnimation();
             drawPile[visibleCards - 1].MakeSpriteOnTop();
         }
-            
+        yield return new WaitForSeconds(duration);
     }
 
     public IEnumerator UpdateDiscardPile(int count)

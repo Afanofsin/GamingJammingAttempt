@@ -16,12 +16,15 @@ MonoBehaviour:
   <Image>k__BackingField: {fileID: 0}
   <Description>k__BackingField: 
   <ManualTargetEffect>k__BackingField:
-    rid: -2
+    rid: 7229863295468175435
   <OtherEffects>k__BackingField: []
   <ID>k__BackingField: 0
   <DeckLimit>k__BackingField: 0
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 7229863295468175435
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        effectType: 1
+        stackCount: 3
