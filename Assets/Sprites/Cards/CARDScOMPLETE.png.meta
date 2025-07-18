@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 0afdaea472e112a4d82ee69707450d90
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7128069191625986443
+    second: CARDScOMPLETE_0
+  - first:
+      213: 838471321543479646
+    second: CARDScOMPLETE_1
+  - first:
+      213: 1065638778823420266
+    second: CARDScOMPLETE_2
+  - first:
+      213: -8907880434145822047
+    second: CARDScOMPLETE_3
+  - first:
+      213: 4942524729218359113
+    second: CARDScOMPLETE_4
+  - first:
+      213: 2848142151225150387
+    second: CARDScOMPLETE_5
+  - first:
+      213: -1746008336849188226
+    second: CARDScOMPLETE_6
+  - first:
+      213: 8359140203395949587
+    second: CARDScOMPLETE_7
+  - first:
+      213: -5006731097227419909
+    second: CARDScOMPLETE_8
+  - first:
+      213: -6676428442068889619
+    second: CARDScOMPLETE_9
+  - first:
+      213: 6109920315157283999
+    second: CARDScOMPLETE_10
+  - first:
+      213: -8294573485177729234
+    second: CARDScOMPLETE_11
+  - first:
+      213: 7784344647944005768
+    second: CARDScOMPLETE_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CARDScOMPLETE_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 149
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81d545e92dfbe260800000000000000
+      internalID: 7128069191625986443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 149
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5193fa7939d2ab00800000000000000
+      internalID: 838471321543479646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 149
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69a6a6c2d8e9ce00800000000000000
+      internalID: 1065638778823420266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 149
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aaf51de0f9d06480800000000000000
+      internalID: -8907880434145822047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 100
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fd4aafd00679440800000000000000
+      internalID: 4942524729218359113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 100
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb87994232a68720800000000000000
+      internalID: 2848142151225150387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 100
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7acb3b1baee4c7e0800000000000000
+      internalID: -1746008336849188226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 100
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3142a13f9b1a10470800000000000000
+      internalID: 8359140203395949587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 52
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe9bd70894848ab0800000000000000
+      internalID: -5006731097227419909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 52
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def4b2684bf8853a0800000000000000
+      internalID: -6676428442068889619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 52
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9484e6a72ccac450800000000000000
+      internalID: 6109920315157283999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_11
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 52
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f8b9c9c51c3ec80800000000000000
+      internalID: -8294573485177729234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CARDScOMPLETE_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8886aedc63c870c60800000000000000
+      internalID: 7784344647944005768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CARDScOMPLETE_0: 7128069191625986443
+      CARDScOMPLETE_1: 838471321543479646
+      CARDScOMPLETE_10: 6109920315157283999
+      CARDScOMPLETE_11: -8294573485177729234
+      CARDScOMPLETE_12: 7784344647944005768
+      CARDScOMPLETE_2: 1065638778823420266
+      CARDScOMPLETE_3: -8907880434145822047
+      CARDScOMPLETE_4: 4942524729218359113
+      CARDScOMPLETE_5: 2848142151225150387
+      CARDScOMPLETE_6: -1746008336849188226
+      CARDScOMPLETE_7: 8359140203395949587
+      CARDScOMPLETE_8: -5006731097227419909
+      CARDScOMPLETE_9: -6676428442068889619
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

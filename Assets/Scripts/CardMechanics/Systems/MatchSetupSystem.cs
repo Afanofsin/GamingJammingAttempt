@@ -1,16 +1,37 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MatchSetupSystem : MonoBehaviour
 {
     [SerializeField]
-    private List<CardDataSO> deckData;
+    private HeroDataSO _heroData;
+    [SerializeField]
+    private List<EnemyDataSO> _enemyDatas;
+    [SerializeField]
+    private int cardsToDrawAtStart = 5;
 
     public static MatchSetupSystem Instance;
     private void Start()
     {
-        CardSystem.Instance.Setup(deckData);
-        DrawCardsGA drawCardsGA = new(5);
+        /*HeroSystem.Instance.Setup(_heroData);
+        EnemySystem.Instance.Setup(_enemyDatas);
+        CardSystem.Instance.Setup(_heroData.Deck, cardsToDrawAtStart);
+        DrawCardsGA drawCardsGA = new(cardsToDrawAtStart);
+        ActionSystem.Instance.Perform(drawCardsGA);*/
+
+        StartCoroutine(MatchSetup());
+    }
+
+    private IEnumerator MatchSetup()
+    {
+        HeroSystem.Instance.Setup(_heroData);
+        EnemySystem.Instance.Setup(_enemyDatas);
+        CardSystem.Instance.Setup(_heroData.Deck, cardsToDrawAtStart);
+
+        yield return new WaitUntil(() => !ActionSystem.Instance.isPerforming);
+
+        DrawCardsGA drawCardsGA = new(cardsToDrawAtStart);
         ActionSystem.Instance.Perform(drawCardsGA);
     }
 
