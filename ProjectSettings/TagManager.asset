@@ -18,9 +18,9 @@ TagManager:
   - 
   - 
   - 
+  - DropArea
   - 
-  - 
-  - 
+  - EnemyView
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Globat_Lit
     uniqueID: 2506577639
+    locked: 0
+  - name: TargetArrow
+    uniqueID: 2645960865
     locked: 0
   m_RenderingLayers:
   - Default

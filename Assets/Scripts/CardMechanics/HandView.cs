@@ -31,13 +31,15 @@ public class HandView : MonoBehaviour
         for (int i = 0; i < cards.Count; i++)
         {
             float pos = firstCardPosition + (i * cardSpacing);
-            Vector3 splinePosition = spline.EvaluatePosition(pos);
+            Vector3 splinePosition = _splineContainer.EvaluatePosition(pos);
             Vector3 forward = spline.EvaluateTangent(pos);
             Vector3 up = spline.EvaluateUpVector(pos);
 
             Quaternion rotation = Quaternion.LookRotation(-up, Vector3.Cross(-up, forward).normalized);
             cards[i].transform.DOMove(splinePosition, 0.25f);
             cards[i].transform.DORotateQuaternion(rotation, 0.25f);
+
+
         }
         yield return new WaitForSeconds(duration);
     }
@@ -54,5 +56,15 @@ public class HandView : MonoBehaviour
     private CardView GetCardView(Card card)
     {
         return cards.Where(cardView => cardView.Card == card).FirstOrDefault();
+    }
+
+    public int GetMaxCardNumber()
+    {
+        return maxHandSize;
+    }
+
+    public int GetCurrentCardNumber()
+    {
+        return cards.Count();
     }
 }
