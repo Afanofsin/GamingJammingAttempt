@@ -16,12 +16,15 @@ public class Movement : MonoBehaviour
     public bool canMove = true;
     public List<Card> BattleDeck;
     public List<Card> InventoryDeck;
-    void Start()
+    void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         BattleDeck = new();
         for (int i = 0; i < defaultHero.Deck.Count; i++)
         {
             Card card = new Card(CardManagementSystem.Instance.GetCardByID(defaultHero.Deck[i].ID));
+            BattleDeck.Add(card);
             Debug.Log("Added card to deck: " + card.Title);
         }
         InventoryDeck = new();

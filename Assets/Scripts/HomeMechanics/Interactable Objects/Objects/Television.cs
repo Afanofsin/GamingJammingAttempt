@@ -22,12 +22,16 @@ public class Television : InteractObject, IDoAction
     {
         if (!shopWindow.activeSelf)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             didAction = true;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
             shopWindow.SetActive(true);
         }
         else
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             didAction = false;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
             shopWindow.SetActive(false);

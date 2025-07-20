@@ -18,4 +18,12 @@ public class HeroDataSO : ScriptableObject
     {
         Deck.Add(cardDataSo);
     }
+    public void RebuildBattleDeck(List<Card> cards)
+    {
+        Deck.Clear();
+        foreach (Card card in cards)
+        {
+            Deck.Add(card.data);
+        }
+    }
 }
