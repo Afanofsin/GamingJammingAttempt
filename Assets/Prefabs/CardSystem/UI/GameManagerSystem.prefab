@@ -46,4 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreenPrefab: {fileID: 622058759402727946, guid: bcc67c546a984744b98fbbbecc063b27, type: 3}
   MainMenuPrefab: {fileID: 5221250037248339160, guid: 04f6e4c0356625a4999af682af0c7732, type: 3}
+  _heroDataSO: {fileID: 0}
+  startingDeck:
+  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
+  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: d6cd6bdec002e5546abe3a0e8c46657f, type: 2}
+  - {fileID: 11400000, guid: 2725c77cdfae03048b09a302c691ea5a, type: 2}
   enemy: {fileID: 11400000, guid: 1cb2507ba5f789748b6454fd44ecd04d, type: 2}

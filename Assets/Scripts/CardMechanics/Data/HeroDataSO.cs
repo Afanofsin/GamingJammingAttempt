@@ -28,4 +28,8 @@ public class HeroDataSO : ScriptableObject
             Deck.Add(card.data);
         }
     }
+    public void InitializeBattleDeck(List<CardDataSO> cards)
+    {
+        Deck = new List<CardDataSO>(cards);
+    }
 }
