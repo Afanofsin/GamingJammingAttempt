@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultHero
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: 21300000, guid: 49ff09552799397408f1f0b1377e529c, type: 3}
-  <Money>k__BackingField: 20
+  <Money>k__BackingField: 0
   <Health>k__BackingField: 15
   <Morale>k__BackingField: 10
   <Controller>k__BackingField: {fileID: 9100000, guid: 4f960ee62a2179443a0bfe5573c50cd9, type: 2}
