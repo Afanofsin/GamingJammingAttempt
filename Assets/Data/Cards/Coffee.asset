@@ -25,9 +25,10 @@ MonoBehaviour:
   - <TargetMode>k__BackingField:
       rid: 7229863269614485707
     <Effect>k__BackingField:
-      rid: 7229863355859075170
+      rid: 7229863269614485708
   <ID>k__BackingField: 1
   <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 55
   references:
     version: 2
     RefIds:

@@ -1,6 +1,7 @@
 using SerializeReferenceEditor;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "Data/Card")]
 public class CardDataSO : ScriptableObject
@@ -23,6 +24,9 @@ public class CardDataSO : ScriptableObject
     public int ID { get; private set; }
     [field: SerializeField]
     public int DeckLimit { get; private set; }
+    [field: SerializeField]
+    public float CardPrice { get; private set; }
+
 
     public void SetID(int id)
     {

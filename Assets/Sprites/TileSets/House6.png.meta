@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: 36ffbd7b801ab284f89257e653d7d8d5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3761523627253525227
+    second: House6_0
+  - first:
+      213: -4619684192275546436
+    second: House6_1
+  - first:
+      213: -2949543605308617156
+    second: House6_2
+  - first:
+      213: -7401434443123973190
+    second: House6_3
+  - first:
+      213: 3718532432866609985
+    second: House6_4
+  - first:
+      213: -8923389787279921063
+    second: House6_5
+  - first:
+      213: -2825561130339641904
+    second: House6_6
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0, y: -0}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: House6_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1145e6e91320458428c3f2fea734c6a5
+      internalID: 340651932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House6_69
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bda0f1a5b86da4aaf7c923b1443634
+      internalID: 1544736234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House6_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254cf84cb28ef9a458a64f59094c1b63
+      internalID: -361346312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House6_92
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba16fa41f36e414cb6e976fa96df6fd
+      internalID: 1338066707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House6_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4134027ce4e34b48ada883b7ae72b2c
+      internalID: 430472946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      House6_0: 250675731
+      House6_1: 295996177
+      House6_10: 754582244
+      House6_100: 515076784
+      House6_101: 371827519
+      House6_102: -2046479103
+      House6_103: -401680340
+      House6_104: -1596064333
+      House6_105: 1905337853
+      House6_106: -835624168
+      House6_107: 1466850076
+      House6_108: -2146634834
+      House6_109: -1976777315
+      House6_11: -1002882228
+      House6_110: -1973143025
+      House6_111: 430472946
+      House6_112: -997596215
+      House6_113: -1989692645
+      House6_114: 172598776
+      House6_115: -230076417
+      House6_116: 294679461
+      House6_117: 1042143081
+      House6_118: 340102587
+      House6_119: -2117856489
+      House6_12: 2089080424
+      House6_120: -1322453910
+      House6_121: 1030772680
+      House6_122: -211378953
+      House6_123: 1142898875
+      House6_124: 754628914
+      House6_125: -1600845261
+      House6_126: -770538542
+      House6_127: -1017648058
+      House6_128: -185861010
+      House6_129: -1047799113
+      House6_13: -1061128285
+      House6_130: 925156808
+      House6_131: 2004475470
+      House6_132: 1289749821
+      House6_133: -682866919
+      House6_134: 748044113
+      House6_135: -688463162
+      House6_136: -303950222
+      House6_137: -800887659
+      House6_138: -1491562177
+      House6_139: -380889754
+      House6_14: 496354757
+      House6_140: -1966462584
+      House6_141: 895969791
+      House6_142: 2097398414
+      House6_143: 353911141
+      House6_144: -305007502
+      House6_145: -1690408672
+      House6_146: -296915919
+      House6_147: 1872152736
+      House6_148: -1098214686
+      House6_149: 1633067734
+      House6_15: 795792876
+      House6_150: 872363534
+      House6_151: 1915019146
+      House6_16: 1744350997
+      House6_17: -842598915
+      House6_18: 595369744
+      House6_19: -1949960760
+      House6_2: -593060764
+      House6_20: -1721637465
+      House6_21: -844592650
+      House6_22: 765605096
+      House6_23: -1534133350
+      House6_24: -1103950839
+      House6_25: 1647556030
+      House6_26: -880954279
+      House6_27: 1411473638
+      House6_28: 92238345
+      House6_29: -374195514
+      House6_3: -1959077140
+      House6_30: -639170162
+      House6_31: -1970787726
+      House6_32: 806723884
+      House6_33: -724781813
+      House6_34: -1680094983
+      House6_35: 1530802910
+      House6_36: -164427684
+      House6_37: -69005005
+      House6_38: 581855291
+      House6_39: -1077042544
+      House6_4: -260432465
+      House6_40: -982698922
+      House6_41: -223098300
+      House6_42: -1755960237
+      House6_43: -170529978
+      House6_44: -933989849
+      House6_45: 851648938
+      House6_46: 1512526706
+      House6_47: 1274936641
+      House6_48: -1101252368
+      House6_49: -634932731
+      House6_5: -878614389
+      House6_50: -2115635457
+      House6_51: 977010005
+      House6_52: 1666525017
+      House6_53: -430705034
+      House6_54: -562139272
+      House6_55: 955634500
+      House6_56: 1071531047
+      House6_57: 1413115680
+      House6_58: -448689091
+      House6_59: 496239074
+      House6_6: -415768273
+      House6_60: 238965939
+      House6_61: -1112406345
+      House6_62: -1844149946
+      House6_63: -2075610424
+      House6_64: -2127035340
+      House6_65: 43050988
+      House6_66: 186117002
+      House6_67: 1670120991
+      House6_68: 340651932
+      House6_69: 1544736234
+      House6_7: 1514087872
+      House6_70: 1673299886
+      House6_71: -389890522
+      House6_72: -448816431
+      House6_73: 1472479247
+      House6_74: -245919555
+      House6_75: 1869227633
+      House6_76: 1679524101
+      House6_77: 1331303878
+      House6_78: -208480500
+      House6_79: 1886004301
+      House6_8: -1234144823
+      House6_80: 1701157357
+      House6_81: 16729602
+      House6_82: 2047677556
+      House6_83: -2047140810
+      House6_84: -1409619093
+      House6_85: 724733944
+      House6_86: -300804509
+      House6_87: 280090534
+      House6_88: -969429121
+      House6_89: -1638646717
+      House6_9: -739377744
+      House6_90: -859303870
+      House6_91: -361346312
+      House6_92: 1338066707
+      House6_93: 238116051
+      House6_94: -533048696
+      House6_95: 2100495111
+      House6_96: -1520289050
+      House6_97: -877562390
+      House6_98: -878994657
+      House6_99: -592499060
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

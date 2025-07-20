@@ -18,7 +18,7 @@ public class CardView : MonoBehaviour
     private LayerMask _layerMask;
     private Camera _cam;
 
-    public Card Card {  get; private set; }
+    public Card Card { get; private set; }
     private Vector3 dragStartPos;
     private Quaternion dragStartRotation;
 
@@ -55,7 +55,7 @@ public class CardView : MonoBehaviour
     private void OnMouseDown()
     {
         if (!InteractionsSystem.Instance.PlayerCanInteract()) return;
-        if(Card.ManualTargetEffect != null)
+        if (Card.ManualTargetEffect != null)
         {
             ManualTargetSystem.Instance.StartTargeting(transform.position);
         }
@@ -84,7 +84,7 @@ public class CardView : MonoBehaviour
         if (Card.ManualTargetEffect != null)
         {
             EnemyView target = ManualTargetSystem.Instance.EndTargeting(MouseUtils.GetMousePositionInWorldSpace(-1));
-            if(target != null && ManaSystem.Instance.HasEnoughMana(Card.Mana))
+            if (target != null && ManaSystem.Instance.HasEnoughMana(Card.Mana))
             {
                 PlayCardGA playCardGA = new(Card, target);
                 ActionSystem.Instance.Perform(playCardGA);

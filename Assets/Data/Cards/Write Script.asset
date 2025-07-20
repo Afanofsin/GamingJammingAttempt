@@ -20,6 +20,7 @@ MonoBehaviour:
   <OtherEffects>k__BackingField: []
   <ID>k__BackingField: 12
   <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 40
   references:
     version: 2
     RefIds:
