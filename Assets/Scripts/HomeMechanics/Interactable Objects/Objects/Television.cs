@@ -1,11 +1,7 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using TMPro;
 
 public class Television : InteractObject, IDoAction
 {
-    [SerializeField] private DialogueText[] dialogueText;
-    [SerializeField] private DialogueController dialogueController;
     [SerializeField] private GameObject shopWindow;
     private bool didAction = false;
     public override void Interact()
@@ -15,12 +11,6 @@ public class Television : InteractObject, IDoAction
             DoAction();
         }
 
-    }
-
-
-    public void Talk(DialogueText dialogueText)
-    {
-        dialogueController.DisplayNextParagraph(dialogueText);
     }
     public override void DoAction()
     {
@@ -39,8 +29,8 @@ public class Television : InteractObject, IDoAction
         else
         {
             didAction = false;
-            shopWindow.SetActive(false);
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
+            shopWindow.SetActive(false);
         }
 
     }

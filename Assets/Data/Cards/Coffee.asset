@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coffee
   m_EditorClassIdentifier: 
   <ManaCost>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 21300000, guid: b9f6982453d9aa64fa291ebc9c6d234d, type: 3}
+  <Image>k__BackingField: {fileID: -1403626704, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
   <Description>k__BackingField: Gives 3 temporary motivation. Deals 1 damage to player
   <ManualTargetEffect>k__BackingField:
     rid: -2
@@ -26,6 +26,9 @@ MonoBehaviour:
       rid: 7229863269614485707
     <Effect>k__BackingField:
       rid: 7229863269614485708
+  <ID>k__BackingField: 1
+  <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 55
   references:
     version: 2
     RefIds:

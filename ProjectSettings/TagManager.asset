@@ -7,6 +7,12 @@ TagManager:
   - Sound
   - Dialogue Controller
   - StateManager
+  - ShopCard
+  - Shop
+  - InventoryDeck
+  - InventoryButton
+  - BattleDeck
+  - BattleButton
   layers:
   - Default
   - TransparentFX
@@ -52,6 +58,12 @@ TagManager:
     locked: 0
   - name: TargetArrow
     uniqueID: 2645960865
+    locked: 0
+  - name: Card
+    uniqueID: 1152392507
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 260501253
     locked: 0
   m_RenderingLayers:
   - Default

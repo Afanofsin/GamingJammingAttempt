@@ -36,6 +36,15 @@ public abstract class InteractObject : MonoBehaviour, IInteractable, IDoAction
             focusObject = this;
             _interactSprite.gameObject.SetActive(true);
         }
+        if (focusObject != null && !focusObject.gameObject.activeSelf)
+        {
+            focusObject = null;
+        }
+        if (focusObject == null && _interactSprite.gameObject.activeSelf)
+        {
+            _interactSprite.gameObject.SetActive(false);
+        }
+        
         if (Input.GetKeyDown(KeyCode.E) && IsWithinDistance() && focusObject == this)
         {
             Interact();

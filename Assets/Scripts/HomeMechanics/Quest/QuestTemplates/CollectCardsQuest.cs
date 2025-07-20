@@ -13,8 +13,6 @@ public class CollectCardsQuest : Quest.QuestGoal
     private void OnPickUp(CollectCardEvent collect)
     {
         CurrentAmount++;
-        Debug.Log(CurrentAmount);
-        Debug.Log(RequiredAmount);
         Evaluate();
     }
     public override void Complete()

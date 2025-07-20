@@ -22,6 +22,10 @@ MonoBehaviour:
       rid: 7229863221763768506
     <Effect>k__BackingField:
       rid: 7229863221763768507
+  <ID>k__BackingField: 0
+  <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 120
+  buttonImage: {fileID: 830634054, guid: 77a6643d636577b44938020f2296fd90, type: 3}
   references:
     version: 2
     RefIds:

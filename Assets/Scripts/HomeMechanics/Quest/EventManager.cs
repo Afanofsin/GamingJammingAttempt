@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
@@ -13,6 +14,16 @@ public class EventManager : MonoBehaviour
     {
         CollectCardEvent collectCardEvent = new();
         ActionSystem.Instance.Perform(collectCardEvent);
+    }
+    public void AddCardToCart(ShopCard cardView)
+    {
+        AddCardToCartEvent addCardToCartEvent = new(cardView);
+        ActionSystem.Instance.Perform(addCardToCartEvent);
+    }
+    public void AddCardToDeckBuilder()
+    {
+        AddCardToDeckBuilder addCardToCartEvent = new();
+        ActionSystem.Instance.Perform(addCardToCartEvent);
     }
     private void Awake()
     {

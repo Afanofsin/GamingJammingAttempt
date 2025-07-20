@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,11 +8,25 @@ using UnityEngine.Rendering;
 
 public class Movement : MonoBehaviour
 {
+    public HeroDataSO defaultHero;
     public float speed;
     public Rigidbody2D _rb;
     public Animator _animator;
     Vector2 _moveDirection;
     public bool canMove = true;
+    public List<Card> BattleDeck;
+    public List<Card> InventoryDeck;
+    void Start()
+    {
+        BattleDeck = new();
+        for (int i = 0; i < defaultHero.Deck.Count; i++)
+        {
+            Card card = new Card(CardManagementSystem.Instance.GetCardByID(defaultHero.Deck[i].ID));
+            Debug.Log("Added card to deck: " + card.Title);
+        }
+        InventoryDeck = new();
+        InventoryDeck.AddRange(BattleDeck);
+    }
     void Update()
     {
         if (canMove)

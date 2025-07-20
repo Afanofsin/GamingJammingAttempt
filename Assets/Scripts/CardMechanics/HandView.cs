@@ -47,7 +47,7 @@ public class HandView : MonoBehaviour
     public CardView RemoveCard(Card card)
     {
         CardView cardView = GetCardView(card);
-        if(cardView == null) return null;
+        if (cardView == null) return null;
         cards.Remove(cardView);
         StartCoroutine(UpdateCardsPositions(0.15f));
         return cardView;

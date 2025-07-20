@@ -6,11 +6,11 @@ public class Bed : InteractObject, IDoAction
 {
     [SerializeField] private DialogueText[] dialogueText;
     [SerializeField] private DialogueController dialogueController;
+    [SerializeField] private CardDataSO givableCard;
     bool didAction = false;
     int i = 0;
     public override void Interact()
     {
-
         Talk(dialogueText[i]);
 
         ProgressTalk();
@@ -27,6 +27,8 @@ public class Bed : InteractObject, IDoAction
     }
     public override void DoAction()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().InventoryDeck.Add(new Card(CardManagementSystem.Instance.GetCardByID(givableCard.ID)));
+        Debug.Log("Added card to a player: " + new Card(CardManagementSystem.Instance.GetCardByID(givableCard.ID)).Title);
         EventManager.Instance.OnCLick();
         didAction = true;
     }

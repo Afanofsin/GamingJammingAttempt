@@ -18,6 +18,9 @@ MonoBehaviour:
   <ManualTargetEffect>k__BackingField:
     rid: 7229863221763768569
   <OtherEffects>k__BackingField: []
+  <ID>k__BackingField: 6
+  <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 70
   references:
     version: 2
     RefIds:

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DefaultHero
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: 21300000, guid: 49ff09552799397408f1f0b1377e529c, type: 3}
+  <Money>k__BackingField: 155555
   <Health>k__BackingField: 8
   <Morale>k__BackingField: 10
   <Deck>k__BackingField:

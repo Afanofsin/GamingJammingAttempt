@@ -10,7 +10,7 @@ public class Card
     public int Mana {  get; private set; }
     public string Description { get; private set; }
 
-    private readonly CardDataSO data;
+    public readonly CardDataSO data;
     public Card(CardDataSO cardData)
     {
         data = cardData;
