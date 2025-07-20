@@ -83,14 +83,14 @@ public class CardSystem : MonoBehaviour
 
         if(playCardGA.Card.ManualTargetEffect != null)
         {
-            PerformEffectsGA performEffectsGA = new(playCardGA.Card.ManualTargetEffect, new() { playCardGA.ManualTarget });
+            PerformEffectsGA performEffectsGA = new(playCardGA.Card.ManualTargetEffect, new() { playCardGA.ManualTarget }, HeroSystem.Instance.HeroView);
             ActionSystem.Instance.AddReaction(performEffectsGA);
         }
 
         foreach(var effect in playCardGA.Card.OtherEffects)
         {
             List<CombatantView> targets = effect.TargetMode.GetTargets();
-            PerformEffectsGA performEffectsGA = new(effect.Effect, targets);
+            PerformEffectsGA performEffectsGA = new(effect.Effect, targets, HeroSystem.Instance.HeroView);
             ActionSystem.Instance.AddReaction(performEffectsGA);
         }
     }
@@ -109,7 +109,6 @@ public class CardSystem : MonoBehaviour
 
         PileView.Instance.OnCardRemovedFromDraw();
 
-        Debug.Log("Card removed from Draw");
         yield return handView.AddCard(cardView);
     }
 
@@ -117,14 +116,12 @@ public class CardSystem : MonoBehaviour
     {
         discardPile.Add(cardView.Card);
 
-        Debug.Log($"CardSystem: Added card to logical discard pile. Count is now: {discardPile.Count}");
-
         cardView.transform.DOScale(Vector3.zero, 0.15f);
         Tween tween = cardView.transform.DOMove(discardPilePos.position, 0.15f);
         yield return tween.WaitForCompletion();
 
         PileView.Instance.ShowCardAddedToDiscard();
-        Destroy(cardView);
+        Destroy(cardView.gameObject);
     }
 
     private IEnumerator RefillDeck()

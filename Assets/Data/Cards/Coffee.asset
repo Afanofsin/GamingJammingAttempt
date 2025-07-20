@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ManaCost>k__BackingField: 0
   <Image>k__BackingField: {fileID: 1553969495, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
-  <Description>k__BackingField: Gives 3 temporary motivation. Deals 2 damage to player
+  <Description>k__BackingField: Gives 3 temporary motivation. Gives 2 Burns to player
   <ManualTargetEffect>k__BackingField:
     rid: -2
   <OtherEffects>k__BackingField:
@@ -25,7 +25,7 @@ MonoBehaviour:
   - <TargetMode>k__BackingField:
       rid: 7229863269614485707
     <Effect>k__BackingField:
-      rid: 7229863269614485708
+      rid: 7229863355859075170
   <ID>k__BackingField: 1
   <DeckLimit>k__BackingField: 0
   references:
@@ -43,7 +43,8 @@ MonoBehaviour:
     - rid: 7229863269614485707
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 7229863269614485708
-      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+    - rid: 7229863355859075170
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 2
+        effectType: 1
+        stackCount: 2

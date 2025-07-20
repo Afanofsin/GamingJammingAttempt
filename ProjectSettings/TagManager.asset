@@ -47,5 +47,8 @@ TagManager:
   - name: TargetArrow
     uniqueID: 2645960865
     locked: 0
+  - name: Effects
+    uniqueID: 2298686897
+    locked: 0
   m_RenderingLayers:
   - Default

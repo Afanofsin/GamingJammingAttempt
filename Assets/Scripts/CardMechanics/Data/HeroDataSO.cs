@@ -12,4 +12,7 @@ public class HeroDataSO : ScriptableObject
     public int Morale { get; private set; }
     [field: SerializeField]
     public List<CardDataSO> Deck {  get; private set; }
+
+    [field: SerializeField]
+    public RuntimeAnimatorController Controller { get; private set; }
 }

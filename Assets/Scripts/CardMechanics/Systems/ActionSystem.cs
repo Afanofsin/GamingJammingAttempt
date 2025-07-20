@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ActionSystem : MonoBehaviour
@@ -11,6 +12,7 @@ public class ActionSystem : MonoBehaviour
     private static Dictionary<Type, List<Action<GameAction>>> preSubs = new();
     private static Dictionary<Type, List<Action<GameAction>>> postSubs = new();
     private static Dictionary<Type, Func<GameAction, IEnumerator>> performers = new();
+    private static Dictionary<Delegate, Action<GameAction>> reactionWrappers = new();
     public void Perform(GameAction action, System.Action OnPerformFinished = null)
     {
         if (isPerforming) return;
@@ -50,7 +52,7 @@ public class ActionSystem : MonoBehaviour
         Type type = action.GetType();
         if (subs.ContainsKey(type))
         {
-            foreach (var sub in subs[type])
+            foreach (var sub in subs[type].ToList())
             {
                 sub(action);
             }
@@ -90,8 +92,11 @@ public class ActionSystem : MonoBehaviour
 
     public static void SubscribeReaction<T>(Action<T> reaction, ReactionTiming timing) where T : GameAction
     {
+        if (reactionWrappers.ContainsKey(reaction)) return;
+
         Dictionary<Type, List<Action<GameAction>>> subs = timing == ReactionTiming.PRE ? preSubs : postSubs;
         void wrappedReaction(GameAction action) => reaction((T)action);
+        reactionWrappers[reaction] = wrappedReaction;
         if (subs.ContainsKey(typeof(T)))
         {
             subs[typeof(T)].Add(wrappedReaction);
@@ -106,13 +111,17 @@ public class ActionSystem : MonoBehaviour
 
     public static void UnsubscribeReaction<T>(Action<T> reaction, ReactionTiming timing) where T : GameAction
     {
+        if (!reactionWrappers.TryGetValue(reaction, out Action<GameAction> wrappedReaction))
+        {
+            return;
+        }
+
         Dictionary<Type, List<Action<GameAction>>> subs = timing == ReactionTiming.PRE ? preSubs : postSubs;
         if(subs.ContainsKey(typeof(T)))
         {
-            void wrappedReaction(GameAction action) => reaction((T)action);
             subs[typeof(T)].Remove(wrappedReaction);
         }
-
+        reactionWrappers.Remove(reaction);
     }
     private void Awake()
     {

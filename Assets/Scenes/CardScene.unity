@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa438852fc0d54249acc7658c298b925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  burnVFX: {fileID: 0}
+  burnVFX: {fileID: 1540854988647192048, guid: 9340faf62318c99418fd7641ff5c1455, type: 3}
 --- !u!1 &130990283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1535,7 @@ Transform:
   m_GameObject: {fileID: 716048644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: -1, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1605,7 +1605,7 @@ Transform:
   m_GameObject: {fileID: 799604611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -3, z: 0}
+  m_LocalPosition: {x: 7, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2045,7 +2045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14ea331a2a47a049ad5c815262bd85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageVFX: {fileID: 0}
+  damageVFX: {fileID: 2509687990615150659, guid: 71383714a625dc54ca80611c17ed35c6, type: 3}
 --- !u!1 &1020970470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2102,7 @@ Transform:
   m_GameObject: {fileID: 1192520707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: -3, z: 0}
+  m_LocalPosition: {x: 15, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3029,7 +3029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _heroData: {fileID: 11400000, guid: 8f009bac480876947a4c977bee2e2da6, type: 2}
   _enemyDatas:
-  - {fileID: 11400000, guid: aa7476cebe6d2c146b78a47c72e713fa, type: 2}
+  - {fileID: 11400000, guid: 1cb2507ba5f789748b6454fd44ecd04d, type: 2}
   cardsToDrawAtStart: 5
 --- !u!1 &1963680578
 GameObject:

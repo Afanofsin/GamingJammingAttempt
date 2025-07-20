@@ -43,10 +43,9 @@ public class EnemySystem : MonoBehaviour
             {
                 ApplyBurnGA applyBurnGA = new(burnStacks, enemy);
                 ActionSystem.Instance.AddReaction(applyBurnGA);
-
-                AttackHeroGA attackHeroGA = new(enemy);
-                ActionSystem.Instance.AddReaction(attackHeroGA);
             }
+            AttackHeroGA attackHeroGA = new(enemy);
+            ActionSystem.Instance.AddReaction(attackHeroGA);
         }
         yield return null;
     }
@@ -57,6 +56,10 @@ public class EnemySystem : MonoBehaviour
         if (attacker == null || attacker.CurrentHealth <= 0) yield break;
         //Animation
         Tween tween = attacker.transform.DOMoveX(attacker.transform.position.x - 1f, 0.15f);
+        if (attacker.Animator)
+        {
+            attacker.Animator.SetTrigger("Attack");
+        }
         yield return tween.WaitForCompletion();
         attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.25f);
 

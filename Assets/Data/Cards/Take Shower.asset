@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c86b1a82db059b4580ff3ce608c83d6, type: 3}
   m_Name: Take Shower
   m_EditorClassIdentifier: 
-  <ManaCost>k__BackingField: 0
+  <ManaCost>k__BackingField: 3
   <Image>k__BackingField: {fileID: -1990616146, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
-  <Description>k__BackingField: 
+  <Description>k__BackingField: Gives 1 Shield to player
   <ManualTargetEffect>k__BackingField:
     rid: -2
   <OtherEffects>k__BackingField:
@@ -22,7 +22,7 @@ MonoBehaviour:
       rid: 7229863269614485583
     <Effect>k__BackingField:
       rid: 7229863269614485584
-  <ID>k__BackingField: 5
+  <ID>k__BackingField: 9
   <DeckLimit>k__BackingField: 0
   references:
     version: 2

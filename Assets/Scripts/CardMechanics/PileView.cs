@@ -158,12 +158,6 @@ public class PileView : MonoBehaviour
         int cardCount = CardSystem.Instance.discardPile.Count;
         int visibleCards = Mathf.Min(MAX_CARDS_VISIBLE, cardCount);
 
-        Debug.Log($"PileView: Updating discard visuals. Logical count is: {cardCount}");
-        if (cardCount == 0)
-        {
-            Debug.LogWarning("PileView: Update called, but discard pile is empty. No cards will be shown.");
-        }
-
         // Update visual cards
         for (int i = 0; i < MAX_CARDS_VISIBLE; i++)
         {
@@ -171,7 +165,6 @@ public class PileView : MonoBehaviour
 
             if (i < visibleCards)
             {
-                Debug.Log($"PileView: Activating visual card at index {i}");
                 visualCard.gameObject.SetActive(true);
 
                 Vector3 endPos = discardPos.position;

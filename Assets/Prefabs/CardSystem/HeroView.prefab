@@ -49,6 +49,7 @@ MonoBehaviour:
   _healthMask: {fileID: 7053396391511894074}
   _moraleText: {fileID: 6245786553556011484}
   _moraleSpriteRenderer: {fileID: 3256173854320678858}
+  Animator: {fileID: 4219081244659875866}
   barsParent: {fileID: 1552372268782666293}
   _spriteRenderer: {fileID: 6452331236559802250}
   statusEffectsUI: {fileID: 2543907219893895865}
@@ -313,6 +314,11 @@ MonoBehaviour:
 --- !u!212 &3256173854320678858 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4076825146642344690, guid: 153e8adee805228408b6f47dccd29187, type: 3}
+  m_PrefabInstance: {fileID: 1559241631512526136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4219081244659875866 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3399859318663347490, guid: 153e8adee805228408b6f47dccd29187, type: 3}
   m_PrefabInstance: {fileID: 1559241631512526136}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &6245786553556011484 stripped
