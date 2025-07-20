@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289d2dc3ee48b64e9fdd60beb9b09c7, type: 3}
   m_Name: ImposterSyndrome
   m_EditorClassIdentifier: 
-  <Image>k__BackingField: {fileID: 0}
+  <Image>k__BackingField: {fileID: 487653675, guid: 91a5758559766a34f8a70c25e9e80f08, type: 3}
   <Health>k__BackingField: 60
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 5
