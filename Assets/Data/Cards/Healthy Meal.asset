@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Healthy Meal
   m_EditorClassIdentifier: 
   <ManaCost>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 21300000, guid: b9f6982453d9aa64fa291ebc9c6d234d, type: 3}
+  <Image>k__BackingField: {fileID: 865256925, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
   <Description>k__BackingField: Gives 2 morale
   <ManualTargetEffect>k__BackingField:
     rid: -2
@@ -22,6 +22,8 @@ MonoBehaviour:
       rid: 7229863269614485713
     <Effect>k__BackingField:
       rid: 7229863269614485714
+  <ID>k__BackingField: 4
+  <DeckLimit>k__BackingField: 0
   references:
     version: 2
     RefIds:

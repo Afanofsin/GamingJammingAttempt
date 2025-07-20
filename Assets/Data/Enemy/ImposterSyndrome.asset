@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289d2dc3ee48b64e9fdd60beb9b09c7, type: 3}
+  m_Name: ImposterSyndrome
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: 0}
+  <Health>k__BackingField: 60
+  <Morale>k__BackingField: 0
+  <AttackPower>k__BackingField: 5
+  <Reward>k__BackingField: 40
+  <Controller>k__BackingField: {fileID: 9100000, guid: c84549c1660ec6c46a7ef953af8f35c1, type: 2}
+  Phase1Base: {fileID: 11400000, guid: 783b79f73de3b2548a565eaeae13b83f, type: 2}
+  Phase2Base: {fileID: 11400000, guid: b8429ad55f3b35b4cbf0d049fed6c32e, type: 2}
+  Phase3Base: {fileID: 11400000, guid: a5a6551b60b9ea147801f825abf299e2, type: 2}

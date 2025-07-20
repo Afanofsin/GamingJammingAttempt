@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1019058679665076391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1343512093928318173}
+  m_Layer: 12
+  m_Name: Distractions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1343512093928318173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019058679665076391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4011890693565643946}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4120350028763844869
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,7 +65,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.8760118, y: 9.68718}
+  m_AnchoredPosition: {x: -2.8760118, y: 11.1725}
   m_SizeDelta: {x: 4, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &8604572516397139852
@@ -207,6 +238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1343512093928318173}
   - {fileID: 2377222306539342961}
   - {fileID: 6317087621467989011}
   m_Father: {fileID: 0}
@@ -227,10 +259,14 @@ MonoBehaviour:
   _healthMask: {fileID: 3684694835695935324}
   _moraleText: {fileID: 319022254733655738}
   _moraleSpriteRenderer: {fileID: 9218965287984636076}
+  Animator: {fileID: 7515708168337291132}
   barsParent: {fileID: 5137264194604545363}
   _spriteRenderer: {fileID: 813834151915698412}
   statusEffectsUI: {fileID: 8182441189976978911}
   _attackText: {fileID: 1691566523287779920}
+  distractionPrefab: {fileID: 2967849276512223618, guid: 4d9f3cc18a94ed74ab7000627fcd6b7c, type: 3}
+  distractionParent: {fileID: 1343512093928318173}
+  distractionRadius: 1.2
 --- !u!65 &6496301919583759983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -260,6 +296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4011890693565643946}
     m_Modifications:
+    - target: {fileID: 11444104285699853, guid: 153e8adee805228408b6f47dccd29187, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.84375
+      objectReference: {fileID: 0}
     - target: {fileID: 1209602925850652237, guid: 153e8adee805228408b6f47dccd29187, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -425,6 +465,11 @@ Transform:
 --- !u!4 &6317087621467989011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1209602925850652237, guid: 153e8adee805228408b6f47dccd29187, type: 3}
+  m_PrefabInstance: {fileID: 5144116600601053790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7515708168337291132 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3399859318663347490, guid: 153e8adee805228408b6f47dccd29187, type: 3}
   m_PrefabInstance: {fileID: 5144116600601053790}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8182441189976978911 stripped

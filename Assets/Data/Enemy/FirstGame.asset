@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289d2dc3ee48b64e9fdd60beb9b09c7, type: 3}
+  m_Name: FirstGame
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: 0}
+  <Health>k__BackingField: 80
+  <Morale>k__BackingField: 0
+  <AttackPower>k__BackingField: 6
+  <Reward>k__BackingField: 50
+  <Controller>k__BackingField: {fileID: 9100000, guid: 55464827bfce105408f756ecf77f49f6, type: 2}
+  Phase1Base: {fileID: 11400000, guid: 380be21c3dfc73e4f91321f478199119, type: 2}
+  Phase2Base: {fileID: 11400000, guid: 925517968b4ffc34a913280327cc5eec, type: 2}
+  Phase3Base: {fileID: 11400000, guid: 9fa1c2234c34d6c4db15504f8f1cf149, type: 2}

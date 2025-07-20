@@ -1,0 +1,30 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Imposter Phase 2", menuName = "Enemy/Imposter/Phase 2")]
+public class ImposterPhase2Base : EnemyPhase2SOBase
+{
+    public override void DoEnterLogic()
+    {
+        base.DoEnterLogic();
+    }
+
+    public override void DoExitLogic()
+    {
+        base.DoExitLogic();
+    }
+
+    public override void DoReactionLogic(EnemyTurnGA enemyTurnGA)
+    {
+        base.DoReactionLogic(enemyTurnGA);
+    }
+
+    public override void Initialize(EnemyView enemyView)
+    {
+        base.Initialize(enemyView);
+    }
+
+    public override void ResetValues()
+    {
+        base.ResetValues();
+    }
+}

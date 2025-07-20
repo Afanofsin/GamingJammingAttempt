@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
+using static GameManagerSystem;
 
 public class MatchSetupSystem : MonoBehaviour
 {
@@ -12,21 +14,30 @@ public class MatchSetupSystem : MonoBehaviour
     private int cardsToDrawAtStart = 5;
 
     public static MatchSetupSystem Instance;
-    private void Start()
-    {
-        /*HeroSystem.Instance.Setup(_heroData);
-        EnemySystem.Instance.Setup(_enemyDatas);
-        CardSystem.Instance.Setup(_heroData.Deck, cardsToDrawAtStart);
-        DrawCardsGA drawCardsGA = new(cardsToDrawAtStart);
-        ActionSystem.Instance.Perform(drawCardsGA);*/
 
-        StartCoroutine(MatchSetup());
+    private void OnEnable()
+    {
+        GameManagerSystem.OnSceneReady += SetupCheck;
+    }
+    /*private void Start()
+    {
+        StartCoroutine(MatchSetup(GameManagerSystem.Instance.GetEnemiesForBattle()));
+    }*/
+    private void OnDisable()
+    {
+        GameManagerSystem.OnSceneReady -= SetupCheck;
     }
 
-    private IEnumerator MatchSetup()
+    private void SetupCheck(GameState gameState)
+    {
+        if (gameState == GameState.InBattle) StartCoroutine(MatchSetup(GameManagerSystem.Instance.GetEnemiesForBattle()));
+        else return;
+    }
+
+    public IEnumerator MatchSetup(List<EnemyDataSO> enemies)
     {
         HeroSystem.Instance.Setup(_heroData);
-        EnemySystem.Instance.Setup(_enemyDatas);
+        EnemySystem.Instance.Setup(enemies);
         CardSystem.Instance.Setup(_heroData.Deck, cardsToDrawAtStart);
 
         yield return new WaitUntil(() => !ActionSystem.Instance.isPerforming);

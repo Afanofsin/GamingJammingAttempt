@@ -22,9 +22,13 @@ public class BurnSystem : MonoBehaviour
         CombatantView target = applyBurnGA.Target;
         if (burnVFX != null)
         {
-            Instantiate(burnVFX, target.transform.position, Quaternion.identity);
+            Vector3 VFXpos = target.transform.position;
+            Quaternion VFXrot = Quaternion.Euler(0f, 0f, -180f);
+            VFXpos.y += 10f;
+            VFXpos.x -= 1f;
+            Instantiate(burnVFX, VFXpos, VFXrot);
         }
-        target.Damage(applyBurnGA.BurnDamage);
+        target.DirectDamage(applyBurnGA.BurnDamage, DirectType.IGNORESHIELD);
         
 
         if(target.GetStatusEffectStacks(StatusEffectType.BURN) > 1)
@@ -40,7 +44,7 @@ public class BurnSystem : MonoBehaviour
         {
             if (target is EnemyView enemyView)
             {
-                KillEnemyGA killEnemyGA = new(enemyView);
+                KillEnemyGA killEnemyGA = new(enemyView, enemyView.Reward);
                 ActionSystem.Instance.AddReaction(killEnemyGA);
             }
             else

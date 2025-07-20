@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 549174849583381422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.125, y: 2.7648687, z: 0}
+  m_LocalPosition: {x: 0.093, y: 2.655, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.5, y: 2.5}
+  m_Size: {x: 3.375, y: 2.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -244,8 +244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.069426775, y: -1.3284616}
-  m_SizeDelta: {x: 3.5, y: 2}
+  m_AnchoredPosition: {x: 0.069426775, y: -1.2972116}
+  m_SizeDelta: {x: 3.5, y: 1.6875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4064440180751697602
 MeshRenderer:
@@ -270,7 +270,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8446911811002514054, guid: 16f56742a4312724b81593572f4a2740, type: 2}
+  - {fileID: -6014796846814122065, guid: 4ddba47c43afb3646b21898d7926a57a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -314,8 +314,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is description
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 16f56742a4312724b81593572f4a2740, type: 2}
-  m_sharedMaterial: {fileID: 8446911811002514054, guid: 16f56742a4312724b81593572f4a2740, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ddba47c43afb3646b21898d7926a57a, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 4ddba47c43afb3646b21898d7926a57a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -339,10 +339,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5.65
-  m_fontSizeBase: 3
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 1
   m_fontSizeMax: 6
   m_fontStyle: 1
@@ -508,7 +508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1851244, y: 0.074180126}
+  m_AnchoredPosition: {x: 0.0624501, y: 0.074180126}
   m_SizeDelta: {x: 3.5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7001774536684865655
@@ -534,7 +534,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8446911811002514054, guid: 16f56742a4312724b81593572f4a2740, type: 2}
+  - {fileID: -6014796846814122065, guid: 4ddba47c43afb3646b21898d7926a57a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -576,10 +576,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Card Name
+  m_text: Watch Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 16f56742a4312724b81593572f4a2740, type: 2}
-  m_sharedMaterial: {fileID: 8446911811002514054, guid: 16f56742a4312724b81593572f4a2740, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ddba47c43afb3646b21898d7926a57a, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 4ddba47c43afb3646b21898d7926a57a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -603,10 +603,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 5
+  m_fontSize: 4.25
+  m_fontSizeBase: 4.25
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 1
   m_fontSizeMax: 6
   m_fontStyle: 1
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.20378923, z: 0, w: 0.18869352}
+  m_margin: {x: 0.03324914, y: 0.20378923, z: -0.029092312, w: 0.20531812}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
