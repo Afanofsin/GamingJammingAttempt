@@ -21,12 +21,20 @@ public class GameManagerSystem : MonoBehaviour
     private GameMainMenuUI _mainMenuUI;
 
     [SerializeField]
+    private HeroDataSO _heroDataSO;
+
+    [SerializeField]
+    private List<CardDataSO> startingDeck;
+
+    [SerializeField]
     private EnemyDataSO enemy;
 
     private List<EnemyDataSO> _enemiesForBattle = new();
 
     private void Start()
     {
+        // Reset HeroDataSO with StartingDeck list
+
         StartBattle(new() { enemy });
     }
 
@@ -37,7 +45,7 @@ public class GameManagerSystem : MonoBehaviour
 
     public void GoToHouseScene()
     {
-        StartCoroutine(LoadSceneCoroutine("TestScene", GameState.InHouse));
+        StartCoroutine(LoadSceneCoroutine("HomeScene", GameState.InHouse));
     }
 
     public void StartBattle(List<EnemyDataSO> enemies)
@@ -84,6 +92,12 @@ public class GameManagerSystem : MonoBehaviour
     public void GameWon(int reward)
     {
         _mainMenuUI.WinScreenOpen(reward);
+        _heroDataSO.Money += reward;
+    }
+
+    private void ResetGameState()
+    {
+
     }
 
     private void Awake()
@@ -99,5 +113,6 @@ public class GameManagerSystem : MonoBehaviour
         _loadingScreenUI = loadingScreenInstance.GetComponent<LoadingScreenUI>();
         GameObject mainMenuInstance = Instantiate(MainMenuPrefab, transform);
         _mainMenuUI = mainMenuInstance.GetComponent<GameMainMenuUI>();
+        ResetGameState();
     }
 }

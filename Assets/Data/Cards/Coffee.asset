@@ -25,7 +25,7 @@ MonoBehaviour:
   - <TargetMode>k__BackingField:
       rid: 7229863269614485707
     <Effect>k__BackingField:
-      rid: 7229863269614485708
+      rid: 7229863370307928150
   <ID>k__BackingField: 1
   <DeckLimit>k__BackingField: 0
   <CardPrice>k__BackingField: 55
@@ -44,7 +44,7 @@ MonoBehaviour:
     - rid: 7229863269614485707
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 7229863355859075170
+    - rid: 7229863370307928150
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         effectType: 1

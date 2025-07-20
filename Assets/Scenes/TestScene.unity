@@ -307,6 +307,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: aa7476cebe6d2c146b78a47c72e713fa, type: 2}
+    - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
+      propertyPath: _heroDataSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f009bac480876947a4c977bee2e2da6, type: 2}
     - target: {fileID: 8307118385824474068, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
       propertyPath: m_Name
       value: GameManagerSystem

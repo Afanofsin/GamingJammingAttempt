@@ -6,7 +6,7 @@ public class StatusEffectsUI : MonoBehaviour
     [SerializeField]
     private StatusEffectUI statusEffectUIPrefab;
     [SerializeField]
-    private Sprite shieldSprite, burnSprite;
+    private Sprite shieldSprite, burnSprite, procrastinationSprite;
 
     private Dictionary<StatusEffectType, StatusEffectUI> statusEffectUIs = new();
 
@@ -40,6 +40,7 @@ public class StatusEffectsUI : MonoBehaviour
         {
             StatusEffectType.SHIELD => shieldSprite,
             StatusEffectType.BURN => burnSprite,
+            StatusEffectType.PROCRASTINATION => procrastinationSprite,
             _ => null,
         };
 

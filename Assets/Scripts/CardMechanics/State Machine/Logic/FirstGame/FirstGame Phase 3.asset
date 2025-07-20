@@ -12,3 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd13b5aeebfaa054881c44c37a27e45f, type: 3}
   m_Name: FirstGame Phase 3
   m_EditorClassIdentifier: 
+  <OtherEffects>k__BackingField:
+  - <TargetMode>k__BackingField:
+      rid: 7229863370307928148
+    <Effect>k__BackingField:
+      rid: 7229863370307928149
+  references:
+    version: 2
+    RefIds:
+    - rid: 7229863370307928148
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 7229863370307928149
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        effectType: 1
+        stackCount: 3

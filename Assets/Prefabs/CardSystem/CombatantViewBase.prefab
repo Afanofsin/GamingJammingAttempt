@@ -845,6 +845,7 @@ MonoBehaviour:
   statusEffectUIPrefab: {fileID: 1270217010949451036, guid: 560dd7cac43c46c41b1d273367b37d01, type: 3}
   shieldSprite: {fileID: 864074389, guid: cf491e19a7ccc784e8a6b2b5fa2ee0b4, type: 3}
   burnSprite: {fileID: -1225663973, guid: cf491e19a7ccc784e8a6b2b5fa2ee0b4, type: 3}
+  procrastinationSprite: {fileID: 21300000, guid: 093a9fa8a9b01154c9e21fdec8a208b2, type: 3}
 --- !u!222 &2661485608009734342
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -12,3 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d34ef90ef5d1b4594e179ae3179c4f, type: 3}
   m_Name: Imposter Phase 2
   m_EditorClassIdentifier: 
+  <OtherEffects>k__BackingField:
+  - <TargetMode>k__BackingField:
+      rid: 7229863370307928137
+    <Effect>k__BackingField:
+      rid: 7229863370307928138
+  references:
+    version: 2
+    RefIds:
+    - rid: 7229863370307928137
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 7229863370307928138
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        effectType: 0
+        stackCount: 1
