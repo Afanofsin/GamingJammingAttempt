@@ -7,8 +7,16 @@ public class Bed : InteractObject, IDoAction
     [SerializeField] private DialogueText[] dialogueText;
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private CardDataSO givableCard;
+    public Progression progression;
     bool didAction = false;
     int i = 0;
+    private void Start() {
+        if (progression.isBedCardCollected)
+        {
+            i = 4;
+            didAction = true;
+        }
+    }
     public override void Interact()
     {
         Talk(dialogueText[i]);
@@ -27,6 +35,7 @@ public class Bed : InteractObject, IDoAction
     }
     public override void DoAction()
     {
+        progression.isBedCardCollected = true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().InventoryDeck.Add(new Card(CardManagementSystem.Instance.GetCardByID(givableCard.ID)));
         Debug.Log("Added card to a player: " + new Card(CardManagementSystem.Instance.GetCardByID(givableCard.ID)).Title);
         EventManager.Instance.OnCLick();
