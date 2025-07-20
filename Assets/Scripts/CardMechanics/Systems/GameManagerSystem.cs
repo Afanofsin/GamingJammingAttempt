@@ -13,12 +13,12 @@ public class GameManagerSystem : MonoBehaviour
 
     public enum GameState { MainMenu, InHouse, InBattle }
     public GameState CurrentState { get; private set; }
-
-    [SerializeField]
-    private GameObject mainMenu;
     
     [SerializeField] private GameObject loadingScreenPrefab;
     private LoadingScreenUI _loadingScreenUI;
+
+    [SerializeField] private GameObject MainMenuPrefab;
+    private GameMainMenuUI _mainMenuUI;
 
     [SerializeField]
     private EnemyDataSO enemy;
@@ -81,6 +81,11 @@ public class GameManagerSystem : MonoBehaviour
         yield return StartCoroutine(_loadingScreenUI.FadeOut());
     }
 
+    public void GameWon(int reward)
+    {
+        _mainMenuUI.WinScreenOpen(reward);
+    }
+
     private void Awake()
     {
         if(Instance != null)
@@ -92,5 +97,7 @@ public class GameManagerSystem : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         GameObject loadingScreenInstance = Instantiate(loadingScreenPrefab, transform);
         _loadingScreenUI = loadingScreenInstance.GetComponent<LoadingScreenUI>();
+        GameObject mainMenuInstance = Instantiate(MainMenuPrefab, transform);
+        _mainMenuUI = mainMenuInstance.GetComponent<GameMainMenuUI>();
     }
 }

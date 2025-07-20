@@ -12,3 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3684463765e57a645bb02fab3a454f3d, type: 3}
   m_Name: Sloth Phase 2
   m_EditorClassIdentifier: 
+  <OtherEffects>k__BackingField:
+  - <TargetMode>k__BackingField:
+      rid: 7229863355859075319
+    <Effect>k__BackingField:
+      rid: 7229863355859075320
+  references:
+    version: 2
+    RefIds:
+    - rid: 7229863355859075319
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 7229863355859075320
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        effectType: 0
+        stackCount: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ManaCost>k__BackingField: 2
   <Image>k__BackingField: {fileID: -1935172900, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
-  <Description>k__BackingField: LalaLilil
+  <Description>k__BackingField: Take 3 cards from the deck
   <ManualTargetEffect>k__BackingField:
     rid: -2
   <OtherEffects>k__BackingField:

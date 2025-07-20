@@ -53,6 +53,7 @@ MonoBehaviour:
   barsParent: {fileID: 1552372268782666293}
   _spriteRenderer: {fileID: 6452331236559802250}
   statusEffectsUI: {fileID: 2543907219893895865}
+  HeroPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1559241631512526136
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ MonoBehaviour:
   <Health>k__BackingField: 80
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 6
+  <Reward>k__BackingField: 50
   <Controller>k__BackingField: {fileID: 9100000, guid: 55464827bfce105408f756ecf77f49f6, type: 2}
   Phase1Base: {fileID: 11400000, guid: 380be21c3dfc73e4f91321f478199119, type: 2}
   Phase2Base: {fileID: 11400000, guid: 925517968b4ffc34a913280327cc5eec, type: 2}

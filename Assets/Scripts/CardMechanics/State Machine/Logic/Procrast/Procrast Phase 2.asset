@@ -12,3 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233c90c156c52484b8af0f6959ff9bbd, type: 3}
   m_Name: Procrast Phase 2
   m_EditorClassIdentifier: 
+  <OtherEffects>k__BackingField:
+  - <TargetMode>k__BackingField:
+      rid: 7229863368595079244
+    <Effect>k__BackingField:
+      rid: 7229863368595079245
+  references:
+    version: 2
+    RefIds:
+    - rid: 7229863368595079244
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 7229863368595079245
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        effectType: 2
+        stackCount: 6

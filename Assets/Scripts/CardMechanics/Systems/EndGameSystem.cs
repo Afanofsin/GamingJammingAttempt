@@ -23,14 +23,14 @@ public class EndGameSystem : MonoBehaviour
         reward += killEnemyGA.Reward;
         if (enemyBoardView.EnemyViews.Count == 0)
         {
-            Debug.Log("You received " + reward + " money");
+            GameManagerSystem.Instance.GameWon(reward);
             StartCoroutine(StartSceneLeave());
         }
     }
 
     private IEnumerator StartSceneLeave()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(5f);
         GameManagerSystem.Instance.GoToHouseScene();
     }
 

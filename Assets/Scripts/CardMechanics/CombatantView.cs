@@ -85,6 +85,7 @@ public class CombatantView : MonoBehaviour
 
     public void Damage(int damageAmount)
     {
+        if (GetStatusEffectStacks(StatusEffectType.PROCRASTINATION) > 0) return;
         int remainingDamage = damageAmount;
         int currentShield = GetStatusEffectStacks(StatusEffectType.SHIELD);
 
@@ -106,6 +107,7 @@ public class CombatantView : MonoBehaviour
 
     public void DirectDamage(int damageAmount, DirectType type)
     {
+        if (GetStatusEffectStacks(StatusEffectType.PROCRASTINATION) > 0) return;
         int remainingDamage = damageAmount;
         switch (type)
         {

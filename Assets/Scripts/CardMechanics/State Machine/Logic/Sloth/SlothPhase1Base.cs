@@ -4,8 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Sloth Phase 1", menuName = "Enemy/Sloth/Phase1")]
 public class SlothPhase1Base : EnemyPhase1SOBase
 {
-    [field: SerializeField]
-    public List<AutoTargetEffect> OtherEffects { get; private set; }
+    
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
@@ -23,12 +22,6 @@ public class SlothPhase1Base : EnemyPhase1SOBase
         float maxHealthPercentage = (float)Enemy.CurrentHealth / (float)Enemy.MaxHealth;
         if(maxHealthPercentage < 0.75f)
         {
-            foreach (var effect in OtherEffects)
-            {
-                List<CombatantView> targets = effect.TargetMode.GetTargets();
-                PerformEffectsGA performEffectsGA = new(effect.Effect, targets, Enemy);
-                ActionSystem.Instance.AddReaction(performEffectsGA);
-            }
             Enemy.UpdateAttackText();
             Enemy.StateMachine.ChangeState(Enemy.Phase2State);
         }

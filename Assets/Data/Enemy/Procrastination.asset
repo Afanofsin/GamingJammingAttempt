@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Procrastination
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: 0}
-  <Health>k__BackingField: 1
+  <Health>k__BackingField: 30
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 5
-  <Reward>k__BackingField: 20
+  <Reward>k__BackingField: 30
   <Controller>k__BackingField: {fileID: 9100000, guid: 573d25578f177aa45b9ee41a174bdd4b, type: 2}
   Phase1Base: {fileID: 11400000, guid: 783b79f73de3b2548a565eaeae13b83f, type: 2}
   Phase2Base: {fileID: 11400000, guid: b8429ad55f3b35b4cbf0d049fed6c32e, type: 2}
