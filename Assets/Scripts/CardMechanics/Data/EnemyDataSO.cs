@@ -12,6 +12,9 @@ public class EnemyDataSO : ScriptableObject
     [field: SerializeField]
     public int AttackPower { get; private set; }
     [field: SerializeField]
+    public int Reward { get; private set; }
+
+    [field: SerializeField]
     public RuntimeAnimatorController Controller { get; private set; }
     [field: SerializeField]
     public EnemyPhase1SOBase Phase1Base;

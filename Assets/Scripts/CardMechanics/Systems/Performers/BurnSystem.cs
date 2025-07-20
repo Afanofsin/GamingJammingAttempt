@@ -44,7 +44,7 @@ public class BurnSystem : MonoBehaviour
         {
             if (target is EnemyView enemyView)
             {
-                KillEnemyGA killEnemyGA = new(enemyView);
+                KillEnemyGA killEnemyGA = new(enemyView, enemyView.Reward);
                 ActionSystem.Instance.AddReaction(killEnemyGA);
             }
             else

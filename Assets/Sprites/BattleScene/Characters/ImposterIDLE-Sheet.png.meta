@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -76,9 +76,9 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  alignment: 9
+  spritePivot: {x: 0.5, y: -0}
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -143,20 +143,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 51
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b8cb7b8bc93442b0800000000000000
-      internalID: -5601288490160764747
+      spriteID: 4fb79cf767761124ba04398ae80b2c37
+      internalID: 1065001283
       vertices: []
       indices: 
       edges: []
@@ -165,20 +165,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_1
       rect:
         serializedVersion: 2
-        x: 72
+        x: 64
         y: 0
-        width: 53
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 64f2bea0456284390800000000000000
-      internalID: -7833969409408684218
+      spriteID: e5ad34678344c07409b9a7cb5d80f1ff
+      internalID: 487653675
       vertices: []
       indices: 
       edges: []
@@ -187,20 +187,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_2
       rect:
         serializedVersion: 2
-        x: 133
+        x: 128
         y: 0
-        width: 56
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3ab07dc8a1a61d190800000000000000
-      internalID: -7939448005812876381
+      spriteID: 8842cbd571ed89f498262238d7489c3f
+      internalID: 1592022223
       vertices: []
       indices: 
       edges: []
@@ -209,20 +209,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_3
       rect:
         serializedVersion: 2
-        x: 200
+        x: 192
         y: 0
-        width: 53
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a3a0fd2b7f792e690800000000000000
-      internalID: -7574324533170075078
+      spriteID: b2a958deb95917749a989c3dc40c318c
+      internalID: 1994856549
       vertices: []
       indices: 
       edges: []
@@ -231,20 +231,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_4
       rect:
         serializedVersion: 2
-        x: 266
+        x: 256
         y: 0
-        width: 51
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ecb30fe4b6d30cca0800000000000000
-      internalID: -5998727172562338866
+      spriteID: 345ace9055ea1b44fb8357049a401812
+      internalID: -1694314984
       vertices: []
       indices: 
       edges: []
@@ -253,20 +253,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_5
       rect:
         serializedVersion: 2
-        x: 331
+        x: 320
         y: 0
-        width: 51
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e0d437576955c09b0800000000000000
-      internalID: -5112617372268409586
+      spriteID: 41f3ac1bc2f82904c9333d3b8d11e92e
+      internalID: -709998500
       vertices: []
       indices: 
       edges: []
@@ -275,20 +275,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_6
       rect:
         serializedVersion: 2
-        x: 396
+        x: 384
         y: 0
-        width: 51
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62932f37ae7f32410800000000000000
-      internalID: 1451276091283093798
+      spriteID: a048378ee4b692340a29d348a1b002e9
+      internalID: 47771606
       vertices: []
       indices: 
       edges: []
@@ -297,20 +297,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_7
       rect:
         serializedVersion: 2
-        x: 460
+        x: 448
         y: 0
-        width: 50
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e0caf025451a69750800000000000000
-      internalID: 6311409311332412430
+      spriteID: 5065e19e4489c304589472513d811b0a
+      internalID: 1815338279
       vertices: []
       indices: 
       edges: []
@@ -319,20 +319,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_8
       rect:
         serializedVersion: 2
-        x: 522
+        x: 512
         y: 0
-        width: 51
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb8196eae1bbf3bf0800000000000000
-      internalID: -342349306207332161
+      spriteID: e074490dd4ffe964b94fffb7e58c8695
+      internalID: 15106570
       vertices: []
       indices: 
       edges: []
@@ -341,20 +341,20 @@ TextureImporter:
       name: ImposterIDLE-Sheet_9
       rect:
         serializedVersion: 2
-        x: 584
+        x: 576
         y: 0
-        width: 52
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 09c12431d86177860800000000000000
-      internalID: 7527510097342373008
+      spriteID: 808cd8d6216a4fd4d850cbb950bbd1be
+      internalID: 1167481142
       vertices: []
       indices: 
       edges: []
@@ -363,26 +363,28 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ImposterIDLE-Sheet_0: -5601288490160764747
-      ImposterIDLE-Sheet_1: -7833969409408684218
-      ImposterIDLE-Sheet_2: -7939448005812876381
-      ImposterIDLE-Sheet_3: -7574324533170075078
-      ImposterIDLE-Sheet_4: -5998727172562338866
-      ImposterIDLE-Sheet_5: -5112617372268409586
-      ImposterIDLE-Sheet_6: 1451276091283093798
-      ImposterIDLE-Sheet_7: 6311409311332412430
-      ImposterIDLE-Sheet_8: -342349306207332161
-      ImposterIDLE-Sheet_9: 7527510097342373008
+      ImposterIDLE-Sheet_0: 1065001283
+      ImposterIDLE-Sheet_1: 487653675
+      ImposterIDLE-Sheet_2: 1592022223
+      ImposterIDLE-Sheet_3: 1994856549
+      ImposterIDLE-Sheet_4: -1694314984
+      ImposterIDLE-Sheet_5: -709998500
+      ImposterIDLE-Sheet_6: 47771606
+      ImposterIDLE-Sheet_7: 1815338279
+      ImposterIDLE-Sheet_8: 15106570
+      ImposterIDLE-Sheet_9: 1167481142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

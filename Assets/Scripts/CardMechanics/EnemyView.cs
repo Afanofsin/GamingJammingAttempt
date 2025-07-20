@@ -8,6 +8,7 @@ public class EnemyView : CombatantView
 
     public int AttackPower {  get; set; }
 
+    public int Reward {  get; private set; }
     public EnemyStateMachine StateMachine { get; set; }
     public EnemyPhase1State Phase1State { get; set; }
     public EnemyPhase2State Phase2State { get; set; }
@@ -35,6 +36,7 @@ public class EnemyView : CombatantView
         Phase3Instance.Initialize(this);
 
         StateMachine.Initialize(Phase1State);
+        Reward = enemyDataSO.Reward;
         SetupBase(enemyDataSO.Health, enemyDataSO.Morale, enemyDataSO.Image, enemyDataSO.Controller);
     }
 

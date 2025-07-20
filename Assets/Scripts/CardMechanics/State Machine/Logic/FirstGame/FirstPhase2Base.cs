@@ -1,16 +1,30 @@
 using UnityEngine;
 
-public class FirstPhase2Base : MonoBehaviour
+[CreateAssetMenu(fileName = "FirstGame Phase 2", menuName = "Enemy/First/Phase 2")]
+public class FirstPhase2Base : EnemyPhase2SOBase
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void DoEnterLogic()
     {
-        
+        base.DoEnterLogic();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void DoExitLogic()
     {
-        
+        base.DoExitLogic();
+    }
+
+    public override void DoReactionLogic(EnemyTurnGA enemyTurnGA)
+    {
+        base.DoReactionLogic(enemyTurnGA);
+    }
+
+    public override void Initialize(EnemyView enemyView)
+    {
+        base.Initialize(enemyView);
+    }
+
+    public override void ResetValues()
+    {
+        base.ResetValues();
     }
 }
