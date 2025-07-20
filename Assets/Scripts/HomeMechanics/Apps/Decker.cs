@@ -207,6 +207,7 @@ public class Decker : MonoBehaviour
         {
             Destroy(go);
         }
+        _player.defaultHero.RebuildBattleDeck(playerNewBattleDeck);
         _player.BattleDeck = new();
         _player.InventoryDeck = new();
         _player.BattleDeck.AddRange(playerNewBattleDeck);

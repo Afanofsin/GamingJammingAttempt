@@ -54,7 +54,15 @@ public class ShopDealer : InteractObject, IDoAction
     }
     public IEnumerator KillShopDealer()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(4f);
+        dialogueController.gameObject.SetActive(false);
+        dialogueController.talkingEnded = true;
+        dialogueController.isTyping = false;
+        dialogueController.paragpaphs.Clear();
+        if (!GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Movement>().canMove)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Movement>().StopPlayer();
+        }
         gameObject.SetActive(false);
         i = 0;
         didAction = false;
