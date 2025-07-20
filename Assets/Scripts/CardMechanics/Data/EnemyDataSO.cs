@@ -11,5 +11,19 @@ public class EnemyDataSO : ScriptableObject
     public int Morale { get; private set; }
     [field: SerializeField]
     public int AttackPower { get; private set; }
+    [field: SerializeField]
+    public int Reward { get; private set; }
+
+    [field: SerializeField]
+    [field: TextArea(15, 20)]
+    public string Description { get; private set; }
+    [field: SerializeField]
+    public RuntimeAnimatorController Controller { get; private set; }
+    [field: SerializeField]
+    public EnemyPhase1SOBase Phase1Base;
+    [field: SerializeField]
+    public EnemyPhase2SOBase Phase2Base;
+    [field: SerializeField]
+    public EnemyPhase3SOBase Phase3Base;
 
 }

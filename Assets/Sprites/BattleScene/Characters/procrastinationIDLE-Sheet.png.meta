@@ -1,0 +1,621 @@
+fileFormatVersion: 2
+guid: 81aa29344214e19429be266a1c3130c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4951249320445898724
+    second: procrastinationIDLE-Sheet_0
+  - first:
+      213: 2866003139241952532
+    second: procrastinationIDLE-Sheet_1
+  - first:
+      213: 8112410109161044266
+    second: procrastinationIDLE-Sheet_2
+  - first:
+      213: -5956307272087534890
+    second: procrastinationIDLE-Sheet_3
+  - first:
+      213: 11013611110089936
+    second: procrastinationIDLE-Sheet_4
+  - first:
+      213: 7812226073848351983
+    second: procrastinationIDLE-Sheet_5
+  - first:
+      213: -4365366665758672291
+    second: procrastinationIDLE-Sheet_6
+  - first:
+      213: -1852892033201356352
+    second: procrastinationIDLE-Sheet_7
+  - first:
+      213: -6846797894564942712
+    second: procrastinationIDLE-Sheet_8
+  - first:
+      213: 1052556228420710685
+    second: procrastinationIDLE-Sheet_9
+  - first:
+      213: -2930224299257616775
+    second: procrastinationIDLE-Sheet_10
+  - first:
+      213: 4994801003245978133
+    second: procrastinationIDLE-Sheet_11
+  - first:
+      213: -3608072677643394413
+    second: procrastinationIDLE-Sheet_12
+  - first:
+      213: -5010015761900321667
+    second: procrastinationIDLE-Sheet_13
+  - first:
+      213: -1818409531786831448
+    second: procrastinationIDLE-Sheet_14
+  - first:
+      213: -1023553776318654363
+    second: procrastinationIDLE-Sheet_15
+  - first:
+      213: 431319990204246128
+    second: procrastinationIDLE-Sheet_16
+  - first:
+      213: -6768580862944846385
+    second: procrastinationIDLE-Sheet_17
+  - first:
+      213: 7843604522730281732
+    second: procrastinationIDLE-Sheet_18
+  - first:
+      213: -4270541854002529428
+    second: procrastinationIDLE-Sheet_19
+  - first:
+      213: 382375900413852532
+    second: procrastinationIDLE-Sheet_20
+  - first:
+      213: 1727329047641698
+    second: procrastinationIDLE-Sheet_21
+  - first:
+      213: -2854067646670074143
+    second: procrastinationIDLE-Sheet_22
+  - first:
+      213: -3464759872441354645
+    second: procrastinationIDLE-Sheet_23
+  - first:
+      213: 4421788387935985221
+    second: procrastinationIDLE-Sheet_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: -0}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b53743cc248384b8cbe36d01879ac2
+      internalID: 471017314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340144e628595b748a864a404c32afa0
+      internalID: -498364367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0163c745f984084aaa8650e881611cc
+      internalID: -2019165428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ac8cc231e085d4cab056aad30860df
+      internalID: -2011686111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f9327dcc8c7b14b8e4830ad285f6a1
+      internalID: -1418162104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d637d3319b38cf4fa798a4708ea0e67
+      internalID: -325077555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f1bce4d22c7474ebb574fe6e2b390c
+      internalID: -110638080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b966425256336545aaa57ebe12cc63a
+      internalID: -1575190326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28817a60bcbd5f24894a6c765850af35
+      internalID: -483871932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f3ac7303535bd449e659e8dee5789b
+      internalID: -641879402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ced51659f375a4395410f68e7042ff
+      internalID: -324657179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfbde13667dad641922a9e8e1dbd2dc
+      internalID: -535451026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd60b07151b773d4798db85e7d83bfc9
+      internalID: 174682054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed983d12511e2b34c9feb908b7db07e7
+      internalID: -1110620972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4204bffbeb7752845b90c26172c0077a
+      internalID: -1008166324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f11b1c6c8905de499aa433f33639cc1
+      internalID: -135322903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8f6b4c33ba1994495242e9284e9f14
+      internalID: 1222880332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: procrastinationIDLE-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 0
+        width: 112
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d161e6cbe0f0784da6e71049ec5f9ea
+      internalID: 800946691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":18.0,"y":1.0},"gridSpriteSize":{"x":112.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      procrastinationIDLE-Sheet_0: 471017314
+      procrastinationIDLE-Sheet_1: -498364367
+      procrastinationIDLE-Sheet_10: -324657179
+      procrastinationIDLE-Sheet_11: -535451026
+      procrastinationIDLE-Sheet_12: 174682054
+      procrastinationIDLE-Sheet_13: -1110620972
+      procrastinationIDLE-Sheet_14: -1008166324
+      procrastinationIDLE-Sheet_15: -135322903
+      procrastinationIDLE-Sheet_16: 1222880332
+      procrastinationIDLE-Sheet_17: 800946691
+      procrastinationIDLE-Sheet_2: -2019165428
+      procrastinationIDLE-Sheet_3: -2011686111
+      procrastinationIDLE-Sheet_4: -1418162104
+      procrastinationIDLE-Sheet_5: -325077555
+      procrastinationIDLE-Sheet_6: -110638080
+      procrastinationIDLE-Sheet_7: -1575190326
+      procrastinationIDLE-Sheet_8: -483871932
+      procrastinationIDLE-Sheet_9: -641879402
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

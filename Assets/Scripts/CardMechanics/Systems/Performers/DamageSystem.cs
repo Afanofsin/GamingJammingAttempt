@@ -11,11 +11,13 @@ public class DamageSystem : MonoBehaviour
     private void OnEnable()
     {
         ActionSystem.AttachPerformer<DealDamageGA>(DealDamagePerformer);
+        ActionSystem.AttachPerformer<DealDirectDamageGA>(DealDirectDamagePerformer);
     }
 
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<DealDamageGA>();
+        ActionSystem.DetachPerformer<DealDirectDamageGA>();
     }
 
 
@@ -24,8 +26,11 @@ public class DamageSystem : MonoBehaviour
         foreach (var target in dealDamageGA.Targets)
         {
             target.Damage(dealDamageGA.Amount);
-            
-            if(damageVFX != null) Instantiate(damageVFX, target.transform.position, Quaternion.identity);
+
+            Vector3 VFXpos = target.transform.position;
+            VFXpos.y += 0.25f;
+            VFXpos.x += 2f;
+            if (damageVFX != null) Instantiate(damageVFX, VFXpos, Quaternion.identity);
 
             yield return new WaitForSeconds(0.15f);
 
@@ -33,7 +38,35 @@ public class DamageSystem : MonoBehaviour
             {
                 if (target is EnemyView enemyView)
                 {
-                    KillEnemyGA killEnemyGA = new(enemyView);
+                    KillEnemyGA killEnemyGA = new(enemyView, enemyView.Reward);
+                    ActionSystem.Instance.AddReaction(killEnemyGA);
+                }
+                else
+                {
+                    // Player Death Logic
+                }
+            }
+        }
+    }
+
+    private IEnumerator DealDirectDamagePerformer(DealDirectDamageGA dealDirectDamageGA)
+    {
+        foreach (var target in dealDirectDamageGA.Targets)
+        {
+            target.DirectDamage(dealDirectDamageGA.Amount, dealDirectDamageGA.DamageType);
+
+            Vector3 VFXpos = target.transform.position;
+            VFXpos.y += 0.25f;
+            VFXpos.x += 2f;
+            if (damageVFX != null) Instantiate(damageVFX, VFXpos, Quaternion.identity);
+
+            yield return new WaitForSeconds(0.15f);
+
+            if (target.CurrentHealth <= 0)
+            {
+                if (target is EnemyView enemyView)
+                {
+                    KillEnemyGA killEnemyGA = new(enemyView, enemyView.Reward);
                     ActionSystem.Instance.AddReaction(killEnemyGA);
                 }
                 else

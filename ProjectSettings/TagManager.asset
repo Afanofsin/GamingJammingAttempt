@@ -59,6 +59,8 @@ TagManager:
   - name: TargetArrow
     uniqueID: 2645960865
     locked: 0
+  - name: Effects
+    uniqueID: 2298686897
   - name: Card
     uniqueID: 1152392507
     locked: 0

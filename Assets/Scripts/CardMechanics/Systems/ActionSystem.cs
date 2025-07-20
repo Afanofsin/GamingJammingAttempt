@@ -61,7 +61,7 @@ public class ActionSystem : MonoBehaviour
 
     private IEnumerator PerformReactions()
     {
-        foreach (var reaction in reactions)
+        foreach(var reaction in reactions)
         {
             yield return Flow(reaction);
         }
@@ -70,24 +70,24 @@ public class ActionSystem : MonoBehaviour
     private IEnumerator PerformPerformer(GameAction action)
     {
         Type type = action.GetType();
-        if (performers.ContainsKey(type))
+        if(performers.ContainsKey(type))
         {
             yield return performers[type](action);
         }
     }
 
-    public static void AttachPerformer<T>(Func<T, IEnumerator> performer) where T : GameAction
+    public static void AttachPerformer<T>(Func<T, IEnumerator> performer) where T: GameAction
     {
         Type type = typeof(T);
         IEnumerator wrappedPerformer(GameAction action) => performer((T)action);
-        if (performers.ContainsKey(type)) performers[type] = wrappedPerformer;
+        if(performers.ContainsKey(type)) performers[type] =  wrappedPerformer;
         else performers.Add(type, wrappedPerformer);
     }
 
-    public static void DetachPerformer<T>() where T : GameAction
+    public static void DetachPerformer<T>() where T: GameAction
     {
         Type type = typeof(T);
-        if (performers.ContainsKey(type)) performers.Remove(type);
+        if(performers.ContainsKey(type)) performers.Remove(type);
     }
 
     public static void SubscribeReaction<T>(Action<T> reaction, ReactionTiming timing) where T : GameAction
@@ -117,7 +117,7 @@ public class ActionSystem : MonoBehaviour
         }
 
         Dictionary<Type, List<Action<GameAction>>> subs = timing == ReactionTiming.PRE ? preSubs : postSubs;
-        if (subs.ContainsKey(typeof(T)))
+        if(subs.ContainsKey(typeof(T)))
         {
             subs[typeof(T)].Remove(wrappedReaction);
         }
@@ -125,7 +125,7 @@ public class ActionSystem : MonoBehaviour
     }
     private void Awake()
     {
-        if (Instance != null)
+        if(Instance != null)
         {
             Destroy(gameObject);
             return;

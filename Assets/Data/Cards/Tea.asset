@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c86b1a82db059b4580ff3ce608c83d6, type: 3}
+  m_Name: Tea
+  m_EditorClassIdentifier: 
+  <ManaCost>k__BackingField: 0
+  <Image>k__BackingField: {fileID: 1848772572, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
+  <Description>k__BackingField: Gives 2 temporary Motivation
+  <ManualTargetEffect>k__BackingField:
+    rid: -2
+  <OtherEffects>k__BackingField:
+  - <TargetMode>k__BackingField:
+      rid: 7229863333074829557
+    <Effect>k__BackingField:
+      rid: 7229863355859075190
+  <ID>k__BackingField: 10
+  <DeckLimit>k__BackingField: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7229863333074829557
+      type: {class: NoTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 7229863355859075190
+      type: {class: AddManaEffect, ns: , asm: Assembly-CSharp}
+      data:
+        amount: 2

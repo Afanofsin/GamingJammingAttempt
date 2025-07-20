@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5209123821803856454}
   - component: {fileID: 5487850629319635634}
+  - component: {fileID: 3399859318663347490}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -119,6 +120,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3399859318663347490
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829321015862387044}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2513277251827057848
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 6140565341892662947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.53125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -820,8 +843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statusEffectUIPrefab: {fileID: 1270217010949451036, guid: 560dd7cac43c46c41b1d273367b37d01, type: 3}
-  shieldSprite: {fileID: 21300000, guid: 192e4c45358fcbd419b587621f2bb39b, type: 3}
-  burnSprite: {fileID: 21300000, guid: 9b32075a292452f479c9f69ac8a08b9e, type: 3}
+  shieldSprite: {fileID: 864074389, guid: cf491e19a7ccc784e8a6b2b5fa2ee0b4, type: 3}
+  burnSprite: {fileID: -1225663973, guid: cf491e19a7ccc784e8a6b2b5fa2ee0b4, type: 3}
+  procrastinationSprite: {fileID: 21300000, guid: 093a9fa8a9b01154c9e21fdec8a208b2, type: 3}
 --- !u!222 &2661485608009734342
 CanvasRenderer:
   m_ObjectHideFlags: 0

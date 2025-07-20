@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Sloth
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: 21300000, guid: 99947274a01e2924fbfe7683a7ffa82a, type: 3}
-  <Health>k__BackingField: 25
+  <Health>k__BackingField: 40
   <Morale>k__BackingField: 0
-  <AttackPower>k__BackingField: 5
+  <AttackPower>k__BackingField: 2
+  <Reward>k__BackingField: 20
+  <Controller>k__BackingField: {fileID: 9100000, guid: a2eb8fdd30a6b134aa1d7d540fb032b1, type: 2}
+  Phase1Base: {fileID: 11400000, guid: 4bf2d18d345de08469279eca6e45b30b, type: 2}
+  Phase2Base: {fileID: 11400000, guid: 0d633cb2f327a93458270376abee6fba, type: 2}
+  Phase3Base: {fileID: 11400000, guid: ec3e721f03748534b9d89b380b4880f9, type: 2}

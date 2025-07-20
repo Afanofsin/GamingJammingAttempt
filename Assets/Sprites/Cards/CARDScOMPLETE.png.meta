@@ -149,287 +149,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CARDScOMPLETE_0
+      name: TeaSprite
       rect:
         serializedVersion: 2
-        x: 0
-        y: 144
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3
+        y: 150
+        width: 56
+        height: 40
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb7287f8d55c9174184f395e2bcecd6d
-      internalID: -1002065127
+      spriteID: a9e163f95ec5a804c91551157beed347
+      internalID: 1848772572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_1
+      name: CoffeeSprite
       rect:
         serializedVersion: 2
-        x: 64
-        y: 144
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 69
+        y: 150
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4f857ad07a301546baf5e2b1c31f186
-      internalID: 965528982
+      spriteID: d36ef6973513ba64ea0e26a4ba64ddcb
+      internalID: 1553969495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_2
+      name: WatchATutorialSprite
       rect:
         serializedVersion: 2
-        x: 128
-        y: 144
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 133
+        y: 150
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf5226bb55099a48856e4c68c62b0bc
-      internalID: -1403626704
+      spriteID: 0b993e15186b54b469ee8f095bedc44a
+      internalID: 1633509274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_3
+      name: ReadDocumentationSprite
       rect:
         serializedVersion: 2
-        x: 192
-        y: 144
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 197
+        y: 150
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c75f532bd71efe41a25aed7a11e5929
-      internalID: -666096815
+      spriteID: 86555304bac85c449b25f4580067814f
+      internalID: -400794458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_4
+      name: TakeShowerSprite
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 101
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6d9013ac96111f4c93254941596e552
-      internalID: -179382941
+      spriteID: 9b57e5daed546cb4eab412f13b9b614e
+      internalID: -1990616146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_5
+      name: HealthyMealSprite
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 69
+        y: 101
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c90f714b2731f7646aa8af52c16303a9
-      internalID: -5513412
+      spriteID: 90e8a515891fed54f977b12c34911de3
+      internalID: 865256925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_6
+      name: SleepSprite
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 133
+        y: 101
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfc929d9343eb474aa7a411d99133909
-      internalID: -922862537
+      spriteID: c2b9044843f54d7428ba8820c3932aae
+      internalID: -306186018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_7
+      name: ExerciseSprite
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 197
+        y: 101
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fffbdf8812172540ba7222a04451165
-      internalID: 910973915
+      spriteID: c992aab83db05934eb91e08a19ea1d0b
+      internalID: 1806968248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_8
+      name: TurnOffDistractionsSprite
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 53
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66866aecf5d2f414c970cc71e7a3ce51
-      internalID: 2003543251
+      spriteID: b047e8251b7fa9f48a4708aba6328400
+      internalID: -1935172900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_9
+      name: EnergyDrinkSprite
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 69
+        y: 53
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d72dd352a6831ed448a155856cd7b595
-      internalID: 1288603313
+      spriteID: 6492778990cc635449547d71ca6a8009
+      internalID: 1036260015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_10
+      name: ReadABookSprite
       rect:
         serializedVersion: 2
-        x: 128
-        y: 48
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 133
+        y: 53
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f7ed3aa87714d4e873a6432d40c9ea
-      internalID: -1383404481
+      spriteID: 8ae6505ddcef5154e936056831d15acf
+      internalID: 307855232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_11
+      name: WriteScriptSprite
       rect:
         serializedVersion: 2
-        x: 192
-        y: 48
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 197
+        y: 53
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f926f74349872d3498363f5b6a905a56
-      internalID: -1743759988
+      spriteID: 521f0c219ba8d9d44b09cc41b212cda8
+      internalID: 697095927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CARDScOMPLETE_12
+      name: PlayGuitarSprite
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 5
+        width: 54
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1808c45cd6f53634fb00660f8878012d
-      internalID: 820822491
+      spriteID: 53ea093f6eed546458da71808fa332df
+      internalID: 776119790
       vertices: []
       indices: 
       edges: []
@@ -448,21 +448,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      CARDScOMPLETE_0: -1002065127
-      CARDScOMPLETE_1: 965528982
-      CARDScOMPLETE_10: -1383404481
-      CARDScOMPLETE_11: -1743759988
-      CARDScOMPLETE_12: 820822491
-      CARDScOMPLETE_2: -1403626704
-      CARDScOMPLETE_3: -666096815
-      CARDScOMPLETE_4: -179382941
-      CARDScOMPLETE_5: -5513412
-      CARDScOMPLETE_6: -922862537
-      CARDScOMPLETE_7: 910973915
-      CARDScOMPLETE_8: 2003543251
-      CARDScOMPLETE_9: 1288603313
+      CoffeeSprite: 1553969495
+      EnergyDrinkSprite: 1036260015
+      ExerciseSprite: 1806968248
+      HealthyMealSprite: 865256925
+      PlayGuitarSprite: 776119790
+      ReadABookSprite: 307855232
+      ReadDocumentationSprite: -400794458
+      SleepSprite: -306186018
+      TakeShowerSprite: -1990616146
+      TeaSprite: 1848772572
+      TurnOffDistractionsSprite: -1935172900
+      WatchATutorialSprite: 1633509274
+      WriteScriptSprite: 697095927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

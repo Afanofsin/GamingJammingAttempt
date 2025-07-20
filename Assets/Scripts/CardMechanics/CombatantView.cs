@@ -15,8 +15,9 @@ public class CombatantView : MonoBehaviour
     [SerializeField]
     private SpriteRenderer _moraleSpriteRenderer;
     [SerializeField]
+    public Animator Animator;
+    [SerializeField]
     private Transform barsParent;
- 
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
@@ -27,18 +28,20 @@ public class CombatantView : MonoBehaviour
     public int CurrentMorale { get; private set; }
 
     private Dictionary<StatusEffectType, int> statusEffects = new();
+    private Tween _jiggleTween;
 
-    protected void SetupBase(int health, int morale, Sprite image)
+    protected void SetupBase(int health, int morale, Sprite image, RuntimeAnimatorController controller)
     {
         MaxHealth = CurrentHealth = health;
         if (morale != 0) CurrentMorale = morale;
         else CurrentMorale = 0;
         _spriteRenderer.sprite = image;
-        UpdateHealthText();
+        Animator.runtimeAnimatorController = controller;
 
+        UpdateHealthText();
         ManageMoraleSprite();
         UpdateMoraleText();
-        StartCoroutine(JiggleBars());
+        StartJiggling();
     }
     private void UpdateHealthText()
     {
@@ -63,18 +66,26 @@ public class CombatantView : MonoBehaviour
         }
     }
 
-    private IEnumerator JiggleBars()
+    private void StartJiggling()
     {
-        Tween up = barsParent.transform.DOMoveY(barsParent.transform.position.y + 0.0625f, 1.15f);
-        yield return up.WaitForCompletion();
-        Tween down = barsParent.transform.DOMoveY(barsParent.transform.position.y - 0.0625f, 1.15f);
-        yield return down.WaitForCompletion();
-        StartCoroutine(JiggleBars());
-        yield break;
+        StopJiggling();
+
+        Vector3 originalPos = barsParent.transform.position;
+        _jiggleTween = barsParent.transform
+            .DOMoveY(originalPos.y + 0.0625f, 1.15f)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine)
+            .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
+    }
+
+    private void StopJiggling()
+    {
+        _jiggleTween?.Kill();
     }
 
     public void Damage(int damageAmount)
     {
+        if (GetStatusEffectStacks(StatusEffectType.PROCRASTINATION) > 0) return;
         int remainingDamage = damageAmount;
         int currentShield = GetStatusEffectStacks(StatusEffectType.SHIELD);
 
@@ -84,30 +95,65 @@ public class CombatantView : MonoBehaviour
             remainingDamage = 0;
         }
 
-        if(CurrentMorale > 0)
-        {
-            if(CurrentMorale >= remainingDamage)
-            {
-                CurrentMorale -= remainingDamage;
-                remainingDamage = 0;
-            }
-            else if(CurrentMorale < remainingDamage) 
-            {
-                remainingDamage -= CurrentMorale;
-                CurrentMorale = 0;
-            }
-        }
+        remainingDamage = DamageMorale(remainingDamage);
 
-        if (remainingDamage > 0) 
-        {
-            CurrentHealth -= remainingDamage;
-            if (CurrentHealth < 0) CurrentHealth = 0;
-        }
+        DamageHealth(remainingDamage);
 
         transform.DOShakePosition(0.2f, 0.5f);
         UpdateHealthText();
         UpdateMoraleText();
         ManageMoraleSprite();
+    }
+
+    public void DirectDamage(int damageAmount, DirectType type)
+    {
+        if (GetStatusEffectStacks(StatusEffectType.PROCRASTINATION) > 0) return;
+        int remainingDamage = damageAmount;
+        switch (type)
+        {
+            case DirectType.IGNORESHIELD:
+                remainingDamage = DamageMorale(remainingDamage);
+                DamageHealth(remainingDamage);
+                break;
+            case DirectType.MORALE:
+                DamageMorale(remainingDamage);
+                break;
+            case DirectType.HEALTH:
+                DamageHealth(remainingDamage);
+                break;
+        }
+        transform.DOShakePosition(0.2f, 0.5f);
+        UpdateHealthText();
+        UpdateMoraleText();
+        ManageMoraleSprite();
+    }
+
+    private int DamageMorale(int damage)
+    {
+        int remainingDamage = damage;
+        if (CurrentMorale > 0)
+        {
+            if (CurrentMorale >= remainingDamage)
+            {
+                CurrentMorale -= remainingDamage;
+                remainingDamage = 0;
+            }
+            else if (CurrentMorale < remainingDamage)
+            {
+                remainingDamage -= CurrentMorale;
+                CurrentMorale = 0;
+            }
+        }
+        return remainingDamage;
+    }
+
+    private void DamageHealth(int remainingDamage)
+    {
+        if (remainingDamage > 0)
+        {
+            CurrentHealth -= remainingDamage;
+            if (CurrentHealth < 0) CurrentHealth = 0;
+        }
     }
 
     public void AddStatusEffect(StatusEffectType type, int stackCount)
