@@ -20,5 +20,5 @@ MonoBehaviour:
   isPlantCardCollected: 0
   isToiletCardCollected: 0
   isWardrobeCardCollected: 0
-  isShoeCardCollected: 0
+  isGuitarCardCollected: 0
   isCompletedCatQuest: 0

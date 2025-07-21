@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690b469552235f3458759163d48fb9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequiredAmount: 5
+  RequiredAmount: 1
   GoalCompleted:
     m_PersistentCalls:
       m_Calls: []

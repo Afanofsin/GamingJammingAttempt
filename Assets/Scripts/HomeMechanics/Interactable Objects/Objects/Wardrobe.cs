@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Plant : InteractObject, IInteractable
+public class Wardrobe : InteractObject, IInteractable
 {
     [SerializeField] private DialogueText[] dialogueText;
     [SerializeField] private DialogueController dialogueController;
@@ -8,7 +8,7 @@ public class Plant : InteractObject, IInteractable
     bool didAction = false;
     int i = 0;
     private void Start() {
-         if (progression.isPlantCardCollected)
+         if (progression.isWardrobeCardCollected)
         {
             i = 2;
             didAction = true;
@@ -32,8 +32,8 @@ public class Plant : InteractObject, IInteractable
     }
     public override void DoAction()
     {
-        progression.isPlantCardCollected = true;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().InventoryDeck.Add(new Card(CardManagementSystem.Instance.GetCardByName("Healthy Meal")));
+        progression.isWardrobeCardCollected = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().InventoryDeck.Add(new Card(CardManagementSystem.Instance.GetCardByName("Coffee")));
         EventManager.Instance.OnCLick();
         didAction = true;
     }
