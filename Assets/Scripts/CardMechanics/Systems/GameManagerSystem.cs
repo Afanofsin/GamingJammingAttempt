@@ -35,11 +35,18 @@ public class GameManagerSystem : MonoBehaviour
 
     private void Start()
     {
-        // Reset HeroDataSO with StartingDeck list
-        //_heroDataSO.InitializeBattleDeck(startingDeck);
-        //progression.ResetProgress();
+        _heroDataSO.InitializeBattleDeck(startingDeck);
+        progression.ResetProgress();
 
         //StartBattle(new() { enemy });
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            _mainMenuUI.OpenOptions();
+        }
     }
 
     public void GoToMainMenu()
