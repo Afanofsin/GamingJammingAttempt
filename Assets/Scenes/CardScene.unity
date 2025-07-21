@@ -939,8 +939,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 16f56742a4312724b81593572f4a2740, type: 2}
-  m_sharedMaterial: {fileID: 8446911811002514054, guid: 16f56742a4312724b81593572f4a2740, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2168,8 +2168,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is your HP. It is finite resource, it does not regenerate
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
-  m_sharedMaterial: {fileID: -3912275069040531621, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2566,8 +2566,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Morale is a second lifebar, it can grow infinitely
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
-  m_sharedMaterial: {fileID: -3912275069040531621, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3359,8 +3359,8 @@ MonoBehaviour:
   m_text: Button to end your turn. You will discard all remaining cards in hand and
     get 5 new ones from draw pile
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
-  m_sharedMaterial: {fileID: -3912275069040531621, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3615,8 +3615,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Status effects are located under characters
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
-  m_sharedMaterial: {fileID: -3912275069040531621, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3902,8 +3902,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: End Turn
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 16f56742a4312724b81593572f4a2740, type: 2}
-  m_sharedMaterial: {fileID: 8446911811002514054, guid: 16f56742a4312724b81593572f4a2740, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4507,8 +4507,8 @@ MonoBehaviour:
     2. Shield - blocks any instance
     of enemy damage, except Burn and direct damage to Health and Morale'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
-  m_sharedMaterial: {fileID: -3912275069040531621, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5092,8 +5092,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Motivation is used to play cards
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
-  m_sharedMaterial: {fileID: -3912275069040531621, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5634,8 +5634,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Your hand is located here, it can hold 8 cards
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
-  m_sharedMaterial: {fileID: -3912275069040531621, guid: ddc07802d1d47c0449551cee6fb52823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
+  m_sharedMaterial: {fileID: -6014796846814122065, guid: 698cd93cb6fa0a042ad6de8fadb89e2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

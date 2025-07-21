@@ -75,6 +75,14 @@ public class GameMainMenuUI : MonoBehaviour
         GameManagerSystem.Instance?.GoToMainMenu();
     }
 
+    public void OpenOptions()
+    {
+        _mainMenu.SetActive(false);
+        _inGameMenu.SetActive(true);
+        _WinMenu.SetActive(false);
+
+    }
+
     public void Quit()
     {
         Application.Quit();

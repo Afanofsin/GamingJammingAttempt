@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreenPrefab: {fileID: 622058759402727946, guid: bcc67c546a984744b98fbbbecc063b27, type: 3}
   MainMenuPrefab: {fileID: 5221250037248339160, guid: 04f6e4c0356625a4999af682af0c7732, type: 3}
-  _heroDataSO: {fileID: 0}
-  progression: {fileID: 0}
+  _heroDataSO: {fileID: 11400000, guid: 8f009bac480876947a4c977bee2e2da6, type: 2}
+  progression: {fileID: 11400000, guid: 8fa90f9f79266024791040492d75e355, type: 2}
   startingDeck:
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
   - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
