@@ -63,7 +63,7 @@ public class DialogueController : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
         paragpaphs.Clear();
 
-        talkingEnded = false;
+        talkingEnded = true;
 
         if (gameObject.activeSelf)
         {

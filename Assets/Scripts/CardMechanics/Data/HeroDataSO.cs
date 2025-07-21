@@ -30,6 +30,16 @@ public class HeroDataSO : ScriptableObject
             Deck.Add(card.data);
         }
     }
+
+    public void RebuildInventoryDeck(List<Card> cards)
+    {
+        InventoryDeck.Clear();
+        foreach (Card card in cards)
+        {
+            InventoryDeck.Add(card.data);
+        }
+    }
+
     public void InitializeBattleDeck(List<CardDataSO> cards)
     {
         Deck = new List<CardDataSO>(cards);

@@ -18,6 +18,7 @@ public class Decker : MonoBehaviour
     private string cardToTransfer;
     private GameObject[] objectsToDestroy1;
     private GameObject[] objectsToDestroy2;
+
     void OnEnable()
     {
         Debug.Log(_player.BattleDeck.Count);
@@ -40,7 +41,7 @@ public class Decker : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(cardToTransfer);
+        //Debug.Log(cardToTransfer);
     }
     public void ShowCardLeft(string cardTitle)
     {
@@ -208,6 +209,7 @@ public class Decker : MonoBehaviour
             Destroy(go);
         }
         _player.defaultHero.RebuildBattleDeck(playerNewBattleDeck);
+        _player.defaultHero.RebuildInventoryDeck(playerNewInventoryDeck);
         _player.BattleDeck = new();
         _player.InventoryDeck = new();
         _player.BattleDeck.AddRange(playerNewBattleDeck);

@@ -34,6 +34,7 @@ public class GameManagerSystem : MonoBehaviour
     private EnemyDataSO enemy;
 
     private List<EnemyDataSO> _enemiesForBattle = new();
+    
 
     private void Start()
     {
@@ -50,6 +51,7 @@ public class GameManagerSystem : MonoBehaviour
         {
             _mainMenuUI.OpenOptions();
         }
+
     }
 
     public void GoToMainMenu()

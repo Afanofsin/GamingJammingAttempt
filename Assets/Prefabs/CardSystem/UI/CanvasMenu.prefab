@@ -4864,7 +4864,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 202963384866719722}
+      - m_Target: {fileID: 3988490492848231194}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4934,9 +4934,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenu: {fileID: 3663130438854991956}
   _inGameMenu: {fileID: 7635072941479045833}
+  _inGameHouse: {fileID: 5663913660536382912}
   _WinMenu: {fileID: 222771431311760294}
   _WinMenuText: {fileID: 7651538598829223573}
   _LoseMenu: {fileID: 1806612626058307342}
+  wasTutorActive: 0
 --- !u!223 &6640132316121677078
 Canvas:
   m_ObjectHideFlags: 0
@@ -4958,7 +4960,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 999
   m_TargetDisplay: 0
 --- !u!114 &9102726596989508922
 MonoBehaviour:

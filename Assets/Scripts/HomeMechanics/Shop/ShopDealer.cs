@@ -20,7 +20,6 @@ public class ShopDealer : InteractObject, IDoAction
     {
         Talk(dialogueText[i]);
 
-        ProgressTalk();
         if (i == 3 && !didAction && dialogueController.talkingEnded)
         {
             DoAction();
@@ -45,7 +44,7 @@ public class ShopDealer : InteractObject, IDoAction
         cardsToGive.Clear();
         didAction = true;
     }
-    public void ProgressTalk()
+    public override void CheckDialogueEnd()
     {
         if (dialogueController.talkingEnded && i < dialogueText.Length - 1 && !dialogueController.isTyping)
         {

@@ -25,6 +25,7 @@ public abstract class InteractObject : MonoBehaviour, IInteractable, IDoAction
 
     void Update()
     {
+        CheckDialogueEnd();
         if (!IsWithinDistance() && _interactSprite.gameObject.activeSelf && focusObject == this)
         {
             focusObject = null;
@@ -49,6 +50,7 @@ public abstract class InteractObject : MonoBehaviour, IInteractable, IDoAction
         {
             Interact();
         }
+        
     }
     public bool IsWithinDistance()
     {
@@ -61,6 +63,8 @@ public abstract class InteractObject : MonoBehaviour, IInteractable, IDoAction
     }
     public abstract void Interact();
     public abstract void DoAction();
+
+    public abstract void CheckDialogueEnd();
     
     /* private void AnimationTriggerEvent(AnimationTrigger triggerType)
     {

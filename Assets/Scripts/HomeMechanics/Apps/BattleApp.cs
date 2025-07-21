@@ -11,12 +11,14 @@ public class BattleApp : MonoBehaviour
     public EnemyDataSO proctrastinationDataSO;
     public EnemyDataSO imposterSyndromeDataSO;
     public EnemyDataSO firstGameDataSO;
+    public HeroDataSO heroDataSO;
     public Progression progression;
     public Button firstBossButton;
     public Button secondBossButton;
     public Button thirdBossButton;
     public Button fourthBossButton;
     public Button startBattleButton;
+    public GameObject notEnoughCardsText;
     public Image bossImage;
     public TextMeshProUGUI bossName;
     public TextMeshProUGUI bossDescription;
@@ -39,6 +41,7 @@ public class BattleApp : MonoBehaviour
         bossName.text = null;
         bossDescription.text = null;
         bossImage.enabled = false;
+        notEnoughCardsText.SetActive(false);
         startBattleButton.gameObject.SetActive(false);
         EvaluateBosses();
     }
@@ -62,6 +65,11 @@ public class BattleApp : MonoBehaviour
     }
     public void StartBattle()
     {
+        if (heroDataSO.Deck.Count < 10)
+        {
+            notEnoughCardsText.SetActive(true);
+            return;
+        }
         GameManagerSystem.Instance.StartBattle( bossData );
     }
     public void ShowSecondBoss()

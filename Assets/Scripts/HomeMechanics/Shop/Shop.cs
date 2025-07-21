@@ -23,9 +23,10 @@ public class Shop : MonoBehaviour
     private const int SHOP_LIMIT = 10;
     void Awake()
     {
-        ActionSystem.SubscribeReaction<AddCardToCartEvent>(AddCardToCart, ReactionTiming.POST);
+        
         if (Instance == null)
         {
+            shopContent.Clear();
             FIllWithRandomCards();
             EvaluateCards();
             Instance = this;
@@ -37,6 +38,7 @@ public class Shop : MonoBehaviour
     }
     void OnEnable()
     {
+        ActionSystem.SubscribeReaction<AddCardToCartEvent>(AddCardToCart, ReactionTiming.POST);
         fullPrice = 0;
         moneyText.text = "Your money: " + playerCash.Money;
         cartText.text = "Cart:  " + fullPrice;
@@ -104,6 +106,16 @@ public class Shop : MonoBehaviour
             }
         }
     }
+
+    public void DestroyCardViews()
+    {
+        ShopCardView[] allViews = FindObjectsByType<ShopCardView>(FindObjectsSortMode.None);
+
+        foreach (ShopCardView view in allViews)
+        {
+            view.DestroyCardView();
+        }
+    }
     public bool HasEnoughCash(float money)
     {
         return money >= fullPrice;
@@ -112,8 +124,8 @@ public class Shop : MonoBehaviour
     {
         if (HasEnoughCash(playerCash.Money) && fullPrice != 0 && shopDealer.cardsToGive.Count == 0)
         {
-            buyButton.image.sprite = buyButtonGood;
             buyButton.enabled = true;
+            buyButton.image.sprite = buyButtonGood;
         }
         else
         {
@@ -165,6 +177,7 @@ public class Shop : MonoBehaviour
     void OnDisable()
     {
         EvaluateCards();
+        ActionSystem.UnsubscribeReaction<AddCardToCartEvent>(AddCardToCart, ReactionTiming.POST);
     }
 
 }
