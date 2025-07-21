@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 11400000, guid: aa7476cebe6d2c146b78a47c72e713fa, type: 2}
+      objectReference: {fileID: 11400000, guid: e6d7faa8c3c537e4fb66230442c214f1, type: 2}
     - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
       propertyPath: _heroDataSO
       value: 

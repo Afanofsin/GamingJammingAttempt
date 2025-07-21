@@ -43,7 +43,8 @@ public class DamageSystem : MonoBehaviour
                 }
                 else
                 {
-                    // Player Death Logic
+                    PlayerDeathGA playerDeathGA = new();
+                    ActionSystem.Instance.AddReaction(playerDeathGA);
                 }
             }
         }
@@ -71,7 +72,8 @@ public class DamageSystem : MonoBehaviour
                 }
                 else
                 {
-                    // Player Death Logic
+                    PlayerDeathGA playerDeathGA = new();
+                    ActionSystem.Instance.AddReaction(playerDeathGA);
                 }
             }
         }

@@ -53,8 +53,30 @@ public class GameMainMenuUI : MonoBehaviour
         _WinMenuText.text = $"You won:\r\n|{reward}$|\r\nSpend them on some new cards!\r\n";
     }
 
+    public void OpenLoseScreen()
+    {
+        _mainMenu.SetActive(false);
+        _inGameMenu.SetActive(false);
+        _LoseMenu.SetActive(true);
+        _WinMenu.SetActive(false);
+    }
+
+    public void RestartLevel()
+    {
+        GameManagerSystem.Instance?.RestartLevel();
+    }
     public void GoBackToHouse()
     {
-        GameManagerSystem.Instance.GoToHouseScene();
+        GameManagerSystem.Instance?.GoToHouseScene();
+    }
+
+    public void GoToMainMenu()
+    {
+        GameManagerSystem.Instance?.GoToMainMenu();
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

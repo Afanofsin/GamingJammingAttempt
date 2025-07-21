@@ -2,14 +2,38 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Progression")]
 public class Progression : ScriptableObject
 {
-    public bool isFirstBossKilled = false;
-    public bool isSecondBossKilled = false;
-    public bool isThirdBossKilled = false;
-    public bool isFourthBossKilled = false;
-    public bool isBedCardCollected = false;
-    public bool isPlantCardCollected = false;
-    public bool isToiletCardCollected = false;
-    public bool isWardrobeCardCollected = false;
-    public bool isShoeCardCollected = false;
-    public bool isCompletedCatQuest = false;
+    [field: SerializeField]
+    public bool isFirstBossKilled { get; set; } = false;
+    [field: SerializeField]
+    public bool isSecondBossKilled { get; set; } = false;
+    [field: SerializeField]
+    public bool isThirdBossKilled { get; set; } = false;
+    [field: SerializeField]
+    public bool isFourthBossKilled { get; set; } = false;
+    [field: SerializeField]
+    public bool isBedCardCollected { get; set; } = false;
+    [field: SerializeField]
+    public bool isPlantCardCollected { get; set; } = false;
+    [field: SerializeField]
+    public bool isToiletCardCollected { get; set; } = false;
+    [field: SerializeField]
+    public bool isWardrobeCardCollected { get; set; } = false;
+    [field: SerializeField]
+    public bool isShoeCardCollected { get; set; } = false;
+    [field: SerializeField]
+    public bool isCompletedCatQuest { get; set; }   = false;
+
+    public void ResetProgress()
+    {
+        isFirstBossKilled = false;
+        isSecondBossKilled = false;
+        isThirdBossKilled = false;
+        isFourthBossKilled = false;
+        isBedCardCollected = false;
+        isPlantCardCollected = false;
+        isToiletCardCollected = false;
+        isWardrobeCardCollected = false;
+        isShoeCardCollected = false;
+        isCompletedCatQuest = false;
+    }
 }

@@ -57,7 +57,7 @@ public class EnemyView : CombatantView
 
         StateMachine.Initialize(Phase1State);
         Reward = enemyDataSO.Reward;
-        SetupBase(enemyDataSO.Health, enemyDataSO.Morale, enemyDataSO.Image, enemyDataSO.Controller);
+        SetupBase(enemyDataSO.Health, enemyDataSO.Morale, enemyDataSO.Image, enemyDataSO.Controller, enemyDataSO.name);
     }
 
     public void ReduceProcrastination(PlayCardGA playCardGA)

@@ -17,7 +17,9 @@ MonoBehaviour:
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 5
   <Reward>k__BackingField: 40
-  <Description>k__BackingField: 
+  <Description>k__BackingField: You are your own greatest enemy. You know your weaknesses
+    the best. Make precise strikes to soften the armor and strike strong once the
+    guard is down.
   <Controller>k__BackingField: {fileID: 9100000, guid: c84549c1660ec6c46a7ef953af8f35c1, type: 2}
   Phase1Base: {fileID: 11400000, guid: 13044d75ae136e34399ce26e1a2f1cd0, type: 2}
   Phase2Base: {fileID: 11400000, guid: 838e45f53f6c68042a2ec092709e2a69, type: 2}

@@ -27,16 +27,19 @@ public class CombatantView : MonoBehaviour
     public int CurrentHealth { get; private set; }
     public int CurrentMorale { get; private set; }
 
+    public string Name { get; private set; }
+
     private Dictionary<StatusEffectType, int> statusEffects = new();
     private Tween _jiggleTween;
 
-    protected void SetupBase(int health, int morale, Sprite image, RuntimeAnimatorController controller)
+    protected void SetupBase(int health, int morale, Sprite image, RuntimeAnimatorController controller, string name)
     {
         MaxHealth = CurrentHealth = health;
         if (morale != 0) CurrentMorale = morale;
         else CurrentMorale = 0;
         _spriteRenderer.sprite = image;
         Animator.runtimeAnimatorController = controller;
+        Name = name;
 
         UpdateHealthText();
         ManageMoraleSprite();

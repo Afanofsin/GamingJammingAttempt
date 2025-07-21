@@ -22,6 +22,8 @@ public class GameManagerSystem : MonoBehaviour
 
     [SerializeField]
     private HeroDataSO _heroDataSO;
+    [SerializeField]
+    private Progression progression;
 
     [SerializeField]
     private List<CardDataSO> startingDeck;
@@ -35,8 +37,9 @@ public class GameManagerSystem : MonoBehaviour
     {
         // Reset HeroDataSO with StartingDeck list
         //_heroDataSO.InitializeBattleDeck(startingDeck);
+        //progression.ResetProgress();
 
-        StartBattle(new() { enemy });
+        //StartBattle(new() { enemy });
     }
 
     public void GoToMainMenu()
@@ -94,6 +97,37 @@ public class GameManagerSystem : MonoBehaviour
     {
         _mainMenuUI.WinScreenOpen(reward);
         _heroDataSO.Money += reward;
+    }
+
+    public void GameLost()
+    {
+        _mainMenuUI.OpenLoseScreen();
+    }
+
+    public void RestartLevel()
+    {
+        StartBattle(_enemiesForBattle);
+    }
+
+    public void Progress(string bossName)
+    {
+        switch (bossName)
+        {
+            case "Sloth":
+                progression.isFirstBossKilled = true;
+                break;
+            case "Procrastination":
+                progression.isSecondBossKilled = true;
+                break;
+            case "ImposterSyndrome":
+                progression.isThirdBossKilled = true;
+                break;
+            case "FirstGame":
+                progression.isFourthBossKilled = true;
+                break;
+            default:
+                break;
+        }
     }
 
     private void ResetGameState()
