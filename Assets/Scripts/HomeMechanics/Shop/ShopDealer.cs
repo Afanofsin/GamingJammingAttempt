@@ -59,13 +59,14 @@ public class ShopDealer : InteractObject, IDoAction
         dialogueController.talkingEnded = true;
         dialogueController.isTyping = false;
         dialogueController.paragpaphs.Clear();
-        if (!GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Movement>().canMove)
-        {
-            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Movement>().StopPlayer();
-        }
+        Talk(dialogueText[i]);
         gameObject.SetActive(false);
         i = 0;
         didAction = false;
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().canMove == false)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
+        }
     }
     public IEnumerator RingTheBell()
     {

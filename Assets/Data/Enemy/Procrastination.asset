@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Procrastination
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: 471017314, guid: 81aa29344214e19429be266a1c3130c7, type: 3}
-  <Health>k__BackingField: 30
+  <Health>k__BackingField: 45
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 5
   <Reward>k__BackingField: 30

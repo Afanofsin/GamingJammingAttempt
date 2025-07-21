@@ -17,15 +17,9 @@ MonoBehaviour:
       rid: 7229863370307928140
     <Effect>k__BackingField:
       rid: 7229863370307928141
-  - <TargetMode>k__BackingField:
-      rid: -2
-    <Effect>k__BackingField:
-      rid: -2
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 7229863370307928140
       type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
       data: 

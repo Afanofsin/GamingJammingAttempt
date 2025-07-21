@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e420f66ba827c97419f49fde35098ff6, type: 3}
   m_Name: Progression
   m_EditorClassIdentifier: 
-  isFirstBossKilled: 0
-  isSecondBossKilled: 0
-  isThirdBossKilled: 0
-  isFourthBossKilled: 0
-  isBedCardCollected: 0
-  isPlantCardCollected: 0
-  isToiletCardCollected: 0
-  isWardrobeCardCollected: 0
-  isGuitarCardCollected: 0
-  isCompletedCatQuest: 0
+  <isFirstBossKilled>k__BackingField: 1
+  <isSecondBossKilled>k__BackingField: 1
+  <isThirdBossKilled>k__BackingField: 0
+  <isFourthBossKilled>k__BackingField: 0
+  <isBedCardCollected>k__BackingField: 0
+  <isPlantCardCollected>k__BackingField: 0
+  <isToiletCardCollected>k__BackingField: 0
+  <isWardrobeCardCollected>k__BackingField: 0
+  <isShoeCardCollected>k__BackingField: 0
+  <isCompletedCatQuest>k__BackingField: 0
+  <isGuitarCardCollected>k__BackingField: 0

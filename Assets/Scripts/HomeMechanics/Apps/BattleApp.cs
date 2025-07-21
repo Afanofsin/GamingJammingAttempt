@@ -89,7 +89,7 @@ public class BattleApp : MonoBehaviour
         bossImage.sprite = firstGameDataSO.Image;
         bossImage.enabled = true;
         startBattleButton.gameObject.SetActive(true);
-        bossName.text = firstGameDataSO.Description;
+        bossDescription.text = firstGameDataSO.Description;
     }
     public void EvaluateSloth()
     {

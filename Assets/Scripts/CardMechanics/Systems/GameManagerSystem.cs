@@ -24,6 +24,8 @@ public class GameManagerSystem : MonoBehaviour
     private HeroDataSO _heroDataSO;
     [SerializeField]
     private Progression progression;
+    [SerializeField]
+    public GameObject houseTutor;
 
     [SerializeField]
     private List<CardDataSO> startingDeck;
@@ -35,9 +37,10 @@ public class GameManagerSystem : MonoBehaviour
 
     private void Start()
     {
-        _heroDataSO.InitializeBattleDeck(startingDeck);
+        _heroDataSO.Reset();
+        _heroDataSO.InitializeInventoryDeck(startingDeck);
         progression.ResetProgress();
-
+        _mainMenuUI.OpenMainMenu();
         //StartBattle(new() { enemy });
     }
 

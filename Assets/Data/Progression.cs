@@ -22,6 +22,8 @@ public class Progression : ScriptableObject
     public bool isShoeCardCollected { get; set; } = false;
     [field: SerializeField]
     public bool isCompletedCatQuest { get; set; }   = false;
+    [field: SerializeField]
+    public bool isGuitarCardCollected { get; set; } = false;
 
     public void ResetProgress()
     {
@@ -35,5 +37,6 @@ public class Progression : ScriptableObject
         isWardrobeCardCollected = false;
         isShoeCardCollected = false;
         isCompletedCatQuest = false;
+        isGuitarCardCollected = false;
     }
 }

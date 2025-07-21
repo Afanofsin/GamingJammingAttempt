@@ -16,6 +16,7 @@ public class HeroDataSO : ScriptableObject
     public RuntimeAnimatorController Controller { get; private set; }
     [field: SerializeField]
     public List<CardDataSO> Deck { get; private set; }
+    [field: SerializeField]
     public List<CardDataSO> InventoryDeck { get; private set; }
     public void AddCardToDeck(CardDataSO cardDataSo)
     {
@@ -32,5 +33,17 @@ public class HeroDataSO : ScriptableObject
     public void InitializeBattleDeck(List<CardDataSO> cards)
     {
         Deck = new List<CardDataSO>(cards);
+    }
+
+    public void InitializeInventoryDeck(List<CardDataSO> cards)
+    {
+        InventoryDeck = new List<CardDataSO>(cards);
+    }
+
+    public void Reset()
+    {
+        InventoryDeck = new();
+        Deck = new();
+        Money = 0;
     }
 }

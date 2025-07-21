@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CardScene.unity
     guid: a70c233b6e6426c4584166528c17129a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 82f9bf9e74ef5134c922581dbd9cfba0
   m_configObjects:

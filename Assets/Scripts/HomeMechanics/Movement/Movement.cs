@@ -18,13 +18,11 @@ public class Movement : MonoBehaviour
     public List<Card> InventoryDeck;
     void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         InventoryDeck = new();
         for (int i = 0; i < defaultHero.InventoryDeck.Count; i++)
         {
             Card card = new Card(CardManagementSystem.Instance.GetCardByID(defaultHero.InventoryDeck[i].ID));
-            BattleDeck.Add(card);
+            InventoryDeck.Add(card);
         }
         BattleDeck = new();
         for (int i = 0; i < defaultHero.Deck.Count; i++)

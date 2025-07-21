@@ -16,6 +16,8 @@ public class GameMainMenuUI : MonoBehaviour
     private TMP_Text _WinMenuText;
     [SerializeField]
     private GameObject _LoseMenu;
+    [SerializeField]
+    private bool wasTutorActive = false;
 
     private void OnEnable()
     {
@@ -35,6 +37,10 @@ public class GameMainMenuUI : MonoBehaviour
             _inGameMenu.SetActive(false);
             _WinMenu.SetActive(false);
             _LoseMenu.SetActive(false);
+            if (gameState == GameState.InHouse)
+            {
+                ShowTutorial();
+            }
         }
         else
         {
@@ -43,6 +49,14 @@ public class GameMainMenuUI : MonoBehaviour
             _WinMenu.SetActive(false);
             _LoseMenu.SetActive(false);
         }
+    }
+
+    public void OpenMainMenu()
+    {
+        _mainMenu.SetActive(true);
+        _inGameMenu.SetActive(false);
+        _WinMenu.SetActive(false);
+        _LoseMenu.SetActive(false);
     }
     public void WinScreenOpen(int reward)
     {
@@ -59,6 +73,13 @@ public class GameMainMenuUI : MonoBehaviour
         _inGameMenu.SetActive(false);
         _LoseMenu.SetActive(true);
         _WinMenu.SetActive(false);
+    }
+
+    public void ShowTutorial()
+    {
+        if (wasTutorActive) return;
+        Instantiate(GameManagerSystem.Instance.houseTutor, transform.position, Quaternion.identity);
+        wasTutorActive = true;
     }
 
     public void RestartLevel()
