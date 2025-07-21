@@ -36,8 +36,7 @@ public class Bed : InteractObject, IDoAction
     public override void DoAction()
     {
         progression.isBedCardCollected = true;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().InventoryDeck.Add(new Card(CardManagementSystem.Instance.GetCardByID(givableCard.ID)));
-        Debug.Log("Added card to a player: " + new Card(CardManagementSystem.Instance.GetCardByID(givableCard.ID)).Title);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().InventoryDeck.Add(new Card(CardManagementSystem.Instance.GetCardByName("Take Rest")));
         EventManager.Instance.OnCLick();
         didAction = true;
     }

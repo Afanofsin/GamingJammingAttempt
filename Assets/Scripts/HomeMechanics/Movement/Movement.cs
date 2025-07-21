@@ -20,15 +20,18 @@ public class Movement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        InventoryDeck = new();
+        for (int i = 0; i < defaultHero.InventoryDeck.Count; i++)
+        {
+            Card card = new Card(CardManagementSystem.Instance.GetCardByID(defaultHero.InventoryDeck[i].ID));
+            BattleDeck.Add(card);
+        }
         BattleDeck = new();
         for (int i = 0; i < defaultHero.Deck.Count; i++)
         {
             Card card = new Card(CardManagementSystem.Instance.GetCardByID(defaultHero.Deck[i].ID));
             BattleDeck.Add(card);
-            Debug.Log("Added card to deck: " + card.Title);
         }
-        InventoryDeck = new();
-        InventoryDeck.AddRange(BattleDeck);
     }
     void Update()
     {

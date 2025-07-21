@@ -13,6 +13,7 @@ TagManager:
   - InventoryButton
   - BattleDeck
   - BattleButton
+  - Defeated
   layers:
   - Default
   - TransparentFX
@@ -61,6 +62,7 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 2298686897
+    locked: 0
   - name: Card
     uniqueID: 1152392507
     locked: 0

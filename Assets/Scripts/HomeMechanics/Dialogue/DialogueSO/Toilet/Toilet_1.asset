@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f50abd649a20994789cfc2e5de4642d, type: 3}
-  m_Name: CatDialogue5
+  m_Name: Toilet_1
   m_EditorClassIdentifier: 
-  speakerName: StarDestroyer Jr.
+  speakerName: Toilet
   paragraphs:
-  - '*you pet the cat*'
-  - meow meow
+  - Oops... i forgot to flush.

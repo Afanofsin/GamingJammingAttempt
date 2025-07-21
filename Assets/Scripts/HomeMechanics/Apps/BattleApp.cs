@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class BattleApp : MonoBehaviour
@@ -14,6 +17,7 @@ public class BattleApp : MonoBehaviour
     public Button thirdBossButton;
     public Button fourthBossButton;
     public Button startBattleButton;
+    public Image bossImage;
     public TextMeshProUGUI bossName;
     public TextMeshProUGUI bossDescription;
     public Sprite firstBossImage;
@@ -22,9 +26,20 @@ public class BattleApp : MonoBehaviour
     public Sprite fourthBossImage;
     public Sprite lockedSprite;
     public Sprite defeatedIcon;
+    public List <EnemyDataSO> bossData;
     void OnEnable()
     {
+        GameObject[] toDestroy = GameObject.FindGameObjectsWithTag("Defeated");
+        foreach (var defeated in toDestroy)
+        {
+            Destroy(defeated);
+        }
+        bossData.Clear();
         firstBossButton.enabled = true;
+        bossName.text = null;
+        bossDescription.text = null;
+        bossImage.enabled = false;
+        startBattleButton.gameObject.SetActive(false);
         EvaluateBosses();
     }
 
@@ -37,20 +52,44 @@ public class BattleApp : MonoBehaviour
     }
     public void ShowFirstBoss()
     {
+        bossData = new List<EnemyDataSO>(){slothDataSO};
         bossName.text = slothDataSO.name;
+        bossImage.sprite = slothDataSO.Image;
+        bossImage.enabled = true;
+        startBattleButton.gameObject.SetActive(true);
+        bossDescription.text = slothDataSO.Description;
 
+    }
+    public void StartBattle()
+    {
+        GameManagerSystem.Instance.StartBattle( bossData );
     }
     public void ShowSecondBoss()
     {
+        bossData = new List<EnemyDataSO>(){proctrastinationDataSO};
         bossName.text = proctrastinationDataSO.name;
+        bossImage.sprite = proctrastinationDataSO.Image;
+        bossImage.enabled = true;
+        startBattleButton.gameObject.SetActive(true);
+        bossDescription.text = proctrastinationDataSO.Description;
     }
     public void ShowThirdBoss()
     {
+        bossData = new List<EnemyDataSO>(){imposterSyndromeDataSO};
         bossName.text = imposterSyndromeDataSO.name;
+        bossImage.sprite = imposterSyndromeDataSO.Image;
+        bossImage.enabled = true;
+        startBattleButton.gameObject.SetActive(true);
+        bossDescription.text = imposterSyndromeDataSO.Description;
     }
     public void ShowFourthBoss()
     {
+        bossData = new List<EnemyDataSO>(){firstGameDataSO};
         bossName.text = firstGameDataSO.name;
+        bossImage.sprite = firstGameDataSO.Image;
+        bossImage.enabled = true;
+        startBattleButton.gameObject.SetActive(true);
+        bossName.text = firstGameDataSO.Description;
     }
     public void EvaluateSloth()
     {
@@ -60,8 +99,7 @@ public class BattleApp : MonoBehaviour
         }
         else
         {
-            firstBossButton.image.sprite = defeatedIcon;
-            firstBossButton.enabled = false;
+            firstBossButton.enabled = true;
         }
     }
     public void EvaluateProctastination()
@@ -78,8 +116,7 @@ public class BattleApp : MonoBehaviour
         }
         if (progression.isSecondBossKilled)
         {
-            secondBossButton.image.sprite = defeatedIcon;
-            secondBossButton.enabled = false;
+            secondBossButton.enabled = true;
         }
     }
     public void EvaluateImposter()
@@ -96,8 +133,7 @@ public class BattleApp : MonoBehaviour
         }
         if (progression.isThirdBossKilled)
         {
-            thirdBossButton.image.sprite = defeatedIcon;
-            thirdBossButton.enabled = false;
+            thirdBossButton.enabled = true;
         }
     }
     public void EvaluateFirstGame()
@@ -114,8 +150,7 @@ public class BattleApp : MonoBehaviour
         }
         if (progression.isFourthBossKilled)
         {
-            fourthBossButton.image.sprite = defeatedIcon;
-            fourthBossButton.enabled = false;
+            fourthBossButton.enabled = true;
         }
     }
     public void SwtichBattleApp()

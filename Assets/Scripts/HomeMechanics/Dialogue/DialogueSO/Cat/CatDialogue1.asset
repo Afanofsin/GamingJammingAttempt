@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f50abd649a20994789cfc2e5de4642d, type: 3}
   m_Name: CatDialogue1
   m_EditorClassIdentifier: 
-  speakerName: Uni
+  speakerName: StarDestroyer Jr.
   paragraphs:
-  - 'Hello my name is Uni, now poop your pants
-
-'
-  - 'Heres a free card
-
-'
-  isRepeatable: 0
+  - Hello, John Game!
+  - You finally decided to get yourself together!

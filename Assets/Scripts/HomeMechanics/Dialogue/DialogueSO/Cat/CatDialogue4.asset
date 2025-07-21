@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f50abd649a20994789cfc2e5de4642d, type: 3}
   m_Name: CatDialogue4
   m_EditorClassIdentifier: 
-  speakerName: Uni
+  speakerName: StarDestroyer Jr.
   paragraphs:
-  - Nice, now fuck off and let me rest
-  isRepeatable: 0
+  - That's a great start, now go to your PC, and open Decker app.
+  - Once you there just add all you new cards from inventory to battle deck.
+  - You can start your first battle in the BattleApp, but be careful!

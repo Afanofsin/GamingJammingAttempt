@@ -10,6 +10,6 @@ public class Progression : ScriptableObject
     public bool isPlantCardCollected = false;
     public bool isToiletCardCollected = false;
     public bool isWardrobeCardCollected = false;
-    public bool isShoeCardCollected = false;
+    public bool isGuitarCardCollected = false;
     public bool isCompletedCatQuest = false;
 }

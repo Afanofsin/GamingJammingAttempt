@@ -36,7 +36,7 @@ public class GameManagerSystem : MonoBehaviour
         // Reset HeroDataSO with StartingDeck list
         //_heroDataSO.InitializeBattleDeck(startingDeck);
 
-        StartBattle(new() { enemy });
+        //StartBattle(new() { enemy });
     }
 
     public void GoToMainMenu()
