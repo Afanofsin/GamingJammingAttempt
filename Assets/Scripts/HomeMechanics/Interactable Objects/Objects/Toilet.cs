@@ -37,13 +37,14 @@ public class Toilet : InteractObject, IInteractable
         EventManager.Instance.OnCLick();
         didAction = true;
     }
-    public void CheckDialogueEnd()
+    public override void CheckDialogueEnd()
     {
-        if (dialogueController.talkingEnded && i < dialogueText.Length - 1 && !dialogueController.isTyping)
+        if (dialogueController.CanProgress && i < dialogueText.Length - 1)
         {
             i++;
         }
     }
-
 }
+
+
 

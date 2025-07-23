@@ -38,4 +38,8 @@ public class Television : InteractObject, IDoAction
         }
 
     }
+    public override void CheckDialogueEnd()
+    {
+
+    }
 }

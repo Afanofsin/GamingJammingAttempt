@@ -25,7 +25,6 @@ public abstract class InteractObject : MonoBehaviour, IInteractable, IDoAction
 
     void Update()
     {
-        CheckDialogueEnd();
         if (!IsWithinDistance() && _interactSprite.gameObject.activeSelf && focusObject == this)
         {
             focusObject = null;

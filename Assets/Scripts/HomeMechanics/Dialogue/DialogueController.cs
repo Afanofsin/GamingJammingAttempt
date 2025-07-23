@@ -15,6 +15,18 @@ public class DialogueController : MonoBehaviour
     private Coroutine typeDialogueCoroutine;
     private const string HTML_ALPHA = "<color=#00000000>";
     private const float MAX_TYPE_TIME = 0.1f;
+    public bool CanProgress = false;
+
+    private void OnEnable()
+    {
+        CanProgress = false;
+    }
+
+    private void OnDisable()
+    {
+        CanProgress = false;
+    }
+
     public void DisplayNextParagraph(DialogueText dialogueText)
     {
 
@@ -42,6 +54,7 @@ public class DialogueController : MonoBehaviour
         }
         if (paragpaphs.Count == 0)
         {
+            CanProgress = true;
             talkingEnded = true;
         }
     }
@@ -63,7 +76,7 @@ public class DialogueController : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
         paragpaphs.Clear();
 
-        talkingEnded = true;
+        talkingEnded = false ;
 
         if (gameObject.activeSelf)
         {

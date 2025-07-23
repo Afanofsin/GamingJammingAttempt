@@ -18,6 +18,7 @@ public class ShopDealer : InteractObject, IDoAction
     }
     public override void Interact()
     {
+        CheckDialogueEnd();
         Talk(dialogueText[i]);
 
         if (i == 3 && !didAction && dialogueController.talkingEnded)
@@ -46,7 +47,7 @@ public class ShopDealer : InteractObject, IDoAction
     }
     public override void CheckDialogueEnd()
     {
-        if (dialogueController.talkingEnded && i < dialogueText.Length - 1 && !dialogueController.isTyping)
+        if (dialogueController.CanProgress && i < dialogueText.Length - 1)
         {
             i++;
         }

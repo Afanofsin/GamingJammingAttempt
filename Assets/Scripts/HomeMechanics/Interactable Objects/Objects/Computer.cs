@@ -38,4 +38,8 @@ public class Computer : InteractObject, IDoAction
         }
 
     }
+
+    public override void CheckDialogueEnd()
+    {
+    }
 }

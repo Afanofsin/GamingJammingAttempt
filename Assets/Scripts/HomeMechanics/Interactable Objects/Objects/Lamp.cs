@@ -15,13 +15,17 @@ public class Lamp : InteractObject, IDoAction
         SwitchLamp();
     }
 
- public void SwitchLamp()
+    public void SwitchLamp()
     {
         if (lampLight.activeSelf)
         {
             lampLight.SetActive(false);
         }
         else lampLight.SetActive(true);
+
+    }
+    public override void CheckDialogueEnd()
+    {
 
     }
 

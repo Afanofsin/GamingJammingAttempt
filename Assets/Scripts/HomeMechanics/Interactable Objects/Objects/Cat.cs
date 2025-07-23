@@ -34,7 +34,7 @@ public class Cat : InteractObject, ITalkable, IDoAction
         
         if (dialogueController.talkingEnded && !dialogueController.isTyping)
         {
-            ProgressTalk();
+            CheckDialogueEnd();
         }
 
         Talk(dialogueText[dialogueIndex]);
@@ -56,13 +56,13 @@ public class Cat : InteractObject, ITalkable, IDoAction
         
     }
 
-    public void ProgressTalk()
+    public override void CheckDialogueEnd()
     {
-        if (dialogueController.talkingEnded && dialogueIndex < 2 && !dialogueController.isTyping)
+        if (dialogueController.CanProgress && dialogueIndex < 2 )
         {
             dialogueIndex++;
         }
-        if (quest.Completed && dialogueIndex < dialogueText.Length - 1 && !dialogueController.isTyping)
+        if (quest.Completed && dialogueIndex < dialogueText.Length - 1)
         {
             dialogueIndex++;
         }
