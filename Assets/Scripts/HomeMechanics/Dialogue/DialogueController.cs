@@ -24,7 +24,7 @@ public class DialogueController : MonoBehaviour
 
     private void OnDisable()
     {
-        CanProgress = false;
+        CanProgress = true;
     }
 
     public void DisplayNextParagraph(DialogueText dialogueText)
@@ -36,13 +36,13 @@ public class DialogueController : MonoBehaviour
             {
                 StartTalking(dialogueText);
             }
-            else if(talkingEnded && !isTyping)
+            else if (talkingEnded && !isTyping)
             {
                 StopTalking();
                 return;
             }
-
         }
+        
         if (!isTyping)
         {
             p = paragpaphs.Dequeue();
@@ -52,14 +52,10 @@ public class DialogueController : MonoBehaviour
         {
             FInishTypingEarly();
         }
-        if (paragpaphs.Count == 0)
-        {
-            CanProgress = true;
-            talkingEnded = true;
-        }
     }
     private void StartTalking(DialogueText dialogueText)
     {
+        talkingEnded = true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
         if (!gameObject.activeSelf)
         {
@@ -73,18 +69,17 @@ public class DialogueController : MonoBehaviour
     }
     private void StopTalking()
     {
+        talkingEnded = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().StopPlayer();
         paragpaphs.Clear();
-
-        talkingEnded = false ;
-
         if (gameObject.activeSelf)
         {
             gameObject.SetActive(false);
         }
 
     }
-    private IEnumerator TypeDialogueText(string p) {
+    private IEnumerator TypeDialogueText(string p)
+    {
         isTyping = true;
         objectDialogueText.text = "";
         string originalText = p;
@@ -96,7 +91,7 @@ public class DialogueController : MonoBehaviour
             objectDialogueText.text = originalText;
             displayText = objectDialogueText.text.Insert(aplhaText, HTML_ALPHA);
             objectDialogueText.text = displayText;
-            yield return new WaitForSeconds(MAX_TYPE_TIME/typeSpeed);
+            yield return new WaitForSeconds(MAX_TYPE_TIME / typeSpeed);
         }
         isTyping = false;
     }

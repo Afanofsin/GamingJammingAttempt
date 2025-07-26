@@ -7,37 +7,19 @@ using UnityEngine.UI;
 
 public class BattleApp : MonoBehaviour
 {
-    public EnemyDataSO slothDataSO;
-    public EnemyDataSO proctrastinationDataSO;
-    public EnemyDataSO imposterSyndromeDataSO;
-    public EnemyDataSO firstGameDataSO;
+    [SerializeField] private List<EnemyDataSO> bosses;
     public HeroDataSO heroDataSO;
     public Progression progression;
-    public Button firstBossButton;
-    public Button secondBossButton;
-    public Button thirdBossButton;
-    public Button fourthBossButton;
-    public Button startBattleButton;
+    [SerializeField] private Button buttonPrefab;
+    [SerializeField] private Button startBattleButton;
     public GameObject notEnoughCardsText;
     public Image bossImage;
     public TextMeshProUGUI bossName;
     public TextMeshProUGUI bossDescription;
-    public Sprite firstBossImage;
-    public Sprite secondBossImage;
-    public Sprite thirdBossImage;
-    public Sprite fourthBossImage;
-    public Sprite lockedSprite;
-    public Sprite defeatedIcon;
     public List <EnemyDataSO> bossData;
     void OnEnable()
     {
-        GameObject[] toDestroy = GameObject.FindGameObjectsWithTag("Defeated");
-        foreach (var defeated in toDestroy)
-        {
-            Destroy(defeated);
-        }
         bossData.Clear();
-        firstBossButton.enabled = true;
         bossName.text = null;
         bossDescription.text = null;
         bossImage.enabled = false;
@@ -48,118 +30,33 @@ public class BattleApp : MonoBehaviour
 
     public void EvaluateBosses()
     {
-        EvaluateSloth();
-        EvaluateProctastination();
-        EvaluateImposter();
-        EvaluateFirstGame();
-    }
-    public void ShowFirstBoss()
-    {
-        bossData = new List<EnemyDataSO>(){slothDataSO};
-        bossName.text = slothDataSO.name;
-        bossImage.sprite = slothDataSO.Image;
-        bossImage.enabled = true;
-        startBattleButton.gameObject.SetActive(true);
-        bossDescription.text = slothDataSO.Description;
+    
 
     }
-    public void StartBattle()
+    public void ShowBossButtons()
+    {
+        foreach (var boss in bosses)
+        {
+            Button newButtton = Instantiate(buttonPrefab, buttonPrefab.transform.position, quaternion.identity); 
+        }
+    }
+     public void StartBattle()
     {
         if (heroDataSO.Deck.Count < 10)
         {
             notEnoughCardsText.SetActive(true);
             return;
         }
-        GameManagerSystem.Instance.StartBattle( bossData );
+        GameManagerSystem.Instance.StartBattle(bossData);
     }
-    public void ShowSecondBoss()
+    public void ShowBoss(int i)
     {
-        bossData = new List<EnemyDataSO>(){proctrastinationDataSO};
-        bossName.text = proctrastinationDataSO.name;
-        bossImage.sprite = proctrastinationDataSO.Image;
+        bossData = new List<EnemyDataSO>() { bosses[i] };
+        bossName.text = bosses[i].name;
+        bossImage.sprite = bosses[i].Image;
         bossImage.enabled = true;
         startBattleButton.gameObject.SetActive(true);
-        bossDescription.text = proctrastinationDataSO.Description;
-    }
-    public void ShowThirdBoss()
-    {
-        bossData = new List<EnemyDataSO>(){imposterSyndromeDataSO};
-        bossName.text = imposterSyndromeDataSO.name;
-        bossImage.sprite = imposterSyndromeDataSO.Image;
-        bossImage.enabled = true;
-        startBattleButton.gameObject.SetActive(true);
-        bossDescription.text = imposterSyndromeDataSO.Description;
-    }
-    public void ShowFourthBoss()
-    {
-        bossData = new List<EnemyDataSO>(){firstGameDataSO};
-        bossName.text = firstGameDataSO.name;
-        bossImage.sprite = firstGameDataSO.Image;
-        bossImage.enabled = true;
-        startBattleButton.gameObject.SetActive(true);
-        bossDescription.text = firstGameDataSO.Description;
-    }
-    public void EvaluateSloth()
-    {
-        if (!progression.isFirstBossKilled)
-        {
-            firstBossButton.image.sprite = firstBossImage;
-        }
-        else
-        {
-            firstBossButton.enabled = true;
-        }
-    }
-    public void EvaluateProctastination()
-    {
-        if (!progression.isFirstBossKilled)
-        {
-            secondBossButton.image.sprite = lockedSprite;
-            secondBossButton.enabled = false;
-        }
-        else if (progression.isFirstBossKilled && !progression.isSecondBossKilled)
-        {
-            secondBossButton.image.sprite = secondBossImage;
-            secondBossButton.enabled = true;
-        }
-        if (progression.isSecondBossKilled)
-        {
-            secondBossButton.enabled = true;
-        }
-    }
-    public void EvaluateImposter()
-    {
-        if (!progression.isSecondBossKilled)
-        {
-            thirdBossButton.image.sprite = lockedSprite;
-            thirdBossButton.enabled = false;
-        }
-        else if (progression.isSecondBossKilled && !progression.isThirdBossKilled)
-        {
-            thirdBossButton.image.sprite = thirdBossImage;
-            thirdBossButton.enabled = true;
-        }
-        if (progression.isThirdBossKilled)
-        {
-            thirdBossButton.enabled = true;
-        }
-    }
-    public void EvaluateFirstGame()
-    {
-        if (!progression.isThirdBossKilled)
-        {
-            fourthBossButton.image.sprite = lockedSprite;
-            fourthBossButton.enabled = false;
-        }
-        else if (progression.isThirdBossKilled && !progression.isFourthBossKilled)
-        {
-            fourthBossButton.image.sprite = fourthBossImage;
-            fourthBossButton.enabled = true;
-        }
-        if (progression.isFourthBossKilled)
-        {
-            fourthBossButton.enabled = true;
-        }
+        bossDescription.text = bosses[i].Description;
     }
     public void SwtichBattleApp()
     {

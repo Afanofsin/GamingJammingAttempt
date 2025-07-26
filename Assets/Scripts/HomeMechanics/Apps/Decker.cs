@@ -13,7 +13,7 @@ public class Decker : MonoBehaviour
     [SerializeField] private Button battleCard;
     [SerializeField] private Button leftButton;
     [SerializeField] private Button rightButton;
-    private const int MINIMUM_BATTLE = 12;
+    private const int MINIMUM_BATTLE = 10;
     private const int MAXIMUM_BATTLE = 20;
     private string cardToTransfer;
     private GameObject[] objectsToDestroy1;

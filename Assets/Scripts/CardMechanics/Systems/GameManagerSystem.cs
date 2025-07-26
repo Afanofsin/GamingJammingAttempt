@@ -126,16 +126,16 @@ public class GameManagerSystem : MonoBehaviour
         switch (bossName)
         {
             case "Sloth":
-                progression.isFirstBossKilled = true;
+                //progression.isFirstBossKilled = true;
                 break;
             case "Procrastination":
-                progression.isSecondBossKilled = true;
+                //progression.isSecondBossKilled = true;
                 break;
             case "ImposterSyndrome":
-                progression.isThirdBossKilled = true;
+                //progression.isThirdBossKilled = true;
                 break;
             case "FirstGame":
-                progression.isFourthBossKilled = true;
+                //progression.isFourthBossKilled = true;
                 break;
             default:
                 break;

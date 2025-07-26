@@ -3275,8 +3275,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 888615526}
         m_TargetAssemblyTypeName: BattleApp, Assembly-CSharp
-        m_MethodName: ShowFirstBoss
-        m_Mode: 1
+        m_MethodName: ShowBoss
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3731,7 +3731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8798203862026748709, guid: 3d18c890d404da047ba45c93c6d59d2c, type: 3}
       propertyPath: orthographic size
-      value: 8.4375
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8798203862026748709, guid: 3d18c890d404da047ba45c93c6d59d2c, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -5830,27 +5830,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5f84032e837584f961ae7851542b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slothDataSO: {fileID: 11400000, guid: aa7476cebe6d2c146b78a47c72e713fa, type: 2}
-  proctrastinationDataSO: {fileID: 11400000, guid: 1cb2507ba5f789748b6454fd44ecd04d, type: 2}
-  imposterSyndromeDataSO: {fileID: 11400000, guid: 948384b3e34a33243be42d8b1c4adefa, type: 2}
-  firstGameDataSO: {fileID: 11400000, guid: e6d7faa8c3c537e4fb66230442c214f1, type: 2}
+  bosses:
+  - {fileID: 11400000, guid: aa7476cebe6d2c146b78a47c72e713fa, type: 2}
+  - {fileID: 11400000, guid: 1cb2507ba5f789748b6454fd44ecd04d, type: 2}
+  - {fileID: 11400000, guid: 948384b3e34a33243be42d8b1c4adefa, type: 2}
+  - {fileID: 11400000, guid: e6d7faa8c3c537e4fb66230442c214f1, type: 2}
   heroDataSO: {fileID: 11400000, guid: 8f009bac480876947a4c977bee2e2da6, type: 2}
   progression: {fileID: 11400000, guid: 8fa90f9f79266024791040492d75e355, type: 2}
-  firstBossButton: {fileID: 587120692}
-  secondBossButton: {fileID: 1664883928}
-  thirdBossButton: {fileID: 1873808735}
-  fourthBossButton: {fileID: 1475770341}
+  buttons:
+  - {fileID: 587120692}
+  - {fileID: 1664883928}
+  - {fileID: 1873808735}
+  - {fileID: 1475770341}
   startBattleButton: {fileID: 1773051939}
   notEnoughCardsText: {fileID: 458053464}
   bossImage: {fileID: 795679061}
   bossName: {fileID: 564159653}
   bossDescription: {fileID: 1715490491}
-  firstBossImage: {fileID: -317021761, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
-  secondBossImage: {fileID: -981919808, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
-  thirdBossImage: {fileID: 563860478, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
-  fourthBossImage: {fileID: -1304658860, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
-  lockedSprite: {fileID: 1203921431, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
-  defeatedIcon: {fileID: -1396534429, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
   bossData: []
 --- !u!114 &888615527
 MonoBehaviour:
@@ -9372,6 +9368,7 @@ MonoBehaviour:
   typeSpeed: 2.5
   talkingEnded: 0
   isTyping: 0
+  CanProgress: 0
 --- !u!1 &1306001255
 GameObject:
   m_ObjectHideFlags: 0
@@ -10768,12 +10765,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 888615526}
         m_TargetAssemblyTypeName: BattleApp, Assembly-CSharp
-        m_MethodName: ShowFourthBoss
-        m_Mode: 1
+        m_MethodName: ShowBoss
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12374,12 +12371,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 888615526}
         m_TargetAssemblyTypeName: BattleApp, Assembly-CSharp
-        m_MethodName: ShowSecondBoss
-        m_Mode: 1
+        m_MethodName: ShowBoss
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -13632,12 +13629,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 888615526}
         m_TargetAssemblyTypeName: BattleApp, Assembly-CSharp
-        m_MethodName: ShowThirdBoss
-        m_Mode: 1
+        m_MethodName: ShowBoss
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14131,6 +14128,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
+      propertyPath: houseTutor
+      value: 
+      objectReference: {fileID: 7335695395249287930, guid: 586f021d3700e8c43b51730d98408e31, type: 3}
     - target: {fileID: 8307118385824474068, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
       propertyPath: m_Name
       value: GameManagerSystem

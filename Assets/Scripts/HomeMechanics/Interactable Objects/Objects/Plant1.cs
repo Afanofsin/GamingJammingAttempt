@@ -1,29 +1,29 @@
 using UnityEngine;
 
-public class Plant : InteractObject, IInteractable
+public class Plant : InteractObject
 {
     [SerializeField] private DialogueText[] dialogueText;
     [SerializeField] private DialogueController dialogueController;
     public Progression progression;
     bool didAction = false;
     int i = 0;
-    private void Start() {
-         if (progression.isPlantCardCollected)
+    private void Start()
+    {
+        if (progression.isPlantCardCollected)
         {
             i = 2;
             didAction = true;
         }
     }
-
     public override void Interact()
     {
+        Debug.Log(i);
         Talk(dialogueText[i]);
         CheckDialogueEnd();
-        if (i == 1 && !didAction && dialogueController.talkingEnded)
+        if (i == 1 && !didAction)
         {
             DoAction();
         }
-
     }
 
     public void Talk(DialogueText dialogueText)
