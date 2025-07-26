@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FirstGame
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: -1880772163, guid: 1e9cacf3093f96047b30399272740081, type: 3}
-  <Health>k__BackingField: 60
+  <Health>k__BackingField: 20
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 6
   <Reward>k__BackingField: 50

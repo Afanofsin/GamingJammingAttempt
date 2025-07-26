@@ -30,7 +30,7 @@ public class FirstPhase2Base : EnemyPhase2SOBase
         {
             Enemy.AttackPower += 3;
             Enemy.UpdateAttackText();
-            Enemy.StateMachine.ChangeState(Enemy.Phase2State);
+            Enemy.StateMachine.ChangeState(Enemy.Phase3State);
         }
     }
 

@@ -41,7 +41,8 @@ public class GameManagerSystem : MonoBehaviour
     private void Start()
     {
         _heroDataSO.Reset();
-        _heroDataSO.InitializeInventoryDeck(startingDeck);
+        //_heroDataSO.InitializeInventoryDeck(startingDeck);
+        _heroDataSO.InitializeBattleDeck(startingDeck);
         progression.ResetProgress();
         progression.Initialize(listOfGameBosses);
 
@@ -49,7 +50,11 @@ public class GameManagerSystem : MonoBehaviour
             .Keys
             .ToDictionary( SO => SO.name.ToLowerInvariant(), SO => SO);
 
+        StartBattle(listOfGameBosses);
+
         _mainMenuUI.OpenMainMenu();
+
+       
     }
 
     private void Update()

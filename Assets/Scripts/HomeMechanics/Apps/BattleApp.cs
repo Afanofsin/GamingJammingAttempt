@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
-public class BattleApp : MonoBehaviour
+/*public class BattleApp : MonoBehaviour
 {
     public EnemyDataSO slothDataSO;
     public EnemyDataSO proctrastinationDataSO;
@@ -173,4 +173,4 @@ public class BattleApp : MonoBehaviour
         }
 
     }
-}
+}*/

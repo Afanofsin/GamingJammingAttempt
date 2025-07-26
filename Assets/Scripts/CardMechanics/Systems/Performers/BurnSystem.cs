@@ -49,7 +49,8 @@ public class BurnSystem : MonoBehaviour
             }
             else
             {
-                // Player Death Logic
+                PlayerDeathGA playerDeathGA = new();
+                ActionSystem.Instance.AddReaction(playerDeathGA);
             }
         }
 

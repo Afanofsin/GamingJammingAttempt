@@ -20,10 +20,10 @@ public class Cat : InteractObject, ITalkable, IDoAction
         {
             dialogueIndex = 3;
         }
-        if (progression.isFirstBossKilled)
+        /*if (progression.isFirstBossKilled)
         {
             dialogueIndex = 4;
-        }
+        }*/
     }
     public override void Interact()
     {

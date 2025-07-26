@@ -312,9 +312,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e6d7faa8c3c537e4fb66230442c214f1, type: 2}
     - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
+      propertyPath: houseTutor
+      value: 
+      objectReference: {fileID: 7335695395249287930, guid: 586f021d3700e8c43b51730d98408e31, type: 3}
+    - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
       propertyPath: _heroDataSO
       value: 
       objectReference: {fileID: 11400000, guid: 8f009bac480876947a4c977bee2e2da6, type: 2}
+    - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
+      propertyPath: listOfGameBosses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781015861159860123, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
+      propertyPath: 'listOfGameBosses.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e6d7faa8c3c537e4fb66230442c214f1, type: 2}
     - target: {fileID: 8307118385824474068, guid: 9cf358938e3c734419fde05617aaa0d2, type: 3}
       propertyPath: m_Name
       value: GameManagerSystem
