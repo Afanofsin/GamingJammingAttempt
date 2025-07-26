@@ -14,16 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ManaCost>k__BackingField: 0
   <Image>k__BackingField: {fileID: 1633509274, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
-  <Description>k__BackingField: Deals 2 Damage
+  <Description>k__BackingField: Deals 3 Damage
   <ManualTargetEffect>k__BackingField:
     rid: 7229863221763768569
   <OtherEffects>k__BackingField: []
-  <ID>k__BackingField: 6
+  <ID>k__BackingField: 11
   <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 3
   references:
     version: 2
     RefIds:
     - rid: 7229863221763768569
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 2
+        damageAmount: 3

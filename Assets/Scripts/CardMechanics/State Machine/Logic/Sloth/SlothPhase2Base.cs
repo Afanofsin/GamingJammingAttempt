@@ -29,7 +29,7 @@ public class SlothPhase2Base : EnemyPhase2SOBase
                 PerformEffectsGA performEffectsGA = new(effect.Effect, targets, Enemy);
                 ActionSystem.Instance.AddReaction(performEffectsGA);
             }
-            Enemy.AttackPower += 2;
+            Enemy.AttackPower += 4;
             Enemy.UpdateAttackText();
             Enemy.StateMachine.ChangeState(Enemy.Phase3State);
         }

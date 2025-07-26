@@ -1,51 +1,47 @@
 using JetBrains.Annotations;
+using NUnit.Framework.Interfaces;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CardManagementSystem : MonoBehaviour
 {
     public static CardManagementSystem Instance;
-
     [SerializeField]
     private CardDatabaseSO _database;
-
-    public void GetCardByID(int id)
+    public CardDataSO GetCardByID(int id)
     {
-        _database.GetCardByID(id);
+        return _database.GetCardByID(id);
+    }
+    public CardDataSO GetCardByName(string name)
+    {
+        return _database.GetCardByName(name);
     }
 
-    public void GetCardByName(string name)
+    public CardDataSO GetRandomCard()
     {
-        _database.GetCardByName(name);
+        return _database.GetRandomCard();
     }
 
-    public void GetRandomCard()
+    public List<CardDataSO> GetRandomCardsNoDuplicates(int count)
     {
-        _database.GetRandomCard();
+        return _database.GetRandomCardsNoDuplicates(count);
     }
 
-    public void GetRandomCardsNoDuplicates(int count)
+    public List<CardDataSO> GetRandomCardsWithDuplicates(int count)
     {
-        _database.GetRandomCardsNoDuplicates(count);
+        return _database.GetRandomCardsWithDuplicates(count);
     }
 
-    public void GetRandomCardsWithDuplicates(int count)
-    {
-        _database.GetRandomCardsWithDuplicates(count);
-    }
-
-    public void GetAllCards()
+    public List<CardDataSO> GetAllCards()
     {
         List<CardDataSO> list = _database.GetAllCards();
-        foreach (var card in list)
-        {
-            Debug.Log(card);
-        }
+        return list;
     }
 
     private void Awake()
     {
-        if(Instance != null)
+        if (Instance != null)
         {
             Destroy(gameObject);
             return;

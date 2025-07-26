@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class HeroSystem : MonoBehaviour
@@ -10,11 +9,14 @@ public class HeroSystem : MonoBehaviour
 
     public static HeroSystem Instance;
 
+    [SerializeField]
+    private AudioClip heroDeath;
     private Coroutine returnCoroutine;
 
     private void OnEnable()
     {
         ActionSystem.AttachPerformer<AddMoraleGA>(AddMoralePerformer);
+        ActionSystem.AttachPerformer<PlayerDeathGA>(PlayerDeathPerformer);
         ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPreReaction, ReactionTiming.PRE);
         ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
         ActionSystem.SubscribeReaction<PlayCardGA>(PlayCardAnimation, ReactionTiming.PRE);
@@ -23,6 +25,7 @@ public class HeroSystem : MonoBehaviour
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<AddMoraleGA>();
+        ActionSystem.DetachPerformer<PlayerDeathGA>();
         ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPreReaction, ReactionTiming.PRE);
         ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
         ActionSystem.UnsubscribeReaction<PlayCardGA>(PlayCardAnimation, ReactionTiming.PRE);
@@ -37,6 +40,13 @@ public class HeroSystem : MonoBehaviour
     private IEnumerator AddMoralePerformer(AddMoraleGA addMoraleGA)
     {
         HeroView.AddMorale(addMoraleGA.Amount);
+        yield return null;
+    }
+
+    private IEnumerator PlayerDeathPerformer(PlayerDeathGA playerDeathGA)
+    {
+        SoundFXManager.Instance.PlayFXClip(heroDeath,transform, 0.8f);
+        GameManagerSystem.Instance?.GameLost();
         yield return null;
     }
 
@@ -92,6 +102,8 @@ public class HeroSystem : MonoBehaviour
         // Now, move the hero back to their starting position
         HeroView.transform.DOMove(HeroView.HeroPos, 0.2f).SetEase(Ease.InOutSine);
     }
+
+
 
     private void Awake()
     {

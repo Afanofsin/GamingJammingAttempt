@@ -24,6 +24,7 @@ MonoBehaviour:
       rid: 7229863221763768509
   <ID>k__BackingField: 5
   <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 10
   references:
     version: 2
     RefIds:

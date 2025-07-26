@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ManaCost>k__BackingField: 3
   <Image>k__BackingField: {fileID: -306186018, guid: 0afdaea472e112a4d82ee69707450d90, type: 3}
-  <Description>k__BackingField: Gives 10 Morale to player
+  <Description>k__BackingField: Gives 6 Morale to player
   <ManualTargetEffect>k__BackingField:
     rid: -2
   <OtherEffects>k__BackingField:
@@ -24,6 +24,7 @@ MonoBehaviour:
       rid: 7229863355859075179
   <ID>k__BackingField: 8
   <DeckLimit>k__BackingField: 0
+  <CardPrice>k__BackingField: 10
   references:
     version: 2
     RefIds:

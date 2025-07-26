@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289d2dc3ee48b64e9fdd60beb9b09c7, type: 3}
   m_Name: ImposterSyndrome
   m_EditorClassIdentifier: 
-  <Image>k__BackingField: {fileID: 0}
+  <Image>k__BackingField: {fileID: 487653675, guid: 91a5758559766a34f8a70c25e9e80f08, type: 3}
   <Health>k__BackingField: 60
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 5
   <Reward>k__BackingField: 40
+  <Description>k__BackingField: You are your own greatest enemy. You know your weaknesses
+    the best. Make precise strikes to soften the armor and strike strong once the
+    guard is down.
   <Controller>k__BackingField: {fileID: 9100000, guid: c84549c1660ec6c46a7ef953af8f35c1, type: 2}
-  Phase1Base: {fileID: 11400000, guid: 783b79f73de3b2548a565eaeae13b83f, type: 2}
-  Phase2Base: {fileID: 11400000, guid: b8429ad55f3b35b4cbf0d049fed6c32e, type: 2}
-  Phase3Base: {fileID: 11400000, guid: a5a6551b60b9ea147801f825abf299e2, type: 2}
+  Phase1Base: {fileID: 11400000, guid: 13044d75ae136e34399ce26e1a2f1cd0, type: 2}
+  Phase2Base: {fileID: 11400000, guid: 838e45f53f6c68042a2ec092709e2a69, type: 2}
+  Phase3Base: {fileID: 11400000, guid: f35c96b4bc26ec4418302bd87fe69183, type: 2}

@@ -23,10 +23,12 @@ public class EndGameSystem : MonoBehaviour
         reward += killEnemyGA.Reward;
         if (enemyBoardView.EnemyViews.Count == 0)
         {
+            GameManagerSystem.Instance.Progress(killEnemyGA.enemyView.Name);
             GameManagerSystem.Instance.GameWon(reward);
             StartCoroutine(StartSceneLeave());
         }
     }
+
 
     private IEnumerator StartSceneLeave()
     {

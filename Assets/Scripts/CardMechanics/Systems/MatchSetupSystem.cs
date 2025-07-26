@@ -44,6 +44,7 @@ public class MatchSetupSystem : MonoBehaviour
 
         DrawCardsGA drawCardsGA = new(cardsToDrawAtStart);
         ActionSystem.Instance.Perform(drawCardsGA);
+
     }
 
     private void Awake()

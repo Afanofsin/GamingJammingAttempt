@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Sound
+  - Dialogue Controller
+  - StateManager
+  - ShopCard
+  - Shop
+  - InventoryDeck
+  - InventoryButton
+  - BattleDeck
+  - BattleButton
+  - Defeated
   layers:
   - Default
   - TransparentFX
@@ -41,14 +51,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Cards
-    uniqueID: 3416471337
+  - name: Shop
+    uniqueID: 1799216165
+    locked: 0
+  - name: Globat_Lit
+    uniqueID: 2506577639
     locked: 0
   - name: TargetArrow
     uniqueID: 2645960865
     locked: 0
   - name: Effects
     uniqueID: 2298686897
+    locked: 0
+  - name: Card
+    uniqueID: 1152392507
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 260501253
     locked: 0
   m_RenderingLayers:
   - Default

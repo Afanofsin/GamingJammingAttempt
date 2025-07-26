@@ -9,6 +9,12 @@ public class ProcrastPhase2Base : EnemyPhase2SOBase
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
+        foreach (var effect in OtherEffects)
+        {
+            List<CombatantView> targets = effect.TargetMode.GetTargets();
+            PerformEffectsGA performEffectsGA = new(effect.Effect, targets, Enemy);
+            ActionSystem.Instance.AddReaction(performEffectsGA);
+        }
     }
 
     public override void DoExitLogic()
@@ -19,11 +25,12 @@ public class ProcrastPhase2Base : EnemyPhase2SOBase
     public override void DoReactionLogic(EnemyTurnGA enemyTurnGA)
     {
         base.DoReactionLogic(enemyTurnGA);
-        foreach (var effect in OtherEffects)
+        float maxHealthPercentage = (float)Enemy.CurrentHealth / (float)Enemy.MaxHealth;
+        if (maxHealthPercentage < 0.5f)
         {
-            List<CombatantView> targets = effect.TargetMode.GetTargets();
-            PerformEffectsGA performEffectsGA = new(effect.Effect, targets, Enemy);
-            ActionSystem.Instance.AddReaction(performEffectsGA);
+            Enemy.AttackPower += 4;
+            Enemy.UpdateAttackText();
+            Enemy.StateMachine.ChangeState(Enemy.Phase3State);
         }
     }
 

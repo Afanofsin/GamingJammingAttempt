@@ -15,6 +15,9 @@ public class EnemyDataSO : ScriptableObject
     public int Reward { get; private set; }
 
     [field: SerializeField]
+    [field: TextArea(15, 20)]
+    public string Description { get; private set; }
+    [field: SerializeField]
     public RuntimeAnimatorController Controller { get; private set; }
     [field: SerializeField]
     public EnemyPhase1SOBase Phase1Base;

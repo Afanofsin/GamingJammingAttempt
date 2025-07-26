@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -5,7 +6,6 @@ public class CardViewCreator : MonoBehaviour
 {
     [SerializeField]
     private CardView cardViewPrefab;
-
     public static CardViewCreator Instance { get; private set; }
 
     private void Awake()

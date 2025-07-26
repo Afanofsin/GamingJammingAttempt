@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System;
 using Unity.VisualScripting;
 using static UnityEngine.EventSystems.EventTrigger;
+using System.Linq;
 
 public class GameManagerSystem : MonoBehaviour
 {
@@ -21,13 +22,43 @@ public class GameManagerSystem : MonoBehaviour
     private GameMainMenuUI _mainMenuUI;
 
     [SerializeField]
-    private EnemyDataSO enemy;
+    private HeroDataSO _heroDataSO;
+    [SerializeField]
+    private Progression progression;
+    [SerializeField]
+    public GameObject houseTutor;
 
+    [SerializeField]
+    private List<CardDataSO> startingDeck;
+
+    [SerializeField]
+    private List<EnemyDataSO> listOfGameBosses;
+
+    private Dictionary<string, EnemyDataSO> enemyLookupName;
     private List<EnemyDataSO> _enemiesForBattle = new();
+    
 
     private void Start()
     {
-        StartBattle(new() { enemy });
+        _heroDataSO.Reset();
+        _heroDataSO.InitializeInventoryDeck(startingDeck);
+        progression.ResetProgress();
+        progression.Initialize(listOfGameBosses);
+
+        enemyLookupName = progression.enemiesDefeated
+            .Keys
+            .ToDictionary( SO => SO.name.ToLowerInvariant(), SO => SO);
+
+        _mainMenuUI.OpenMainMenu();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            _mainMenuUI.OpenOptions();
+        }
+
     }
 
     public void GoToMainMenu()
@@ -37,7 +68,7 @@ public class GameManagerSystem : MonoBehaviour
 
     public void GoToHouseScene()
     {
-        StartCoroutine(LoadSceneCoroutine("TestScene", GameState.InHouse));
+        StartCoroutine(LoadSceneCoroutine("HomeScene", GameState.InHouse));
     }
 
     public void StartBattle(List<EnemyDataSO> enemies)
@@ -84,6 +115,36 @@ public class GameManagerSystem : MonoBehaviour
     public void GameWon(int reward)
     {
         _mainMenuUI.WinScreenOpen(reward);
+        _heroDataSO.Money += reward;
+    }
+
+    public void GameLost()
+    {
+        _mainMenuUI.OpenLoseScreen();
+    }
+
+    public void RestartLevel()
+    {
+        StartBattle(_enemiesForBattle);
+    }
+
+    public void Progress(string bossName)
+    {
+        string key = bossName.ToLowerInvariant();
+        if (enemyLookupName.TryGetValue(key, out EnemyDataSO SO))
+        {
+            progression.enemiesDefeated[SO] = true;
+        }
+        else
+        {
+            Debug.LogWarning("No boss with name " + bossName + "found");
+        }
+
+    }
+
+    private void ResetGameState()
+    {
+
     }
 
     private void Awake()
@@ -99,5 +160,6 @@ public class GameManagerSystem : MonoBehaviour
         _loadingScreenUI = loadingScreenInstance.GetComponent<LoadingScreenUI>();
         GameObject mainMenuInstance = Instantiate(MainMenuPrefab, transform);
         _mainMenuUI = mainMenuInstance.GetComponent<GameMainMenuUI>();
+        ResetGameState();
     }
 }

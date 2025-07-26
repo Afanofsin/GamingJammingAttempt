@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289d2dc3ee48b64e9fdd60beb9b09c7, type: 3}
   m_Name: FirstGame
   m_EditorClassIdentifier: 
-  <Image>k__BackingField: {fileID: 0}
-  <Health>k__BackingField: 80
+  <Image>k__BackingField: {fileID: -1880772163, guid: 1e9cacf3093f96047b30399272740081, type: 3}
+  <Health>k__BackingField: 60
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 6
   <Reward>k__BackingField: 50
+  <Description>k__BackingField: This is it. This is what you were going for. Be carefull,
+    do not burnout during the process of creating your first game!
   <Controller>k__BackingField: {fileID: 9100000, guid: 55464827bfce105408f756ecf77f49f6, type: 2}
   Phase1Base: {fileID: 11400000, guid: 380be21c3dfc73e4f91321f478199119, type: 2}
   Phase2Base: {fileID: 11400000, guid: 925517968b4ffc34a913280327cc5eec, type: 2}

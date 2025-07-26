@@ -12,7 +12,7 @@ public class EnemyView : CombatantView
     [SerializeField]
     private Transform distractionParent; // An empty GameObject child of EnemyView to hold the distractions
     [SerializeField]
-    private float distractionRadius = 1.2f;
+    private List<Transform> spawnPoints = new();
     public int AttackPower {  get; set; }
 
     public int Reward {  get; private set; }
@@ -57,7 +57,7 @@ public class EnemyView : CombatantView
 
         StateMachine.Initialize(Phase1State);
         Reward = enemyDataSO.Reward;
-        SetupBase(enemyDataSO.Health, enemyDataSO.Morale, enemyDataSO.Image, enemyDataSO.Controller);
+        SetupBase(enemyDataSO.Health, enemyDataSO.Morale, enemyDataSO.Image, enemyDataSO.Controller, enemyDataSO.name);
     }
 
     public void ReduceProcrastination(PlayCardGA playCardGA)
@@ -69,14 +69,10 @@ public class EnemyView : CombatantView
 
     private void OnStatusEffectAdded(AddStatusEffectGA ga)
     {
-        // We only care if the effect was applied to THIS enemy.
         if (!ga.Targets.Contains(this)) return;
 
-        // We only care if the effect being added IS Procrastination.
         if (ga.Type == StatusEffectType.PROCRASTINATION)
         {
-            // The effect was just applied, so create the visuals.
-            // We get the stacks AFTER the action has completed.
             UpdateDistractionVisuals();
         }
     }
@@ -92,7 +88,7 @@ public class EnemyView : CombatantView
             GameObject distObj = Instantiate(distractionPrefab, distractionParent.position, Quaternion.identity, distractionParent);
             activeDistractions.Add(distObj);
             distObj.transform.localScale = Vector3.zero;
-            distObj.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
+            distObj.transform.DOScale(new Vector3(2f,2f,2f), 0.3f).SetEase(Ease.OutBack);
         }
 
         // --- Remove extra distractions if needed ---
@@ -104,33 +100,15 @@ public class EnemyView : CombatantView
             Destroy(distToRemove);
             // You could add a "pop-out" animation here too.
         }
-
-        // Optional: Re-arrange the positions of the remaining distractions
-        // so they look nice (e.g., in an arc over the enemy's head).
         ArrangeDistractions();
     }
 
     private void ArrangeDistractions()
     {
-        for (int i = 0; i < activeDistractions.Count; i++)
+        int pointsToUse = Mathf.Min(activeDistractions.Count, spawnPoints.Count);
+        for (int i = 0; i < pointsToUse; i++)
         {
-            // 1. Get a random angle in radians.
-            // A full circle is 2 * PI radians.
-            float randomAngle = Random.Range(0f, 2f * Mathf.PI);
-
-            // 2. Get a random distance within the radius.
-            // Using Random.Range(0, radius) would cluster points near the center.
-            // Multiplying by sqrt(random) gives a much more uniform distribution across the circle's area.
-            float randomRadius = distractionRadius * Mathf.Sqrt(Random.Range(0f, 1f));
-
-            // 3. Convert the circular coordinates (angle + radius) to cartesian coordinates (x, y).
-            float x = Mathf.Cos(randomAngle) * randomRadius;
-            float y = Mathf.Sin(randomAngle) * randomRadius;
-
-            // 4. Create the final position vector and apply it.
-            // We use localPosition so the placement is relative to the distractionParent.
-            Vector3 newPosition = new Vector3(x, y, 0);
-            activeDistractions[i].transform.localPosition = newPosition;
+            activeDistractions[i].transform.localPosition = spawnPoints[i].localPosition;
         }
     }
 

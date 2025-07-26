@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Imposter Phase 3", menuName = "Enemy/Imposter/Phase 3")]
 public class ImposterPhase3Base : EnemyPhase3SOBase
 {
+    [field: SerializeField]
+    public List<AutoTargetEffect> OtherEffects { get; private set; }
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
@@ -16,6 +19,12 @@ public class ImposterPhase3Base : EnemyPhase3SOBase
     public override void DoReactionLogic(EnemyTurnGA enemyTurnGA)
     {
         base.DoReactionLogic(enemyTurnGA);
+        foreach (var effect in OtherEffects)
+        {
+            List<CombatantView> targets = effect.TargetMode.GetTargets();
+            PerformEffectsGA performEffectsGA = new(effect.Effect, targets, Enemy);
+            ActionSystem.Instance.AddReaction(performEffectsGA);
+        }
     }
 
     public override void Initialize(EnemyView enemyView)

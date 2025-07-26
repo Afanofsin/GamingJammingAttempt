@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5884643438112533211}
   - component: {fileID: 7781015861159860123}
+  - component: {fileID: 7161994799110710878}
   m_Layer: 0
   m_Name: GameManagerSystem
   m_TagString: Untagged
@@ -46,4 +47,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreenPrefab: {fileID: 622058759402727946, guid: bcc67c546a984744b98fbbbecc063b27, type: 3}
   MainMenuPrefab: {fileID: 5221250037248339160, guid: 04f6e4c0356625a4999af682af0c7732, type: 3}
+  _heroDataSO: {fileID: 11400000, guid: 8f009bac480876947a4c977bee2e2da6, type: 2}
+  progression: {fileID: 11400000, guid: 8fa90f9f79266024791040492d75e355, type: 2}
+  startingDeck:
+  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
+  - {fileID: 11400000, guid: e45959cecf1603141b411f516accd09f, type: 2}
+  - {fileID: 11400000, guid: de0ed9dcaf9da2c4e8ea8aafae144093, type: 2}
+  - {fileID: 11400000, guid: 5b230538c79505e4fa86214eacdb92f5, type: 2}
+  - {fileID: 11400000, guid: 182ef4e8783d06e479bac088c5e2f615, type: 2}
+  - {fileID: 11400000, guid: d6cd6bdec002e5546abe3a0e8c46657f, type: 2}
+  - {fileID: 11400000, guid: 2725c77cdfae03048b09a302c691ea5a, type: 2}
   enemy: {fileID: 11400000, guid: 1cb2507ba5f789748b6454fd44ecd04d, type: 2}
+--- !u!114 &7161994799110710878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307118385824474068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd252e5cabb7cda45825324defb058d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSourcePrefab: {fileID: 5184430906206825323, guid: 6785371271232884d9008ac62ebb6a6b, type: 3}

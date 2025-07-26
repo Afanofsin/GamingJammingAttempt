@@ -22,6 +22,7 @@ public class SlothPhase1Base : EnemyPhase1SOBase
         float maxHealthPercentage = (float)Enemy.CurrentHealth / (float)Enemy.MaxHealth;
         if(maxHealthPercentage < 0.75f)
         {
+            Enemy.AttackPower += 2;
             Enemy.UpdateAttackText();
             Enemy.StateMachine.ChangeState(Enemy.Phase2State);
         }
