@@ -129,31 +129,18 @@ public class GameManagerSystem : MonoBehaviour
     }
 
     public void Progress(string bossName)
+{
+    string key = bossName.ToLowerInvariant();
+    if (enemyLookupName.TryGetValue(key, out EnemyDataSO SO))
     {
-        string key = bossName.ToLowerInvariant();
-        if (enemyLookupName.TryGetValue(key, out EnemyDataSO SO))
-        {
-            case "Sloth":
-                //progression.isFirstBossKilled = true;
-                break;
-            case "Procrastination":
-                //progression.isSecondBossKilled = true;
-                break;
-            case "ImposterSyndrome":
-                //progression.isThirdBossKilled = true;
-                break;
-            case "FirstGame":
-                //progression.isFourthBossKilled = true;
-                break;
-            default:
-                break;
-        }
-        else
-        {
-            Debug.LogWarning("No boss with name " + bossName + "found");
-        }
-
+        progression.enemiesDefeated[SO] = true;
     }
+    else
+    {
+        Debug.LogWarning("No boss with name " + bossName + "found");
+    }
+
+}
 
     private void ResetGameState()
     {

@@ -19,6 +19,7 @@ public class BattleApp : MonoBehaviour
     public List <EnemyDataSO> bossData;
     void OnEnable()
     {
+        ShowBossButtons();
         bossData.Clear();
         bossName.text = null;
         bossDescription.text = null;
@@ -35,9 +36,20 @@ public class BattleApp : MonoBehaviour
     }
     public void ShowBossButtons()
     {
+        int index = 0;
         foreach (var boss in bosses)
         {
-            Button newButtton = Instantiate(buttonPrefab, buttonPrefab.transform.position, quaternion.identity); 
+            int helpIndex = index;
+            var newButton = Instantiate(buttonPrefab, buttonPrefab.transform.position, quaternion.identity);
+            newButton.transform.SetParent(GameObject.Find("ButtonHelper").transform);
+            newButton.transform.localScale = new Vector3(1, 1, 1);
+            if (progression.enemiesDefeated[bosses[index]])
+            {
+                newButton.image.sprite = boss.Image;
+            }
+            newButton.image.sprite = boss.BattleAppImage;
+            newButton.onClick.AddListener(() => ShowBoss(helpIndex));
+            index++;
         }
     }
      public void StartBattle()

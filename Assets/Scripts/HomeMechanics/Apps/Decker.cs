@@ -39,10 +39,6 @@ public class Decker : MonoBehaviour
         objectsToDestroy1 = GameObject.FindGameObjectsWithTag("InventoryButton");
         objectsToDestroy2 = GameObject.FindGameObjectsWithTag("BattleButton");
     }
-    void Update()
-    {
-        //Debug.Log(cardToTransfer);
-    }
     public void ShowCardLeft(string cardTitle)
     {
         if (GameObject.FindGameObjectWithTag("ShopCard") != null)
