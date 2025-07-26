@@ -31,4 +31,12 @@ public class Progression : ScriptableObject
         isCompletedCatQuest = false;
         isGuitarCardCollected = false;
     }
+
+    public void Initialize(List<EnemyDataSO> enemies)
+    {
+        foreach (var enemy in enemies)
+        {
+            enemiesDefeated.Add(enemy, false);
+        }
+    }
 }
