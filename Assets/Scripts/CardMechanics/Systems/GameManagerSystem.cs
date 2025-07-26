@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System;
 using Unity.VisualScripting;
 using static UnityEngine.EventSystems.EventTrigger;
+using System.Linq;
 
 public class GameManagerSystem : MonoBehaviour
 {
@@ -31,8 +32,9 @@ public class GameManagerSystem : MonoBehaviour
     private List<CardDataSO> startingDeck;
 
     [SerializeField]
-    private EnemyDataSO enemy;
+    private List<EnemyDataSO> listOfGameBosses;
 
+    private Dictionary<string, EnemyDataSO> enemyLookupName;
     private List<EnemyDataSO> _enemiesForBattle = new();
     
 
@@ -41,8 +43,13 @@ public class GameManagerSystem : MonoBehaviour
         _heroDataSO.Reset();
         _heroDataSO.InitializeInventoryDeck(startingDeck);
         progression.ResetProgress();
+        progression.Initialize(listOfGameBosses);
+
+        enemyLookupName = progression.enemiesDefeated
+            .Keys
+            .ToDictionary( SO => SO.name.ToLowerInvariant(), SO => SO);
+
         _mainMenuUI.OpenMainMenu();
-        //StartBattle(new() { enemy });
     }
 
     private void Update()
@@ -123,23 +130,16 @@ public class GameManagerSystem : MonoBehaviour
 
     public void Progress(string bossName)
     {
-        switch (bossName)
+        string key = bossName.ToLowerInvariant();
+        if (enemyLookupName.TryGetValue(key, out EnemyDataSO SO))
         {
-            case "Sloth":
-                progression.isFirstBossKilled = true;
-                break;
-            case "Procrastination":
-                progression.isSecondBossKilled = true;
-                break;
-            case "ImposterSyndrome":
-                progression.isThirdBossKilled = true;
-                break;
-            case "FirstGame":
-                progression.isFourthBossKilled = true;
-                break;
-            default:
-                break;
+            progression.enemiesDefeated[SO] = true;
         }
+        else
+        {
+            Debug.LogWarning("No boss with name " + bossName + "found");
+        }
+
     }
 
     private void ResetGameState()
