@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ImposterSyndrome
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: 487653675, guid: 91a5758559766a34f8a70c25e9e80f08, type: 3}
+  <BattleAppImage>k__BackingField: {fileID: 563860478, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
   <Health>k__BackingField: 60
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 5

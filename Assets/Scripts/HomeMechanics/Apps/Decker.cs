@@ -88,8 +88,8 @@ public class Decker : MonoBehaviour
         if (string.IsNullOrEmpty(cardToTransfer))
             return;
 
-        Transform inventoryParent = GameObject.Find("InventoryDeckContent").transform;
-        Transform battleParent = GameObject.Find("BattleDeckContent").transform;
+        Transform inventoryParent = GameObject.Find("Inventory_Content").transform;
+        Transform battleParent = GameObject.Find("Battle_Content").transform;
 
         if (rightButton.gameObject.activeSelf)
         {
@@ -131,7 +131,7 @@ public class Decker : MonoBehaviour
         foreach (Card card in playerNewInventoryDeck)
         {
             var newButton = Instantiate(inventoryCard, inventoryCard.transform.position, quaternion.identity);
-            newButton.transform.SetParent(GameObject.Find("InventoryDeckContent").transform);
+            newButton.transform.SetParent(GameObject.Find("Inventory_Content").transform);
             newButton.GetComponentInChildren<TextMeshProUGUI>().text = card.Title;
             newButton.transform.localScale = new Vector3(1, 1, 1);
             string cardTitle = card.Title;
@@ -143,7 +143,7 @@ public class Decker : MonoBehaviour
         foreach (Card card in playerNewBattleDeck)
         {
             var newButton = Instantiate(battleCard, battleCard.transform.position, quaternion.identity);
-            newButton.transform.SetParent(GameObject.Find("BattleDeckContent").transform);
+            newButton.transform.SetParent(GameObject.Find("Battle_Content").transform);
             newButton.GetComponentInChildren<TextMeshProUGUI>().text = card.Title;
             newButton.transform.localScale = new Vector3(1, 1, 1);
             string cardTitle = card.Title;
@@ -166,7 +166,7 @@ public class Decker : MonoBehaviour
     private void CreateInventoryDeckButton(Card card)
     {
         var newButton = Instantiate(inventoryCard, inventoryCard.transform.position, quaternion.identity);
-        newButton.transform.SetParent(GameObject.Find("InventoryDeckContent").transform);
+        newButton.transform.SetParent(GameObject.Find("Inventory_Content").transform);
         newButton.GetComponentInChildren<TextMeshProUGUI>().text = card.Title;
         newButton.transform.localScale = Vector3.one;
         string cardTitle = card.Title;
@@ -176,7 +176,7 @@ public class Decker : MonoBehaviour
     private void CreateBattleDeckButton(Card card)
     {
         var newButton = Instantiate(battleCard, battleCard.transform.position, quaternion.identity);
-        newButton.transform.SetParent(GameObject.Find("BattleDeckContent").transform);
+        newButton.transform.SetParent(GameObject.Find("Battle_Content").transform);
         newButton.GetComponentInChildren<TextMeshProUGUI>().text = card.Title;
         newButton.transform.localScale = Vector3.one;
         string cardTitle = card.Title;

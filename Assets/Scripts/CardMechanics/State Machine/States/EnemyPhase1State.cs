@@ -16,7 +16,7 @@ public class EnemyPhase1State : EnemyState
         base.ExitState();
         Debug.Log("<color=red>EXITING STATE: Phase 1</color>");
         Enemy.Phase1Instance.DoExitLogic();
-
+    
     }
     public override void Reaction(EnemyTurnGA enemyTurnGA)
     {

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Sloth
   m_EditorClassIdentifier: 
   <Image>k__BackingField: {fileID: 21300000, guid: 99947274a01e2924fbfe7683a7ffa82a, type: 3}
+  <BattleAppImage>k__BackingField: {fileID: -317021761, guid: 85ddff3320019c54a9f3078af497103a, type: 3}
   <Health>k__BackingField: 35
   <Morale>k__BackingField: 0
   <AttackPower>k__BackingField: 2

@@ -20,23 +20,14 @@ public class Cat : InteractObject, ITalkable, IDoAction
         {
             dialogueIndex = 3;
         }
-        /*if (progression.isFirstBossKilled)
-        {
-            dialogueIndex = 4;
-        }*/
     }
     public override void Interact()
     {
-          if (quest.Completed)
+        if (quest.Completed)
         {
             progression.isCompletedCatQuest = true;
         }
-        
-        if (dialogueController.talkingEnded && !dialogueController.isTyping)
-        {
-            CheckDialogueEnd();
-        }
-
+        CheckDialogueEnd();
         Talk(dialogueText[dialogueIndex]);
 
         if (dialogueIndex == 1 && !dialogueController.talkingEnded)
@@ -53,12 +44,12 @@ public class Cat : InteractObject, ITalkable, IDoAction
 
     public override void DoAction()
     {
-        
+
     }
 
     public override void CheckDialogueEnd()
     {
-        if (dialogueController.CanProgress && dialogueIndex < 2 )
+        if (dialogueController.CanProgress && dialogueIndex < 2)
         {
             dialogueIndex++;
         }

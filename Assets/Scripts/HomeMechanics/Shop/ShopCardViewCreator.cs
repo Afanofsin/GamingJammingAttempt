@@ -28,8 +28,8 @@ public class ShopCardViewCreator : MonoBehaviour
     }
     public ShopCardView CreateDeckerCardView(ShopCard card, Vector3 position, Quaternion rotation)
     {
-        ShopCardView cardView = Instantiate(deckerViewPrefab, position + new Vector3(0, 140, 0), rotation);
-        cardView.transform.SetParent(GameObject.Find("Decker").transform);
+        ShopCardView cardView = Instantiate(deckerViewPrefab, position + new Vector3(0, 100, 0), rotation);
+        cardView.transform.SetParent(GameObject.Find("Decker_Window").transform);
         cardView.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         cardView._cardButton.gameObject.SetActive(false);
         cardView.Setup(card);

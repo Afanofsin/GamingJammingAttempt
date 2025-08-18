@@ -2,23 +2,24 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
-
 public class BattleApp : MonoBehaviour
 {
     [SerializeField] private List<EnemyDataSO> bosses;
-    public HeroDataSO heroDataSO;
-    public Progression progression;
+    [SerializeField] private HeroDataSO heroDataSO;
+    [SerializeField] private Progression progression;
     [SerializeField] private Button buttonPrefab;
     [SerializeField] private Button startBattleButton;
-    public GameObject notEnoughCardsText;
-    public Image bossImage;
-    public TextMeshProUGUI bossName;
-    public TextMeshProUGUI bossDescription;
-    public List <EnemyDataSO> bossData;
+    [SerializeField] private GameObject notEnoughCardsText;
+    [SerializeField] private Image bossImage;
+    [SerializeField] private Sprite lockedImage;
+    [SerializeField] private TextMeshProUGUI bossName;
+    [SerializeField] private TextMeshProUGUI bossDescription;
+    [SerializeField] private List<EnemyDataSO> bossData;
+    private List<Button> buttonsToDestroy = new();
     void OnEnable()
     {
+        DestroyAllBossButtons();
         ShowBossButtons();
         bossData.Clear();
         bossName.text = null;
@@ -26,13 +27,6 @@ public class BattleApp : MonoBehaviour
         bossImage.enabled = false;
         notEnoughCardsText.SetActive(false);
         startBattleButton.gameObject.SetActive(false);
-        EvaluateBosses();
-    }
-
-    public void EvaluateBosses()
-    {
-    
-
     }
     public void ShowBossButtons()
     {
@@ -43,16 +37,27 @@ public class BattleApp : MonoBehaviour
             var newButton = Instantiate(buttonPrefab, buttonPrefab.transform.position, quaternion.identity);
             newButton.transform.SetParent(GameObject.Find("ButtonHelper").transform);
             newButton.transform.localScale = new Vector3(1, 1, 1);
-            if (progression.enemiesDefeated[bosses[index]])
+            if (helpIndex == 0)
             {
-                newButton.image.sprite = boss.Image;
+                newButton.enabled = true;
+                newButton.image.sprite = boss.BattleAppImage;
             }
-            newButton.image.sprite = boss.BattleAppImage;
+            else if (helpIndex >= 1 && !progression.enemiesDefeated[bosses[helpIndex - 1]])
+            {
+                newButton.image.sprite = lockedImage;
+                newButton.enabled = false;
+            }
+            else
+            {
+                newButton.enabled = true;
+                newButton.image.sprite = boss.BattleAppImage;
+            }
             newButton.onClick.AddListener(() => ShowBoss(helpIndex));
+            buttonsToDestroy.Add(newButton);
             index++;
         }
     }
-     public void StartBattle()
+    public void StartBattle()
     {
         if (heroDataSO.Deck.Count < 10)
         {
@@ -82,4 +87,20 @@ public class BattleApp : MonoBehaviour
         }
 
     }
+    private void DestroyAllBossButtons()
+    {
+        foreach (var button in buttonsToDestroy)
+        {
+            if (button != null)
+            {
+                Destroy(button.gameObject);
+            }
+        }
+        buttonsToDestroy.Clear();
+    }
+    void OnDisable()
+    {
+        DestroyAllBossButtons();
+    }
+
 }
