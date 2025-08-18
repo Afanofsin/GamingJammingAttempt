@@ -1,37 +1,46 @@
 fileFormatVersion: 2
-guid: 91a5758559766a34f8a70c25e9e80f08
+guid: 6c70c93790ba8ca4c95bf82280592dc1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5601288490160764747
-    second: ImposterIDLE-Sheet_0
+      213: 4655071120809878159
+    second: dreamgameIDLE-Sheet_0
   - first:
-      213: -7833969409408684218
-    second: ImposterIDLE-Sheet_1
+      213: -3403459968009175661
+    second: dreamgameIDLE-Sheet_1
   - first:
-      213: -7939448005812876381
-    second: ImposterIDLE-Sheet_2
+      213: -1900323055411304662
+    second: dreamgameIDLE-Sheet_2
   - first:
-      213: -7574324533170075078
-    second: ImposterIDLE-Sheet_3
+      213: 1532231923775522649
+    second: dreamgameIDLE-Sheet_3
   - first:
-      213: -5998727172562338866
-    second: ImposterIDLE-Sheet_4
+      213: 4815820883489838741
+    second: dreamgameIDLE-Sheet_4
   - first:
-      213: -5112617372268409586
-    second: ImposterIDLE-Sheet_5
+      213: 6993570750013356661
+    second: dreamgameIDLE-Sheet_5
   - first:
-      213: 1451276091283093798
-    second: ImposterIDLE-Sheet_6
+      213: 2352121528610181060
+    second: dreamgameIDLE-Sheet_6
   - first:
-      213: 6311409311332412430
-    second: ImposterIDLE-Sheet_7
+      213: 1874873163617478976
+    second: dreamgameIDLE-Sheet_7
   - first:
-      213: -342349306207332161
-    second: ImposterIDLE-Sheet_8
+      213: -8450417856551970605
+    second: dreamgameIDLE-Sheet_8
   - first:
-      213: 7527510097342373008
-    second: ImposterIDLE-Sheet_9
+      213: -2156440491718627331
+    second: dreamgameIDLE-Sheet_9
+  - first:
+      213: -9168101136743021099
+    second: dreamgameIDLE-Sheet_10
+  - first:
+      213: 1292154201535560423
+    second: dreamgameIDLE-Sheet_11
+  - first:
+      213: 4162784165621340164
+    second: dreamgameIDLE-Sheet_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -140,12 +149,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_0
+      name: dreamgameIDLE-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -155,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 244bc83d66ae8c24d9877a05e0a7e181
-      internalID: 920427475
+      spriteID: 27becd4bb47cc2f44ae6875f619f3d44
+      internalID: 636822787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_1
+      name: dreamgameIDLE-Sheet_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -177,19 +186,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2186a4efae6b3a241ba8c76c0122dc2c
-      internalID: -694185107
+      spriteID: 61ac5b6b43b1dbb45ae22eaa9e5f6f18
+      internalID: 94754482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_2
+      name: dreamgameIDLE-Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 160
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -199,19 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce1130079b795f248bc1c73e7ff23dab
-      internalID: -825599726
+      spriteID: d33ed43dccc4e6f4d8088ee20ffa2621
+      internalID: -1555961508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_3
+      name: dreamgameIDLE-Sheet_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 240
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -221,41 +230,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7aef3977fc6464cab9d0f17b14a1a9
-      internalID: 337409605
+      spriteID: ce59544d131175548ae7a20c94a89136
+      internalID: -1815453564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 410335f232d65ea4a8fec13b6465a0b6
-      internalID: -341103365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ImposterIDLE-Sheet_5
+      name: dreamgameIDLE-Sheet_4
       rect:
         serializedVersion: 2
         x: 320
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -265,19 +252,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74be4f486a7caac4394bcce007cecb90
-      internalID: -1528376974
+      spriteID: 1ccf0a6d74c1e9840affd571d7541169
+      internalID: -1896545081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_6
+      name: dreamgameIDLE-Sheet_5
       rect:
         serializedVersion: 2
-        x: 384
+        x: 400
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -287,19 +274,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d66d9f12b6873974ca6a621bb5ef16d7
-      internalID: 969588485
+      spriteID: 187971ced88e52c488c84b631b06da3a
+      internalID: -1363623463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_7
+      name: dreamgameIDLE-Sheet_6
       rect:
         serializedVersion: 2
-        x: 448
+        x: 480
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -309,19 +296,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbd4c516a2437e94a9a8fa564fa0ccfd
-      internalID: -1423481285
+      spriteID: 8810048e18591d44591513fcdf2abbc0
+      internalID: -1860323651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_8
+      name: dreamgameIDLE-Sheet_7
       rect:
         serializedVersion: 2
-        x: 512
+        x: 560
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -331,19 +318,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28927cdf18073854db548f44805f1e51
-      internalID: -946569998
+      spriteID: 5a1b45b136ed7394193b3c6f88e16e49
+      internalID: -1346232441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_9
+      name: dreamgameIDLE-Sheet_8
       rect:
         serializedVersion: 2
-        x: 576
+        x: 640
         y: 0
-        width: 64
+        width: 80
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -353,8 +340,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96fc6cdb1dcbf994691f865e384e028f
-      internalID: -1216345671
+      spriteID: 715f6bbdf071f1744b81f03978fd4214
+      internalID: 2019535847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreamgameIDLE-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 80
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab256c915a2b054ab9ac5d7f6b8e17d
+      internalID: -1135024420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreamgameIDLE-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 80
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f10d11a5a2d4b54bb4399229a3d7a61
+      internalID: -171891181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreamgameIDLE-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 80
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c206fa20877f44d8f831347fb6b159
+      internalID: 2060110415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreamgameIDLE-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 80
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97422be7bc5255c4da774e080761b788
+      internalID: 155044879
       vertices: []
       indices: 
       edges: []
@@ -373,18 +448,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":13.0,"y":1.0},"gridSpriteSize":{"x":80.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ImposterIDLE-Sheet_0: 920427475
-      ImposterIDLE-Sheet_1: -694185107
-      ImposterIDLE-Sheet_2: -825599726
-      ImposterIDLE-Sheet_3: 337409605
-      ImposterIDLE-Sheet_4: -341103365
-      ImposterIDLE-Sheet_5: -1528376974
-      ImposterIDLE-Sheet_6: 969588485
-      ImposterIDLE-Sheet_7: -1423481285
-      ImposterIDLE-Sheet_8: -946569998
-      ImposterIDLE-Sheet_9: -1216345671
+      dreamgameIDLE-Sheet_0: 636822787
+      dreamgameIDLE-Sheet_1: 94754482
+      dreamgameIDLE-Sheet_10: -171891181
+      dreamgameIDLE-Sheet_11: 2060110415
+      dreamgameIDLE-Sheet_12: 155044879
+      dreamgameIDLE-Sheet_2: -1555961508
+      dreamgameIDLE-Sheet_3: -1815453564
+      dreamgameIDLE-Sheet_4: -1896545081
+      dreamgameIDLE-Sheet_5: -1363623463
+      dreamgameIDLE-Sheet_6: -1860323651
+      dreamgameIDLE-Sheet_7: -1346232441
+      dreamgameIDLE-Sheet_8: 2019535847
+      dreamgameIDLE-Sheet_9: -1135024420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

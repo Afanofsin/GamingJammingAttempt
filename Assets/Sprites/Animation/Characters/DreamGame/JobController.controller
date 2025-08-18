@@ -14,7 +14,7 @@ AnimatorStateMachine:
     m_Position: {x: 320, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7693477363757157930}
-    m_Position: {x: 657.3195, y: 10.591232, z: 0}
+    m_Position: {x: 660, y: 10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -78,7 +78,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ImposterController
+  m_Name: JobController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Attack
@@ -121,7 +121,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8d22a31ce3f05ce4a9163b413b5e4d39, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5def4efcd723c0f47824abdc1c15f219, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 62ea6143774d3de40b2454d0ec2a296b, type: 2}
+  m_Motion: {fileID: 7400000, guid: c8eee7bc7f0898a4d9602efdfae705f1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

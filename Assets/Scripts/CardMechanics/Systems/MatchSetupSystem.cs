@@ -19,10 +19,12 @@ public class MatchSetupSystem : MonoBehaviour
     {
         GameManagerSystem.OnSceneReady += SetupCheck;
     }
-    /*private void Start()
+    private void Start()
     {
-        StartCoroutine(MatchSetup(GameManagerSystem.Instance.GetEnemiesForBattle()));
-    }*/
+#if UNITY_EDITOR
+        StartCoroutine(MatchSetup(_enemyDatas));
+#endif
+    }
     private void OnDisable()
     {
         GameManagerSystem.OnSceneReady -= SetupCheck;
@@ -39,6 +41,7 @@ public class MatchSetupSystem : MonoBehaviour
         HeroSystem.Instance.Setup(_heroData);
         EnemySystem.Instance.Setup(enemies);
         CardSystem.Instance.Setup(_heroData.Deck, cardsToDrawAtStart);
+        MoneyUI.Instance.Setup(_heroData.Money);
 
         yield return new WaitUntil(() => !ActionSystem.Instance.isPerforming);
 

@@ -1,37 +1,34 @@
 fileFormatVersion: 2
-guid: 91a5758559766a34f8a70c25e9e80f08
+guid: 4a7a0e9acdbaada4cae067e7d4b3d6ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5601288490160764747
-    second: ImposterIDLE-Sheet_0
+      213: -4290821789475925583
+    second: JOBaPPLICATION-Sheet_0
   - first:
-      213: -7833969409408684218
-    second: ImposterIDLE-Sheet_1
+      213: -910927551482053069
+    second: JOBaPPLICATION-Sheet_1
   - first:
-      213: -7939448005812876381
-    second: ImposterIDLE-Sheet_2
+      213: 5849249540421067109
+    second: JOBaPPLICATION-Sheet_2
   - first:
-      213: -7574324533170075078
-    second: ImposterIDLE-Sheet_3
+      213: -4306740786782727239
+    second: JOBaPPLICATION-Sheet_3
   - first:
-      213: -5998727172562338866
-    second: ImposterIDLE-Sheet_4
+      213: 4418450463116255660
+    second: JOBaPPLICATION-Sheet_4
   - first:
-      213: -5112617372268409586
-    second: ImposterIDLE-Sheet_5
+      213: 5614293331826590583
+    second: JOBaPPLICATION-Sheet_5
   - first:
-      213: 1451276091283093798
-    second: ImposterIDLE-Sheet_6
+      213: -2909580713066491624
+    second: JOBaPPLICATION-Sheet_6
   - first:
-      213: 6311409311332412430
-    second: ImposterIDLE-Sheet_7
+      213: 8599301615057359797
+    second: JOBaPPLICATION-Sheet_7
   - first:
-      213: -342349306207332161
-    second: ImposterIDLE-Sheet_8
-  - first:
-      213: 7527510097342373008
-    second: ImposterIDLE-Sheet_9
+      213: -1904890816282565570
+    second: JOBaPPLICATION-Sheet_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -140,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_0
+      name: JOBaPPLICATION-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 244bc83d66ae8c24d9877a05e0a7e181
-      internalID: 920427475
+      spriteID: dac5be400f278104c89d76148fea090b
+      internalID: 577906989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_1
+      name: JOBaPPLICATION-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -177,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2186a4efae6b3a241ba8c76c0122dc2c
-      internalID: -694185107
+      spriteID: 0971047039ee33146974a0feb20305a9
+      internalID: 1910638230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_2
+      name: JOBaPPLICATION-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -199,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce1130079b795f248bc1c73e7ff23dab
-      internalID: -825599726
+      spriteID: dfb4f6fec78c1de429d56becff7c35a1
+      internalID: -1392438744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_3
+      name: JOBaPPLICATION-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
@@ -221,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7aef3977fc6464cab9d0f17b14a1a9
-      internalID: 337409605
+      spriteID: b32c499743172c84eb58dfb5b5367063
+      internalID: -1891361306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_4
+      name: JOBaPPLICATION-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
@@ -243,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 410335f232d65ea4a8fec13b6465a0b6
-      internalID: -341103365
+      spriteID: 8bc22378854949345ad5cb739729de89
+      internalID: 110473624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_5
+      name: JOBaPPLICATION-Sheet_5
       rect:
         serializedVersion: 2
         x: 320
@@ -265,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74be4f486a7caac4394bcce007cecb90
-      internalID: -1528376974
+      spriteID: 3e962fe5cd5d22243bc74aae9658f04c
+      internalID: -89996715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_6
+      name: JOBaPPLICATION-Sheet_6
       rect:
         serializedVersion: 2
         x: 384
@@ -287,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d66d9f12b6873974ca6a621bb5ef16d7
-      internalID: 969588485
+      spriteID: 605b3a8c71451864cbe062ccbf31318b
+      internalID: 1098442526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_7
+      name: JOBaPPLICATION-Sheet_7
       rect:
         serializedVersion: 2
         x: 448
@@ -309,14 +306,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbd4c516a2437e94a9a8fa564fa0ccfd
-      internalID: -1423481285
+      spriteID: e2c839408f28378468d293fb208c26a3
+      internalID: -1859899630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ImposterIDLE-Sheet_8
+      name: JOBaPPLICATION-Sheet_8
       rect:
         serializedVersion: 2
         x: 512
@@ -331,30 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28927cdf18073854db548f44805f1e51
-      internalID: -946569998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ImposterIDLE-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96fc6cdb1dcbf994691f865e384e028f
-      internalID: -1216345671
+      spriteID: 05e9c8144e319b14daca4c52c01874df
+      internalID: 1344010169
       vertices: []
       indices: 
       edges: []
@@ -373,18 +348,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ImposterIDLE-Sheet_0: 920427475
-      ImposterIDLE-Sheet_1: -694185107
-      ImposterIDLE-Sheet_2: -825599726
-      ImposterIDLE-Sheet_3: 337409605
-      ImposterIDLE-Sheet_4: -341103365
-      ImposterIDLE-Sheet_5: -1528376974
-      ImposterIDLE-Sheet_6: 969588485
-      ImposterIDLE-Sheet_7: -1423481285
-      ImposterIDLE-Sheet_8: -946569998
-      ImposterIDLE-Sheet_9: -1216345671
+      JOBaPPLICATION-Sheet_0: 577906989
+      JOBaPPLICATION-Sheet_1: 1910638230
+      JOBaPPLICATION-Sheet_2: -1392438744
+      JOBaPPLICATION-Sheet_3: -1891361306
+      JOBaPPLICATION-Sheet_4: 110473624
+      JOBaPPLICATION-Sheet_5: -89996715
+      JOBaPPLICATION-Sheet_6: 1098442526
+      JOBaPPLICATION-Sheet_7: -1859899630
+      JOBaPPLICATION-Sheet_8: 1344010169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,12 +12,13 @@ public class DamageSystem : MonoBehaviour
     {
         ActionSystem.AttachPerformer<DealDamageGA>(DealDamagePerformer);
         ActionSystem.AttachPerformer<DealDirectDamageGA>(DealDirectDamagePerformer);
-    }
-
+        ActionSystem.AttachPerformer<MoneyDamageGA>(MoneyDamagePerformer);
+    } 
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<DealDamageGA>();
         ActionSystem.DetachPerformer<DealDirectDamageGA>();
+        ActionSystem.DetachPerformer<MoneyDamageGA>();
     }
 
 
@@ -79,9 +80,14 @@ public class DamageSystem : MonoBehaviour
         }
     }
 
+    private IEnumerator MoneyDamagePerformer(MoneyDamageGA moneyDamageGA)
+    {
+        yield return moneyDamageGA.Target.DecreaseMoney(moneyDamageGA.Amount);
+    }
+
     private void Awake()
     {
-        if(Instance != null)
+        if (Instance != null)
         {
             Destroy(gameObject);
             return;

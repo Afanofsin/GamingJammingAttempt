@@ -21,8 +21,6 @@ public class Decker : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log(_player.BattleDeck.Count);
-        Debug.Log(_player.InventoryDeck.Count);
         cardToTransfer = null;
         Destroy(GameObject.FindGameObjectWithTag("ShopCard"));
         rightButton.gameObject.SetActive(false);
