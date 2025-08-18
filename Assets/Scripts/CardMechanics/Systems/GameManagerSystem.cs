@@ -134,18 +134,18 @@ public class GameManagerSystem : MonoBehaviour
     }
 
     public void Progress(string bossName)
+{
+    string key = bossName.ToLowerInvariant();
+    if (enemyLookupName.TryGetValue(key, out EnemyDataSO SO))
     {
-        string key = bossName.ToLowerInvariant();
-        if (enemyLookupName.TryGetValue(key, out EnemyDataSO SO))
-        {
-            progression.enemiesDefeated[SO] = true;
-        }
-        else
-        {
-            Debug.LogWarning("No boss with name " + bossName + "found");
-        }
-
+        progression.enemiesDefeated[SO] = true;
     }
+    else
+    {
+        Debug.LogWarning("No boss with name " + bossName + "found");
+    }
+
+}
 
     private void ResetGameState()
     {

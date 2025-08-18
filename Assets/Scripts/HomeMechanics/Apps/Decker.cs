@@ -13,7 +13,7 @@ public class Decker : MonoBehaviour
     [SerializeField] private Button battleCard;
     [SerializeField] private Button leftButton;
     [SerializeField] private Button rightButton;
-    private const int MINIMUM_BATTLE = 12;
+    private const int MINIMUM_BATTLE = 10;
     private const int MAXIMUM_BATTLE = 20;
     private string cardToTransfer;
     private GameObject[] objectsToDestroy1;
@@ -38,10 +38,6 @@ public class Decker : MonoBehaviour
         }
         objectsToDestroy1 = GameObject.FindGameObjectsWithTag("InventoryButton");
         objectsToDestroy2 = GameObject.FindGameObjectsWithTag("BattleButton");
-    }
-    void Update()
-    {
-        //Debug.Log(cardToTransfer);
     }
     public void ShowCardLeft(string cardTitle)
     {
